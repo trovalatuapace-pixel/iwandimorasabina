@@ -7,7 +7,50 @@ html {
 }
 
 body {
+  position: relative;
   background-color: #140f0a;
+}
+
+/* Shared grain + hairline texture behind every section, so the site reads
+   as one continuous surface instead of the hero being the only "designed"
+   part and everything below it falling back to flat color. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(192, 144, 79, 0.08) 0%,
+    transparent 55%
+  );
+}
+
+::selection {
+  background: rgba(192, 144, 79, 0.35);
+  color: #faf6f0;
+}
+
+:focus-visible {
+  outline: 1px solid rgba(192, 144, 79, 0.8);
+  outline-offset: 3px;
 }
 
 .section-title {
@@ -15,18 +58,68 @@ body {
 }
 
 .section-eyebrow {
-  @apply font-sans uppercase tracking-[0.3em] text-xs sm:text-sm text-sabina-300;
+  @apply relative inline-flex items-center gap-3 font-sans uppercase tracking-[0.3em] text-xs sm:text-sm text-sabina-300;
+}
+
+.section-eyebrow::before {
+  content: "";
+  @apply h-px w-8 bg-gradient-to-r from-transparent to-sabina-400/80;
+}
+
+/* Recurring ornament used to separate major sections: a hairline with a
+   small rotated diamond at its center, echoing the eyebrow rule above. */
+.section-divider {
+  @apply relative mx-auto flex max-w-6xl items-center gap-4 px-5 sm:px-8;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  @apply h-px flex-1 bg-gradient-to-r from-transparent via-sabina-700 to-transparent;
+}
+
+.section-divider__mark {
+  @apply h-2 w-2 rotate-45 border border-sabina-400/60;
 }
 
 .card-surface {
+  @apply border border-sabina-800 transition-colors duration-300;
   background: rgba(20, 15, 10, 0.55);
   backdrop-filter: none;
 }
 
+.card-interactive {
+  @apply transition duration-300 ease-out hover:-translate-y-1 hover:shadow-glow;
+}
+
+.card-interactive .card-surface {
+  @apply group-hover:border-sabina-400/50;
+}
+
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-sabina-400 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-950 transition hover:bg-sabina-300;
+  @apply inline-flex items-center justify-center rounded-full bg-sabina-400 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-950 shadow-card transition duration-300 hover:-translate-y-0.5 hover:bg-sabina-300 active:translate-y-0;
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center rounded-full border border-sabina-300/60 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-100 transition hover:border-sabina-100 hover:bg-sabina-50/10;
+  @apply inline-flex items-center justify-center rounded-full border border-sabina-300/60 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-100 transition duration-300 hover:-translate-y-0.5 hover:border-sabina-100 hover:bg-sabina-50/10 active:translate-y-0;
+}
+
+.nav-link {
+  @apply relative py-1 transition-colors duration-300 hover:text-sabina-300;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute -bottom-0.5 left-0 h-px w-0 bg-sabina-300 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-drift {
+    animation: none !important;
+  }
 }

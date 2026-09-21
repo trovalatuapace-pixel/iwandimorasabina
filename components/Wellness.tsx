@@ -12,6 +12,16 @@ export default function Wellness() {
 
   return (
     <section id="wellness" className="relative px-5 py-24 sm:px-8">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at 15% 20%, rgba(60, 111, 106, 0.12) 0%, transparent 55%)",
+        }}
+      />
+      <div className="section-divider mb-16">
+        <span className="section-divider__mark" aria-hidden="true" />
+      </div>
       <div className="mx-auto max-w-6xl">
         <p className="section-eyebrow mb-3">{t.wellness.eyebrow}</p>
         <h2 className="section-title">{t.wellness.title}</h2>
@@ -24,14 +34,14 @@ export default function Wellness() {
             <button
               key={item.slug}
               onClick={() => setActiveSlug(item.slug)}
-              className="group text-left"
+              className="card-interactive group text-left"
             >
               <div
                 className={`flex h-36 items-center justify-center rounded-t-2xl bg-gradient-to-br ${item.gradient} text-5xl transition-transform duration-300 group-hover:scale-[1.03]`}
               >
                 {item.icon}
               </div>
-              <div className="card-surface rounded-b-2xl border border-sabina-800 p-5">
+              <div className="card-surface rounded-b-2xl p-5">
                 <h3 className="font-serif text-xl text-sabina-50">
                   {item.name[lang]}
                 </h3>

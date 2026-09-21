@@ -42,13 +42,13 @@ export default function DetailModal({
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4"
+      className="fixed inset-0 z-[60] flex animate-fade-in-up items-center justify-center bg-black/70 p-4 backdrop-blur-sm [animation-duration:0.25s]"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
     >
       <div
-        className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-sabina-950 shadow-card"
+        className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-sabina-800 bg-sabina-950 shadow-glow"
         onClick={(e) => e.stopPropagation()}
       >
         <div
@@ -64,9 +64,11 @@ export default function DetailModal({
             </div>
             <button
               onClick={onClose}
-              className="shrink-0 rounded-full border border-sabina-300/50 px-3 py-1 font-sans text-xs uppercase tracking-widest text-sabina-100 hover:border-sabina-100"
+              aria-label={closeLabel}
+              className="flex shrink-0 items-center gap-2 rounded-full border border-sabina-300/50 px-3 py-1 font-sans text-xs uppercase tracking-widest text-sabina-100 transition duration-300 hover:border-sabina-100 hover:bg-sabina-50/10"
             >
               {closeLabel}
+              <span aria-hidden="true">×</span>
             </button>
           </div>
 
