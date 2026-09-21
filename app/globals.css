@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #140f0a;
+}
+
+.section-title {
+  @apply font-serif text-3xl sm:text-4xl md:text-5xl text-sabina-50 tracking-wide;
+}
+
+.section-eyebrow {
+  @apply font-sans uppercase tracking-[0.3em] text-xs sm:text-sm text-sabina-300;
+}
+
+.card-surface {
+  background: rgba(20, 15, 10, 0.55);
+  backdrop-filter: none;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-sabina-400 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-950 transition hover:bg-sabina-300;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border border-sabina-300/60 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-100 transition hover:border-sabina-100 hover:bg-sabina-50/10;
+}
