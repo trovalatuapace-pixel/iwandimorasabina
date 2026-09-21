@@ -62,6 +62,31 @@ export type TranslationDict = {
   common: {
     langSwitch: string;
   };
+  welcome: {
+    backToSite: string;
+    eyebrow: string;
+    title: string;
+    intro: string;
+    hostNote: string;
+    houseRules: { eyebrow: string; title: string; thanks: string };
+    restaurants: {
+      eyebrow: string;
+      title: string;
+      intro: string;
+      breakfastTitle: string;
+      localTitle: string;
+      casualTitle: string;
+      tipsTitle: string;
+    };
+    activities: { eyebrow: string; title: string; intro: string; tipsTitle: string };
+    transport: { eyebrow: string; title: string; intro: string };
+    emergency: {
+      eyebrow: string;
+      title: string;
+      intro: string;
+      numbersTitle: string;
+    };
+  };
 };
 
 export const translations: Record<Lang, TranslationDict> = {
@@ -138,6 +163,49 @@ export const translations: Record<Lang, TranslationDict> = {
     common: {
       langSwitch: "EN",
     },
+    welcome: {
+      backToSite: "Torna al sito",
+      eyebrow: "Il vostro soggiorno inizia qui",
+      title: "Benvenuti a Orbis in Sabina",
+      intro:
+        "Questa guida raccoglie tutto quello che serve per godersi il soggiorno: regole della casa, dove mangiare, cosa fare nei dintorni, come muoversi e a chi rivolgersi in caso di emergenza.",
+      hostNote: "Per qualsiasi necessità scriveteci pure su WhatsApp, in qualsiasi momento.",
+      houseRules: {
+        eyebrow: "Comfort, cura e vita tranquilla",
+        title: "Regole della casa",
+        thanks: "Grazie per il rispetto che dimostrate verso la casa e i nostri vicini.",
+      },
+      restaurants: {
+        eyebrow: "Mangiare bene in Sabina",
+        title: "Ristoranti",
+        intro:
+          "Una selezione di indirizzi vicino a Montopoli in Sabina, dalla colazione alla cena.",
+        breakfastTitle: "Colazione",
+        localTitle: "Cucina locale",
+        casualTitle: "Pizza e informale",
+        tipsTitle: "Consigli",
+      },
+      activities: {
+        eyebrow: "Crea ricordi, un momento alla volta",
+        title: "Cosa fare nei dintorni",
+        intro:
+          "Che siate qui per rilassarvi o per esplorare la Sabina, ecco qualche idea per il vostro soggiorno.",
+        tipsTitle: "Consigli",
+      },
+      transport: {
+        eyebrow: "Ovunque tu vada, viaggia con facilità",
+        title: "Come muoversi",
+        intro:
+          "I modi più semplici per spostarsi durante il soggiorno, che si voglia raggiungere Roma o esplorare i borghi vicini.",
+      },
+      emergency: {
+        eyebrow: "Mantenete la calma, i soccorsi sono vicini",
+        title: "Emergenza",
+        intro:
+          "Numeri e indirizzi utili in caso di necessità. In un'emergenza reale chiamate sempre il 112.",
+        numbersTitle: "Numeri di emergenza",
+      },
+    },
   },
   en: {
     nav: {
@@ -211,6 +279,49 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     common: {
       langSwitch: "IT",
+    },
+    welcome: {
+      backToSite: "Back to the site",
+      eyebrow: "Your stay starts here",
+      title: "Welcome to Orbis in Sabina",
+      intro:
+        "This guide has everything you need for your stay: house rules, where to eat, what to do nearby, how to get around and who to contact in an emergency.",
+      hostNote: "For anything you need, just message us on WhatsApp, any time.",
+      houseRules: {
+        eyebrow: "Comfort, care and a quiet stay",
+        title: "House rules",
+        thanks: "Thank you for the care you show for the house and our neighbours.",
+      },
+      restaurants: {
+        eyebrow: "Eating well in Sabina",
+        title: "Restaurants",
+        intro:
+          "A selection of places near Montopoli in Sabina, from breakfast to dinner.",
+        breakfastTitle: "Breakfast",
+        localTitle: "Local cuisine",
+        casualTitle: "Pizza and casual",
+        tipsTitle: "Tips",
+      },
+      activities: {
+        eyebrow: "Make memories, one moment at a time",
+        title: "What to do nearby",
+        intro:
+          "Whether you're here to relax or to explore Sabina, here are a few ideas for your stay.",
+        tipsTitle: "Tips",
+      },
+      transport: {
+        eyebrow: "Wherever you're headed, travel with ease",
+        title: "Getting around",
+        intro:
+          "The easiest ways to get around during your stay, whether you're heading to Rome or exploring nearby villages.",
+      },
+      emergency: {
+        eyebrow: "Stay calm, help is close by",
+        title: "Emergency",
+        intro:
+          "Useful numbers and addresses if you need them. In a real emergency, always call 112.",
+        numbersTitle: "Emergency numbers",
+      },
     },
   },
 };

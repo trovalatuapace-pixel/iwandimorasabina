@@ -34,6 +34,10 @@ Copia `.env.example` in `.env.local` e compila le variabili disponibili.
 - `lib/i18n/` — dizionario testi statici e contesto lingua
 - `lib/ical.ts` + `app/api/availability/route.ts` — parsing dei feed iCal e
   calendario disponibilità
+- `app/benvenuto/page.tsx` + `lib/data/welcomeGuide.ts` — welcome book per
+  gli ospiti (regole della casa, ristoranti, attività, trasporti,
+  emergenza), pagina non collegata al menu pubblico: il link va condiviso
+  direttamente con gli ospiti dopo la prenotazione
 
 ## Variabili d'ambiente (Vercel)
 
@@ -70,6 +74,12 @@ per il punto di innesto.
 - Link iCal delle inserzioni Booking.com e Airbnb
 - Testi definitivi in italiano (poi tradotti in inglese) — bozze già in
   `lib/i18n/translations.ts`, `lib/data/rooms.ts`, `lib/data/wellness.ts`
+- Contenuti di `lib/data/welcomeGuide.ts` (welcome book su `/benvenuto`):
+  orari reali di check-in/check-out e regole della casa effettive (al
+  momento 15:00/11:00 e regole standard, da confermare); ristoranti,
+  farmacia, numero Carabinieri e orari trovati via ricerca web a settembre
+  2026 — nomi, orari e numeri di attività private cambiano, da verificare
+  prima di condividere la pagina con i primi ospiti
 
 ## Deploy
 
