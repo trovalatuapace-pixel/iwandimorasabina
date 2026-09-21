@@ -56,7 +56,7 @@ function MonthGrid({
   const today = toDateOnly(new Date());
 
   return (
-    <div className="card-surface rounded-2xl border border-sabina-800 p-5">
+    <div className="card-surface rounded-2xl p-5 transition-colors duration-300 hover:border-sabina-400/40">
       <p className="mb-4 text-center font-serif text-lg capitalize text-sabina-50">
         {monthLabel}
       </p>
@@ -73,7 +73,7 @@ function MonthGrid({
           return (
             <div
               key={i}
-              className={`flex h-8 items-center justify-center rounded-full font-sans text-xs ${
+              className={`flex h-8 items-center justify-center rounded-full font-sans text-xs transition-colors duration-300 ${
                 isPast
                   ? "text-sabina-300/30"
                   : busy

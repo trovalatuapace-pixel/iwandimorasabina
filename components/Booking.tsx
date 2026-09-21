@@ -10,6 +10,9 @@ export default function Booking() {
 
   return (
     <section id="disponibilita" className="relative px-5 py-24 sm:px-8">
+      <div className="section-divider mb-16">
+        <span className="section-divider__mark" aria-hidden="true" />
+      </div>
       <div className="mx-auto max-w-6xl">
         <p className="section-eyebrow mb-3">{t.booking.eyebrow}</p>
         <h2 className="section-title">{t.booking.title}</h2>

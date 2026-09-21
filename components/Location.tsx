@@ -14,6 +14,9 @@ export default function Location() {
 
   return (
     <section id="location" className="relative px-5 py-24 sm:px-8">
+      <div className="section-divider mb-16">
+        <span className="section-divider__mark" aria-hidden="true" />
+      </div>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2">
         <div>
           <p className="section-eyebrow mb-3">{t.location.eyebrow}</p>
@@ -44,7 +47,7 @@ export default function Location() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-sabina-800 shadow-card">
+        <div className="overflow-hidden rounded-2xl border border-sabina-800 shadow-card transition-colors duration-300 hover:border-sabina-400/50">
           <iframe
             title="Orbis in Sabina — Montopoli in Sabina"
             src={mapsEmbedSrc}
