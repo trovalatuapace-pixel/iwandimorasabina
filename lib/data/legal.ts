@@ -6,11 +6,11 @@ import { contacts } from "@/lib/site";
  * in 4 lingue.
  *
  * Il sito NON usa cookie di profilazione né statistiche. L'unico contenuto di terze parti
- * che può installare cookie è la mappa Google, che si carica solo dopo il clic dell'utente
- * (vedi components/pages/MapEmbed.tsx). Per questo non serve il banner cookie.
+ * che può installare cookie è la mappa Google, che si carica solo con il consenso
+ * "Marketing e contenuti esterni" dato nel banner (components/site/CookieBanner.tsx) o con il clic sulla mappa.
  *
  * Se in futuro si aggiungono Google Analytics, Meta Pixel, YouTube, ecc. bisogna
- * aggiornare la cookie policy E aggiungere un banner di consenso.
+ * aggiornare la cookie policy e il banner (lib/data/cookieBanner.ts), e caricarli solo col consenso.
  */
 
 export const LEGAL_UPDATED = "2026-09-25";
@@ -406,7 +406,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "2. Cookie tecnici",
         p: [
-          "Il sito non installa cookie propri. Salva solo, nel local storage del tuo browser, la tua scelta sulla mappa di Google (chiave «orbis-maps-consent»), così non te la chiediamo a ogni pagina. È uno strumento tecnico che non richiede consenso e resta finché non lo revochi qui sotto o cancelli i dati del browser.",
+          "Il sito non installa cookie propri. Salva solo, nel local storage del tuo browser, le tue scelte sui cookie fatte nel banner (chiave «orbis-cookie-consent»), così non te le chiediamo a ogni pagina. È uno strumento tecnico che non richiede consenso; dopo 6 mesi il banner ti viene riproposto.",
           "I caratteri tipografici sono ospitati sul nostro stesso server: non vengono scaricati da Google Fonts.",
         ],
       },
@@ -430,7 +430,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "6. Come gestire le tue scelte",
         p: [
-          "Puoi revocare o dare il consenso alla mappa con il pulsante qui sotto. Puoi anche cancellare o bloccare i cookie dalle impostazioni del browser (Chrome, Safari, Firefox, Edge); bloccando tutti i cookie alcune funzioni di siti esterni potrebbero non funzionare.",
+          "Alla prima visita un banner ti chiede il consenso: puoi accettare tutti i cookie, sceglierli per categoria («Personalizza») o usare solo quelli necessari. Puoi cambiare idea in qualsiasi momento con il link «Preferenze cookie» in fondo a ogni pagina o con il pulsante qui sotto. Puoi anche cancellare o bloccare i cookie dalle impostazioni del browser (Chrome, Safari, Firefox, Edge); bloccando tutti i cookie alcune funzioni di siti esterni potrebbero non funzionare.",
           "Per il resto del trattamento dei dati personali consulta l'Informativa privacy.",
         ],
       },
@@ -454,7 +454,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "2. Technical cookies",
         p: [
-          "The website sets no cookies of its own. It only stores your choice about the Google map in your browser's local storage (key “orbis-maps-consent”), so we don't ask you on every page. This is a technical tool that needs no consent and stays until you withdraw it below or clear your browser data.",
+          "The website sets no cookies of its own. It only stores the cookie choices you make in the banner in your browser's local storage (key “orbis-cookie-consent”), so we don't ask you on every page. This is a technical tool that needs no consent; after 6 months the banner is shown again.",
           "Fonts are hosted on our own server: they are not downloaded from Google Fonts.",
         ],
       },
@@ -478,7 +478,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "6. Managing your choices",
         p: [
-          "You can give or withdraw consent for the map with the button below. You can also delete or block cookies in your browser settings (Chrome, Safari, Firefox, Edge); blocking all cookies may stop some features of external sites from working.",
+          "On your first visit a banner asks for your consent: you can accept all cookies, choose by category (“Customise”) or use only the necessary ones. You can change your mind at any time via the “Cookie settings” link at the bottom of every page or the button below. You can also delete or block cookies in your browser settings (Chrome, Safari, Firefox, Edge); blocking all cookies may stop some features of external sites from working.",
           "For all other processing of personal data, see the Privacy policy.",
         ],
       },
@@ -502,7 +502,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "2. Technische Cookies",
         p: [
-          "Die Website setzt keine eigenen Cookies. Sie speichert lediglich Ihre Entscheidung zur Google-Karte im Local Storage Ihres Browsers (Schlüssel „orbis-maps-consent“), damit wir nicht auf jeder Seite erneut fragen. Dies ist ein technisches Hilfsmittel, das keine Einwilligung erfordert, und bleibt gespeichert, bis Sie es unten widerrufen oder Ihre Browserdaten löschen.",
+          "Die Website setzt keine eigenen Cookies. Sie speichert lediglich Ihre im Banner getroffene Cookie-Auswahl im Local Storage Ihres Browsers (Schlüssel „orbis-cookie-consent“), damit wir nicht auf jeder Seite erneut fragen. Dies ist ein technisches Hilfsmittel, das keine Einwilligung erfordert; nach 6 Monaten wird das Banner erneut angezeigt.",
           "Die Schriftarten liegen auf unserem eigenen Server und werden nicht von Google Fonts geladen.",
         ],
       },
@@ -526,7 +526,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "6. Ihre Einstellungen verwalten",
         p: [
-          "Mit der Schaltfläche unten können Sie die Einwilligung für die Karte erteilen oder widerrufen. Außerdem können Sie Cookies in den Browsereinstellungen (Chrome, Safari, Firefox, Edge) löschen oder blockieren; wenn Sie alle Cookies blockieren, funktionieren manche Funktionen externer Websites möglicherweise nicht.",
+          "Beim ersten Besuch fragt ein Banner nach Ihrer Einwilligung: Sie können alle Cookies akzeptieren, nach Kategorie wählen („Anpassen“) oder nur die notwendigen verwenden. Über den Link „Cookie-Einstellungen“ unten auf jeder Seite oder die Schaltfläche unten können Sie Ihre Wahl jederzeit ändern. Außerdem können Sie Cookies in den Browsereinstellungen (Chrome, Safari, Firefox, Edge) löschen oder blockieren; wenn Sie alle Cookies blockieren, funktionieren manche Funktionen externer Websites möglicherweise nicht.",
           "Alles Weitere zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung.",
         ],
       },
@@ -550,7 +550,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "2. Cookies techniques",
         p: [
-          "Le site ne dépose aucun cookie propre. Il enregistre seulement votre choix concernant la carte Google dans le local storage de votre navigateur (clé « orbis-maps-consent »), pour ne pas vous le redemander à chaque page. C'est un outil technique qui ne nécessite pas de consentement et qui reste jusqu'à ce que vous le retiriez ci-dessous ou effaciez les données du navigateur.",
+          "Le site ne dépose aucun cookie propre. Il enregistre seulement les choix de cookies faits dans le bandeau dans le local storage de votre navigateur (clé « orbis-cookie-consent »), pour ne pas vous les redemander à chaque page. C'est un outil technique qui ne nécessite pas de consentement ; au bout de 6 mois, le bandeau vous est de nouveau proposé.",
           "Les polices de caractères sont hébergées sur notre propre serveur : elles ne sont pas téléchargées depuis Google Fonts.",
         ],
       },
@@ -574,7 +574,7 @@ const cookies: Record<Lang, LegalDoc> = {
       {
         h: "6. Gérer vos choix",
         p: [
-          "Vous pouvez donner ou retirer votre consentement pour la carte avec le bouton ci-dessous. Vous pouvez aussi supprimer ou bloquer les cookies dans les réglages de votre navigateur (Chrome, Safari, Firefox, Edge) ; bloquer tous les cookies peut empêcher certaines fonctions de sites externes de fonctionner.",
+          "Lors de votre première visite, un bandeau vous demande votre consentement : vous pouvez accepter tous les cookies, choisir par catégorie (« Personnaliser ») ou n'utiliser que les cookies nécessaires. Vous pouvez changer d'avis à tout moment via le lien « Préférences cookies » en bas de chaque page ou le bouton ci-dessous. Vous pouvez aussi supprimer ou bloquer les cookies dans les réglages de votre navigateur (Chrome, Safari, Firefox, Edge) ; bloquer tous les cookies peut empêcher certaines fonctions de sites externes de fonctionner.",
           "Pour tout autre traitement de données personnelles, consultez la Politique de confidentialité.",
         ],
       },

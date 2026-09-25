@@ -2,41 +2,75 @@
 
 import { useEffect, useState } from "react";
 
-/** Chiave nel local storage con la scelta dell'utente sulla mappa Google. */
-export const MAPS_CONSENT_KEY = "orbis-maps-consent";
-const EVENT = "orbis-consent-change";
+/**
+ * Consenso cookie salvato nel local storage del browser.
+ * - necessary: sempre attivi
+ * - statistics: statistiche (oggi non usate, pronte per il futuro)
+ * - marketing: marketing e contenuti esterni (oggi: mappa Google Maps)
+ * La scelta dura 6 mesi, poi il banner viene riproposto (Linee guida Garante 10/06/2021).
+ */
+export const CONSENT_KEY = "orbis-cookie-consent";
+const VERSION = 1;
+const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 180;
+const CHANGE = "orbis-consent-change";
+const OPEN = "orbis-open-cookie-banner";
 
-function read(): boolean {
+export type Consent = { statistics: boolean; marketing: boolean; ts: number; v: number };
+
+export function readConsent(): Consent | null {
   try {
-    return window.localStorage.getItem(MAPS_CONSENT_KEY) === "yes";
+    const raw = window.localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    const c = JSON.parse(raw) as Consent;
+    if (c.v !== VERSION || Date.now() - c.ts > MAX_AGE_MS) return null;
+    return c;
   } catch {
-    return false;
+    return null;
   }
 }
 
-export function setMapsConsent(value: boolean) {
+export function saveConsent(choice: { statistics: boolean; marketing: boolean }) {
+  const c: Consent = { ...choice, ts: Date.now(), v: VERSION };
   try {
-    if (value) window.localStorage.setItem(MAPS_CONSENT_KEY, "yes");
-    else window.localStorage.removeItem(MAPS_CONSENT_KEY);
+    window.localStorage.setItem(CONSENT_KEY, JSON.stringify(c));
   } catch {
-    /* storage bloccato: la scelta vale solo per questa pagina */
+    /* storage bloccato: la scelta vale solo per questa visita */
   }
-  window.dispatchEvent(new CustomEvent(EVENT, { detail: value }));
+  window.dispatchEvent(new CustomEvent(CHANGE, { detail: c }));
 }
 
-/** Stato del consenso alla mappa, sincronizzato tra componenti e schede. */
-export function useMapsConsent(): [boolean, (v: boolean) => void] {
-  const [ok, setOk] = useState(false);
+/** Riapre il banner (link "Preferenze cookie" nel footer e nella cookie policy). */
+export function openCookieBanner() {
+  window.dispatchEvent(new Event(OPEN));
+}
+
+/** Stato del consenso sincronizzato tra componenti e schede. `null` = nessuna scelta ancora. */
+export function useConsent(): Consent | null | undefined {
+  const [c, setC] = useState<Consent | null | undefined>(undefined);
   useEffect(() => {
-    setOk(read());
-    const onChange = (e: Event) => setOk(Boolean((e as CustomEvent).detail));
-    const onStorage = (e: StorageEvent) => e.key === MAPS_CONSENT_KEY && setOk(read());
-    window.addEventListener(EVENT, onChange);
+    setC(readConsent());
+    const onChange = (e: Event) => setC((e as CustomEvent<Consent>).detail);
+    const onStorage = (e: StorageEvent) => e.key === CONSENT_KEY && setC(readConsent());
+    window.addEventListener(CHANGE, onChange);
     window.addEventListener("storage", onStorage);
     return () => {
-      window.removeEventListener(EVENT, onChange);
+      window.removeEventListener(CHANGE, onChange);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
-  return [ok, setMapsConsent];
+  return c;
+}
+
+export function onOpenCookieBanner(fn: () => void) {
+  window.addEventListener(OPEN, fn);
+  return () => window.removeEventListener(OPEN, fn);
+}
+
+/** Consenso alla mappa Google = categoria marketing / contenuti esterni. */
+export function useMapsConsent(): [boolean, (v: boolean) => void] {
+  const c = useConsent();
+  return [
+    Boolean(c?.marketing),
+    (v: boolean) => saveConsent({ statistics: c?.statistics ?? false, marketing: v }),
+  ];
 }

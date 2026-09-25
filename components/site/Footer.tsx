@@ -4,6 +4,8 @@ import { contacts, href, hrefAll, navItems, type PageKey } from "@/lib/site";
 import { content } from "@/lib/content";
 import { ui } from "@/lib/data/extras";
 import { legalUi } from "@/lib/data/legalUi";
+import { bannerText } from "@/lib/data/cookieBanner";
+import CookieSettingsLink from "./CookieSettingsLink";
 
 export default function Footer({
   lang,
@@ -84,9 +86,10 @@ export default function Footer({
         <p>
           © {new Date().getFullYear()} Orbis in Sabina. {c.rights}
         </p>
-        <nav aria-label="Legal" className="flex gap-4">
+        <nav aria-label="Legal" className="flex flex-wrap gap-4">
           <Link href={href(lang, "privacy")} className="nav-link">{legalUi[lang].privacy}</Link>
           <Link href={href(lang, "cookies")} className="nav-link">{legalUi[lang].cookies}</Link>
+          <CookieSettingsLink label={bannerText[lang].settingsLink} className="nav-link" />
         </nav>
         <nav aria-label={c.language} className="flex gap-4">
           {LANGS.map((l) =>
