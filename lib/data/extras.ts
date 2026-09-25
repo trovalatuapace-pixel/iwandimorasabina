@@ -8,7 +8,6 @@ import type { Lang, Localized } from "@/lib/i18n/translations";
  * DA CONFERMARE CON IWAN prima della pubblicazione definitiva:
  *  - Wi-Fi e biancheria inclusi, orari check-in/check-out (15:00 / 11:00, come nel welcome book)
  *  - politica animali, parcheggio, eventuali servizi a pagamento
- *  - distanze indicative dei luoghi (in `placeDistances`)
  */
 
 export type ServiceIcon =
@@ -149,42 +148,6 @@ export const nearbyCategories: { query: string; title: Localized; text: Localize
 export function nearbyMapsUrl(query: string) {
   return `https://www.google.com/maps/search/${encodeURIComponent(`${query} vicino a Montopoli di Sabina RI`)}`;
 }
-
-/** Distanze indicative (in auto) dei luoghi della pagina Territorio, nello stesso ordine di `content[lang].territory.places`. */
-export const placeDistances = ["", "≈ 10 km", "≈ 15 km", "≈ 53 km"];
-
-export const extraPlaces: { name: string; distance: string; text: Localized }[] = [
-  {
-    name: "Poggio Mirteto",
-    distance: "≈ 9 km",
-    text: {
-      it: "Il centro più vivace della Bassa Sabina: piazza Martiri della Libertà, negozi, mercato e la stazione con i treni per Roma.",
-      en: "The liveliest town in Lower Sabina: Piazza Martiri della Libertà, shops, a market and the station with trains to Rome.",
-      de: "Die lebendigste Kleinstadt der Bassa Sabina: Piazza Martiri della Libertà, Geschäfte, Markt und der Bahnhof mit Zügen nach Rom.",
-      fr: "La petite ville la plus animée de la Basse Sabine : piazza Martiri della Libertà, boutiques, marché et gare avec des trains pour Rome.",
-    },
-  },
-  {
-    name: "Castelnuovo di Farfa",
-    distance: "≈ 13 km",
-    text: {
-      it: "Borgo medievale con il torrione di Porta Castello e il Museo dell'Olio della Sabina.",
-      en: "A medieval village with the Porta Castello tower and the Sabina Olive Oil Museum.",
-      de: "Mittelalterliches Dorf mit dem Turm der Porta Castello und dem Olivenölmuseum der Sabina.",
-      fr: "Village médiéval avec la tour de Porta Castello et le musée de l'huile d'olive de la Sabine.",
-    },
-  },
-  {
-    name: "Rieti",
-    distance: "≈ 45 km",
-    text: {
-      it: "Il capoluogo della Sabina, con il centro storico, il Palazzo Papale e i percorsi sotterranei della Rieti romana.",
-      en: "The capital of Sabina, with its old town, the Papal Palace and the underground routes of Roman Rieti.",
-      de: "Die Hauptstadt der Sabina mit Altstadt, Papstpalast und den unterirdischen Wegen des römischen Rieti.",
-      fr: "Le chef-lieu de la Sabine, avec son centre historique, le Palais papal et les souterrains de la Rieti romaine.",
-    },
-  },
-];
 
 type Ui = {
   servicesEyebrow: string;
