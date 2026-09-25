@@ -1,4 +1,4 @@
-const MAPS_QUERY = "Montopoli in Sabina, Provincia di Rieti, Italia";
+const MAPS_QUERY = "Montopoli di Sabina, Provincia di Rieti, Italia";
 
 export default function MapEmbed({ title }: { title: string }) {
   const src =

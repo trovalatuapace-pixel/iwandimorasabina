@@ -187,7 +187,7 @@ type Ui = {
     subject: string;
     intro: string;
   };
-  legal: { cin: string; vat: string };
+  legal: { cin: string; cir: string; vat: string; codes: string; capacityLabel: string; capacity: (rooms: number, beds: number) => string };
 };
 
 export const ui: Record<Lang, Ui> = {
@@ -229,7 +229,7 @@ export const ui: Record<Lang, Ui> = {
       subject: "Richiesta preventivo",
       intro: "Buongiorno, vorrei un preventivo per Orbis in Sabina.",
     },
-    legal: { cin: "CIN", vat: "P. IVA" },
+    legal: { cin: "CIN", cir: "CIR", vat: "P. IVA", codes: "Codici struttura", capacityLabel: "La struttura", capacity: (r, b) => `${r} camere · ${b} posti letto` },
   },
   en: {
     servicesEyebrow: "Services",
@@ -269,7 +269,7 @@ export const ui: Record<Lang, Ui> = {
       subject: "Quote request",
       intro: "Hello, I would like a quote for Orbis in Sabina.",
     },
-    legal: { cin: "CIN", vat: "VAT no." },
+    legal: { cin: "CIN", cir: "CIR", vat: "VAT no.", codes: "Registration codes", capacityLabel: "The house", capacity: (r, b) => `${r} bedrooms · sleeps ${b}` },
   },
   de: {
     servicesEyebrow: "Leistungen",
@@ -309,7 +309,7 @@ export const ui: Record<Lang, Ui> = {
       subject: "Angebotsanfrage",
       intro: "Guten Tag, ich möchte ein Angebot für Orbis in Sabina.",
     },
-    legal: { cin: "CIN", vat: "USt-IdNr." },
+    legal: { cin: "CIN", cir: "CIR", vat: "USt-IdNr.", codes: "Registrierungsnummern", capacityLabel: "Das Haus", capacity: (r, b) => `${r} Zimmer · ${b} Schlafplätze` },
   },
   fr: {
     servicesEyebrow: "Services",
@@ -349,6 +349,6 @@ export const ui: Record<Lang, Ui> = {
       subject: "Demande de devis",
       intro: "Bonjour, je souhaiterais un devis pour Orbis in Sabina.",
     },
-    legal: { cin: "CIN", vat: "N° TVA" },
+    legal: { cin: "CIN", cir: "CIR", vat: "N° TVA", codes: "Codes d'enregistrement", capacityLabel: "La maison", capacity: (r, b) => `${r} chambres · ${b} couchages` },
   },
 };

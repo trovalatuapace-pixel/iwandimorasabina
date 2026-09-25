@@ -29,9 +29,10 @@ export default function Footer({
             Orbis in Sabina
           </p>
           <p className="mt-3 font-sans text-sm text-sabina-300/80">{c.address}</p>
-          {(contacts.cin || contacts.vat) && (
+          {(contacts.cin || contacts.cir || contacts.vat) && (
             <p className="mt-3 font-sans text-xs leading-relaxed text-sabina-300/70">
               {contacts.cin && <span className="block">{ui[lang].legal.cin} {contacts.cin}</span>}
+              {contacts.cir && <span className="block">{ui[lang].legal.cir} {contacts.cir}</span>}
               {contacts.vat && <span className="block">{ui[lang].legal.vat} {contacts.vat}</span>}
             </p>
           )}

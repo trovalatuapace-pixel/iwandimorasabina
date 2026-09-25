@@ -72,6 +72,10 @@ export default function ContactPage({ lang }: { lang: Lang }) {
                 <dt className="section-eyebrow mb-1 text-[11px]">{t.addressLabel}</dt>
                 <dd className="text-sabina-100/90">{c.address}</dd>
               </div>
+              <div>
+                <dt className="section-eyebrow mb-1 text-[11px]">{ui[lang].legal.capacityLabel}</dt>
+                <dd className="text-sabina-100/90">{ui[lang].legal.capacity(contacts.rooms, contacts.beds)}</dd>
+              </div>
               {contacts.email && (
                 <div>
                   <dt className="section-eyebrow mb-1 text-[11px]">{t.emailLabel}</dt>
@@ -92,8 +96,17 @@ export default function ContactPage({ lang }: { lang: Lang }) {
                       rel="noopener noreferrer"
                       className="nav-link text-sabina-100/90"
                     >
-                      {t.whatsappText}
+                      {t.whatsappText} · {contacts.phoneDisplay}
                     </a>
+                  </dd>
+                </div>
+              )}
+              {(contacts.cin || contacts.cir) && (
+                <div>
+                  <dt className="section-eyebrow mb-1 text-[11px]">{ui[lang].legal.codes}</dt>
+                  <dd className="space-y-0.5 text-sabina-100/90">
+                    {contacts.cin && <span className="block">{ui[lang].legal.cin} {contacts.cin}</span>}
+                    {contacts.cir && <span className="block">{ui[lang].legal.cir} {contacts.cir}</span>}
                   </dd>
                 </div>
               )}

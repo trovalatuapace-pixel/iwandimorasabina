@@ -44,13 +44,28 @@ export const SITE_URL =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : "http://localhost:3000");
 
+/**
+ * Dati ufficiali della struttura (attestato CIN — Regione Lazio, 25/06/2026):
+ * "Alloggio per uso turistico Donateo Iwan", Montopoli di Sabina (RI), 5 camere, 11 posti letto.
+ * Le variabili d'ambiente, se impostate su Vercel, hanno la precedenza.
+ */
+const DEFAULT_EMAIL = "iwandonateo@hotmail.com";
+const DEFAULT_WHATSAPP = "+39 329 267 5324";
+
 export const contacts = {
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
-  whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/[^\d]/g, ""),
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || DEFAULT_EMAIL,
+  whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || DEFAULT_WHATSAPP).replace(/[^\d]/g, ""),
   /** Numero da chiamare (formato internazionale). Se vuoto si usa il numero WhatsApp. */
-  phone: (process.env.NEXT_PUBLIC_PHONE_NUMBER || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/[^\d+]/g, ""),
+  phone: (process.env.NEXT_PUBLIC_PHONE_NUMBER || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || DEFAULT_WHATSAPP).replace(/[^\d+]/g, ""),
+  /** Numero leggibile da mostrare a schermo */
+  phoneDisplay: DEFAULT_WHATSAPP,
   /** Codice Identificativo Nazionale (obbligatorio per affitti brevi) */
-  cin: process.env.NEXT_PUBLIC_CIN || "",
+  cin: process.env.NEXT_PUBLIC_CIN || "IT057044C29W9UI3V2",
+  /** Codice Identificativo Regionale (Lazio) */
+  cir: process.env.NEXT_PUBLIC_CIR || "057044-LOC-00016",
+  /** Capienza ufficiale della struttura */
+  rooms: 5,
+  beds: 11,
   vat: process.env.NEXT_PUBLIC_VAT_NUMBER || "",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
   airbnbUrl: process.env.NEXT_PUBLIC_AIRBNB_URL || "",

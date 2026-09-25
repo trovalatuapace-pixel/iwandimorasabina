@@ -21,7 +21,7 @@ export type GuideBlock = {
 export const restaurants = {
   breakfast: [
     {
-      name: "Bar del centro, Montopoli in Sabina",
+      name: "Bar del centro, Montopoli di Sabina",
       tag: {
         it: "colazione e caffetteria",
         en: "breakfast and coffee",
@@ -40,10 +40,10 @@ export const restaurants = {
         fr: "cuisine de la mer · vue sur les collines",
       },
       note: {
-        it: "Montopoli in Sabina — su prenotazione nel weekend",
-        en: "Montopoli in Sabina — booking recommended on weekends",
-        de: "Montopoli in Sabina — am Wochenende Reservierung empfohlen",
-        fr: "Montopoli in Sabina — réservation conseillée le week-end",
+        it: "Montopoli di Sabina — su prenotazione nel weekend",
+        en: "Montopoli di Sabina — booking recommended on weekends",
+        de: "Montopoli di Sabina — am Wochenende Reservierung empfohlen",
+        fr: "Montopoli di Sabina — réservation conseillée le week-end",
       },
     },
     {
@@ -55,10 +55,10 @@ export const restaurants = {
         fr: "cuisine traditionnelle de la Sabine · terrasse panoramique",
       },
       note: {
-        it: "Montopoli in Sabina",
-        en: "Montopoli in Sabina",
-        de: "Montopoli in Sabina",
-        fr: "Montopoli in Sabina",
+        it: "Montopoli di Sabina",
+        en: "Montopoli di Sabina",
+        de: "Montopoli di Sabina",
+        fr: "Montopoli di Sabina",
       },
     },
     {
@@ -70,10 +70,10 @@ export const restaurants = {
         fr: "plats typiques et régionaux",
       },
       note: {
-        it: "Montopoli in Sabina",
-        en: "Montopoli in Sabina",
-        de: "Montopoli in Sabina",
-        fr: "Montopoli in Sabina",
+        it: "Montopoli di Sabina",
+        en: "Montopoli di Sabina",
+        de: "Montopoli di Sabina",
+        fr: "Montopoli di Sabina",
       },
     },
   ] satisfies GuideCard[],
@@ -116,10 +116,10 @@ export const restaurants = {
 export const activities = {
   village: {
     title: {
-      it: "Il borgo di Montopoli in Sabina",
-      en: "The village of Montopoli in Sabina",
-      de: "Das Dorf Montopoli in Sabina",
-      fr: "Le village de Montopoli in Sabina",
+      it: "Il borgo di Montopoli di Sabina",
+      en: "The village of Montopoli di Sabina",
+      de: "Das Dorf Montopoli di Sabina",
+      fr: "Le village de Montopoli di Sabina",
     },
     items: [
       {
@@ -398,10 +398,10 @@ export const emergency = {
     title: { it: "Supermercato", en: "Supermarket", de: "Supermarkt", fr: "Supermarché" },
     items: [
       {
-        it: "Conad, Via Ferruti 104, Montopoli in Sabina — tel. 0765 446017",
-        en: "Conad, Via Ferruti 104, Montopoli in Sabina — tel. 0765 446017",
-        de: "Conad, Via Ferruti 104, Montopoli in Sabina — Tel. 0765 446017",
-        fr: "Conad, Via Ferruti 104, Montopoli in Sabina — tél. 0765 446017",
+        it: "Conad, Via Ferruti 104, Montopoli di Sabina — tel. 0765 446017",
+        en: "Conad, Via Ferruti 104, Montopoli di Sabina — tel. 0765 446017",
+        de: "Conad, Via Ferruti 104, Montopoli di Sabina — Tel. 0765 446017",
+        fr: "Conad, Via Ferruti 104, Montopoli di Sabina — tél. 0765 446017",
       },
     ] satisfies Localized[],
   },

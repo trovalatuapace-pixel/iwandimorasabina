@@ -111,7 +111,7 @@ export const translations: Record<Lang, TranslationDict> = {
       contacts: "Contatti",
     },
     hero: {
-      eyebrow: "Montopoli in Sabina · a un passo da Roma",
+      eyebrow: "Montopoli di Sabina · a un passo da Roma",
       title: "Orbis in Sabina",
       claim:
         "Una casa vacanze che racchiude il mondo in cinque camere, tra le colline della Sabina.",
@@ -154,12 +154,12 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, a un passo da Roma",
       title: "Dove siamo",
       intro:
-        "Orbis in Sabina si trova a Montopoli in Sabina, in provincia di Rieti: la quiete della campagna romana a meno di un'ora dal centro di Roma, tra uliveti, borghi storici e la Via Salaria.",
+        "Orbis in Sabina si trova a Montopoli di Sabina, in provincia di Rieti: la quiete della campagna romana a meno di un'ora dal centro di Roma, tra uliveti, borghi storici e la Via Salaria.",
       distanceRome: "~45 minuti da Roma centro",
       distanceAirport: "~55 minuti dall'aeroporto di Fiumicino",
       pointsOfInterestTitle: "Nei dintorni",
       pointsOfInterest: [
-        "Borgo storico di Montopoli in Sabina",
+        "Borgo storico di Montopoli di Sabina",
         "Abbazia di Farfa",
         "Riserva Naturale Tevere-Farfa",
         "Roma e la Cupola di San Pietro, visibile dal terrazzo",
@@ -167,7 +167,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Orbis in Sabina",
-      address: "Montopoli in Sabina (RI), Italia",
+      address: "Montopoli di Sabina (RI), Italia",
       contactsTitle: "Contatti",
       whatsapp: "Scrivici su WhatsApp",
       followUs: "Seguici",
@@ -192,7 +192,7 @@ export const translations: Record<Lang, TranslationDict> = {
         eyebrow: "Mangiare bene in Sabina",
         title: "Ristoranti",
         intro:
-          "Una selezione di indirizzi vicino a Montopoli in Sabina, dalla colazione alla cena.",
+          "Una selezione di indirizzi vicino a Montopoli di Sabina, dalla colazione alla cena.",
         breakfastTitle: "Colazione",
         localTitle: "Cucina locale",
         casualTitle: "Pizza e informale",
@@ -229,7 +229,7 @@ export const translations: Record<Lang, TranslationDict> = {
       contacts: "Contacts",
     },
     hero: {
-      eyebrow: "Montopoli in Sabina · a step from Rome",
+      eyebrow: "Montopoli di Sabina · a step from Rome",
       title: "Orbis in Sabina",
       claim:
         "A vacation home that holds the whole world in five rooms, among the hills of Sabina.",
@@ -272,12 +272,12 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, a step from Rome",
       title: "Location",
       intro:
-        "Orbis in Sabina is located in Montopoli in Sabina, in the province of Rieti: the quiet of the Roman countryside less than an hour from central Rome, among olive groves, historic villages and the ancient Via Salaria.",
+        "Orbis in Sabina is located in Montopoli di Sabina, in the province of Rieti: the quiet of the Roman countryside less than an hour from central Rome, among olive groves, historic villages and the ancient Via Salaria.",
       distanceRome: "~45 minutes from central Rome",
       distanceAirport: "~55 minutes from Fiumicino airport",
       pointsOfInterestTitle: "Nearby",
       pointsOfInterest: [
-        "Historic village of Montopoli in Sabina",
+        "Historic village of Montopoli di Sabina",
         "Farfa Abbey",
         "Tevere-Farfa Nature Reserve",
         "Rome and St. Peter's Dome, visible from the terrace",
@@ -285,7 +285,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Orbis in Sabina",
-      address: "Montopoli in Sabina (RI), Italy",
+      address: "Montopoli di Sabina (RI), Italy",
       contactsTitle: "Contacts",
       whatsapp: "Message us on WhatsApp",
       followUs: "Follow us",
@@ -310,7 +310,7 @@ export const translations: Record<Lang, TranslationDict> = {
         eyebrow: "Eating well in Sabina",
         title: "Restaurants",
         intro:
-          "A selection of places near Montopoli in Sabina, from breakfast to dinner.",
+          "A selection of places near Montopoli di Sabina, from breakfast to dinner.",
         breakfastTitle: "Breakfast",
         localTitle: "Local cuisine",
         casualTitle: "Pizza and casual",
@@ -347,7 +347,7 @@ export const translations: Record<Lang, TranslationDict> = {
       contacts: "Kontakt",
     },
     hero: {
-      eyebrow: "Montopoli in Sabina · nur einen Schritt von Rom",
+      eyebrow: "Montopoli di Sabina · nur einen Schritt von Rom",
       title: "Orbis in Sabina",
       claim:
         "Ein Ferienhaus, das die ganze Welt in fünf Zimmern vereint – inmitten der Hügel der Sabina.",
@@ -390,12 +390,12 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, nur einen Schritt von Rom",
       title: "Lage",
       intro:
-        "Orbis in Sabina liegt in Montopoli in Sabina in der Provinz Rieti: die Ruhe der römischen Landschaft, weniger als eine Stunde vom Zentrum Roms entfernt, zwischen Olivenhainen, historischen Dörfern und der antiken Via Salaria.",
+        "Orbis in Sabina liegt in Montopoli di Sabina in der Provinz Rieti: die Ruhe der römischen Landschaft, weniger als eine Stunde vom Zentrum Roms entfernt, zwischen Olivenhainen, historischen Dörfern und der antiken Via Salaria.",
       distanceRome: "~45 Minuten bis ins Zentrum von Rom",
       distanceAirport: "~55 Minuten zum Flughafen Fiumicino",
       pointsOfInterestTitle: "In der Umgebung",
       pointsOfInterest: [
-        "Historischer Ortskern von Montopoli in Sabina",
+        "Historischer Ortskern von Montopoli di Sabina",
         "Abtei Farfa",
         "Naturschutzgebiet Tevere-Farfa",
         "Rom und die Kuppel des Petersdoms – sichtbar von der Terrasse",
@@ -403,7 +403,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Orbis in Sabina",
-      address: "Montopoli in Sabina (RI), Italien",
+      address: "Montopoli di Sabina (RI), Italien",
       contactsTitle: "Kontakt",
       whatsapp: "Schreiben Sie uns auf WhatsApp",
       followUs: "Folgen Sie uns",
@@ -428,7 +428,7 @@ export const translations: Record<Lang, TranslationDict> = {
         eyebrow: "Gut essen in der Sabina",
         title: "Restaurants",
         intro:
-          "Eine Auswahl an Adressen rund um Montopoli in Sabina – vom Frühstück bis zum Abendessen.",
+          "Eine Auswahl an Adressen rund um Montopoli di Sabina – vom Frühstück bis zum Abendessen.",
         breakfastTitle: "Frühstück",
         localTitle: "Regionale Küche",
         casualTitle: "Pizza & Ungezwungenes",
@@ -465,7 +465,7 @@ export const translations: Record<Lang, TranslationDict> = {
       contacts: "Contact",
     },
     hero: {
-      eyebrow: "Montopoli in Sabina · à deux pas de Rome",
+      eyebrow: "Montopoli di Sabina · à deux pas de Rome",
       title: "Orbis in Sabina",
       claim:
         "Une maison de vacances qui réunit le monde entier en cinq chambres, au cœur des collines de la Sabine.",
@@ -508,12 +508,12 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "La Sabine, à deux pas de Rome",
       title: "Accès",
       intro:
-        "Orbis in Sabina se trouve à Montopoli in Sabina, dans la province de Rieti : le calme de la campagne romaine à moins d'une heure du centre de Rome, entre oliveraies, villages historiques et l'antique Via Salaria.",
+        "Orbis in Sabina se trouve à Montopoli di Sabina, dans la province de Rieti : le calme de la campagne romaine à moins d'une heure du centre de Rome, entre oliveraies, villages historiques et l'antique Via Salaria.",
       distanceRome: "~45 minutes du centre de Rome",
       distanceAirport: "~55 minutes de l'aéroport de Fiumicino",
       pointsOfInterestTitle: "Aux alentours",
       pointsOfInterest: [
-        "Le village historique de Montopoli in Sabina",
+        "Le village historique de Montopoli di Sabina",
         "L'abbaye de Farfa",
         "La réserve naturelle Tevere-Farfa",
         "Rome et la coupole de Saint-Pierre, visible depuis la terrasse",
@@ -521,7 +521,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Orbis in Sabina",
-      address: "Montopoli in Sabina (RI), Italie",
+      address: "Montopoli di Sabina (RI), Italie",
       contactsTitle: "Contact",
       whatsapp: "Écrivez-nous sur WhatsApp",
       followUs: "Suivez-nous",
@@ -546,7 +546,7 @@ export const translations: Record<Lang, TranslationDict> = {
         eyebrow: "Bien manger en Sabine",
         title: "Restaurants",
         intro:
-          "Une sélection d'adresses près de Montopoli in Sabina, du petit-déjeuner au dîner.",
+          "Une sélection d'adresses près de Montopoli di Sabina, du petit-déjeuner au dîner.",
         breakfastTitle: "Petit-déjeuner",
         localTitle: "Cuisine locale",
         casualTitle: "Pizza et décontracté",

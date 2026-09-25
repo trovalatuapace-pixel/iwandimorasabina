@@ -1,7 +1,7 @@
 # Orbis in Sabina
 
 Sito web in 4 lingue (IT/EN/DE/FR) per "Orbis in Sabina", casa vacanze di fascia alta a
-Montopoli in Sabina (Rieti). Progetto Next.js (App Router) + TypeScript +
+Montopoli di Sabina (Rieti). Progetto Next.js (App Router) + TypeScript +
 Tailwind, pensato per il deploy su Vercel.
 
 ## Stack

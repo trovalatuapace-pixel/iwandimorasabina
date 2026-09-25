@@ -18,14 +18,14 @@ export const content = {
       skip: "Vai al contenuto",
       menu: "Menu",
       language: "Lingua",
-      address: "Montopoli in Sabina (RI), Lazio — Italia",
+      address: "Montopoli di Sabina (RI), Lazio — Italia",
       rights: "Tutti i diritti riservati.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Casa vacanze a Montopoli in Sabina",
+      metaTitle: "Orbis in Sabina | Casa vacanze a Montopoli di Sabina",
       metaDescription:
-        "Casa vacanze a Montopoli in Sabina con cinque camere dedicate ai continenti, sauna, palestra, vasca idromassaggio e terrazzo panoramico con vista sulla Cupola di San Pietro.",
-      eyebrow: "Casa vacanze · Montopoli in Sabina",
+        "Casa vacanze a Montopoli di Sabina con cinque camere dedicate ai continenti, sauna, palestra, vasca idromassaggio e terrazzo panoramico con vista sulla Cupola di San Pietro.",
+      eyebrow: "Casa vacanze · Montopoli di Sabina",
       title: "Orbis in Sabina",
       lead: "Cinque camere dedicate ai cinque continenti, un'area benessere riservata agli ospiti e un terrazzo affacciato sulle colline della Sabina, a meno di un'ora da Roma.",
       introEyebrow: "Il mondo in una casa",
@@ -44,7 +44,7 @@ export const content = {
       territoryEyebrow: "Il territorio",
       territoryTitle: "La Sabina, a un passo da Roma",
       territoryText:
-        "Montopoli in Sabina è un borgo collinare in provincia di Rieti, tra l'Abbazia di Farfa, la valle del Tevere e la Via Salaria. Roma è a circa quarantacinque minuti.",
+        "Montopoli di Sabina è un borgo collinare in provincia di Rieti, tra l'Abbazia di Farfa, la valle del Tevere e la Via Salaria. Roma è a circa quarantacinque minuti.",
       territoryLink: "Esplora il territorio",
       cta: {
         title: "Il vostro soggiorno in Sabina",
@@ -97,10 +97,10 @@ export const content = {
     territory: {
       metaTitle: "Territorio",
       metaDescription:
-        "Montopoli in Sabina e dintorni: l'Abbazia di Farfa, la Riserva Naturale Tevere-Farfa, i borghi sabini e Roma a circa 45 minuti.",
+        "Montopoli di Sabina e dintorni: l'Abbazia di Farfa, la Riserva Naturale Tevere-Farfa, i borghi sabini e Roma a circa 45 minuti.",
       eyebrow: "Il territorio",
       title: "La Sabina, tra colline e storia",
-      lead: "Montopoli in Sabina si trova in provincia di Rieti, sulle colline tra la valle del Tevere e la Via Salaria: la quiete della campagna a meno di un'ora dal centro di Roma.",
+      lead: "Montopoli di Sabina si trova in provincia di Rieti, sulle colline tra la valle del Tevere e la Via Salaria: la quiete della campagna a meno di un'ora dal centro di Roma.",
       distancesTitle: "Distanze indicative",
       distances: [
         { place: "Roma centro", time: "circa 45 minuti in auto" },
@@ -111,7 +111,7 @@ export const content = {
       placesTitle: "Luoghi da visitare",
       places: [
         {
-          name: "Borgo di Montopoli in Sabina",
+          name: "Borgo di Montopoli di Sabina",
           photo: "/foto/borgo-vicolo.webp",
           text: "Il centro storico in pietra, con vicoli, scorci panoramici sulla valle e la tranquillità dei borghi collinari sabini.",
         },
@@ -139,7 +139,7 @@ export const content = {
     contact: {
       metaTitle: "Contatti e prenotazioni",
       metaDescription:
-        "Contatti, disponibilità e prenotazione di Orbis in Sabina, casa vacanze a Montopoli in Sabina (Rieti).",
+        "Contatti, disponibilità e prenotazione di Orbis in Sabina, casa vacanze a Montopoli di Sabina (Rieti).",
       eyebrow: "Contatti",
       title: "Contatti e prenotazioni",
       lead: "Per informazioni sul soggiorno potete scriverci in qualsiasi momento. Qui sotto trovate il calendario delle disponibilità e il link per prenotare.",
@@ -170,14 +170,14 @@ export const content = {
       skip: "Skip to content",
       menu: "Menu",
       language: "Language",
-      address: "Montopoli in Sabina (RI), Lazio — Italy",
+      address: "Montopoli di Sabina (RI), Lazio — Italy",
       rights: "All rights reserved.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Holiday home in Montopoli in Sabina",
+      metaTitle: "Orbis in Sabina | Holiday home in Montopoli di Sabina",
       metaDescription:
-        "Holiday home in Montopoli in Sabina with five continent-themed rooms, sauna, gym, hot tub and a panoramic terrace overlooking St. Peter's Dome.",
-      eyebrow: "Holiday home · Montopoli in Sabina",
+        "Holiday home in Montopoli di Sabina with five continent-themed rooms, sauna, gym, hot tub and a panoramic terrace overlooking St. Peter's Dome.",
+      eyebrow: "Holiday home · Montopoli di Sabina",
       title: "Orbis in Sabina",
       lead: "Five rooms dedicated to the five continents, a private wellness area for guests and a terrace overlooking the Sabine hills, less than an hour from Rome.",
       introEyebrow: "The world in one house",
@@ -196,7 +196,7 @@ export const content = {
       territoryEyebrow: "Surroundings",
       territoryTitle: "Sabina, a step from Rome",
       territoryText:
-        "Montopoli in Sabina is a hilltop village in the province of Rieti, between Farfa Abbey, the Tiber valley and the ancient Via Salaria. Rome is about forty-five minutes away.",
+        "Montopoli di Sabina is a hilltop village in the province of Rieti, between Farfa Abbey, the Tiber valley and the ancient Via Salaria. Rome is about forty-five minutes away.",
       territoryLink: "Explore the area",
       cta: {
         title: "Your stay in Sabina",
@@ -249,10 +249,10 @@ export const content = {
     territory: {
       metaTitle: "Surroundings",
       metaDescription:
-        "Montopoli in Sabina and its surroundings: Farfa Abbey, the Tevere-Farfa Nature Reserve, Sabine villages and Rome about 45 minutes away.",
+        "Montopoli di Sabina and its surroundings: Farfa Abbey, the Tevere-Farfa Nature Reserve, Sabine villages and Rome about 45 minutes away.",
       eyebrow: "Surroundings",
       title: "Sabina, between hills and history",
-      lead: "Montopoli in Sabina lies in the province of Rieti, on the hills between the Tiber valley and the Via Salaria: countryside calm less than an hour from central Rome.",
+      lead: "Montopoli di Sabina lies in the province of Rieti, on the hills between the Tiber valley and the Via Salaria: countryside calm less than an hour from central Rome.",
       distancesTitle: "Approximate distances",
       distances: [
         { place: "Central Rome", time: "about 45 minutes by car" },
@@ -263,7 +263,7 @@ export const content = {
       placesTitle: "Places to visit",
       places: [
         {
-          name: "Montopoli in Sabina",
+          name: "Montopoli di Sabina",
           photo: "/foto/borgo-vicolo.webp",
           text: "The stone-built historic centre, with narrow lanes, views over the valley and the quiet of the Sabine hill villages.",
         },
@@ -291,7 +291,7 @@ export const content = {
     contact: {
       metaTitle: "Contact and booking",
       metaDescription:
-        "Contact details, availability and booking for Orbis in Sabina, holiday home in Montopoli in Sabina (Rieti).",
+        "Contact details, availability and booking for Orbis in Sabina, holiday home in Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact and booking",
       lead: "For any information about your stay, feel free to write to us at any time. Below you will find the availability calendar and the booking link.",
@@ -322,14 +322,14 @@ export const content = {
       skip: "Zum Inhalt springen",
       menu: "Menü",
       language: "Sprache",
-      address: "Montopoli in Sabina (RI), Latium — Italien",
+      address: "Montopoli di Sabina (RI), Latium — Italien",
       rights: "Alle Rechte vorbehalten.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Ferienhaus in Montopoli in Sabina",
+      metaTitle: "Orbis in Sabina | Ferienhaus in Montopoli di Sabina",
       metaDescription:
-        "Ferienhaus in Montopoli in Sabina mit fünf Zimmern im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Panoramaterrasse mit Blick auf die Kuppel des Petersdoms.",
-      eyebrow: "Ferienhaus · Montopoli in Sabina",
+        "Ferienhaus in Montopoli di Sabina mit fünf Zimmern im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Panoramaterrasse mit Blick auf die Kuppel des Petersdoms.",
+      eyebrow: "Ferienhaus · Montopoli di Sabina",
       title: "Orbis in Sabina",
       lead: "Fünf Zimmer, den fünf Kontinenten gewidmet, ein privater Wellnessbereich für die Gäste und eine Terrasse mit Blick auf die Hügel der Sabina – weniger als eine Stunde von Rom.",
       introEyebrow: "Die Welt in einem Haus",
@@ -348,7 +348,7 @@ export const content = {
       territoryEyebrow: "Die Umgebung",
       territoryTitle: "Die Sabina, nur einen Schritt von Rom",
       territoryText:
-        "Montopoli in Sabina ist ein Hügeldorf in der Provinz Rieti, zwischen der Abtei Farfa, dem Tibertal und der antiken Via Salaria. Rom ist etwa fünfundvierzig Minuten entfernt.",
+        "Montopoli di Sabina ist ein Hügeldorf in der Provinz Rieti, zwischen der Abtei Farfa, dem Tibertal und der antiken Via Salaria. Rom ist etwa fünfundvierzig Minuten entfernt.",
       territoryLink: "Die Umgebung erkunden",
       cta: {
         title: "Ihr Aufenthalt in der Sabina",
@@ -401,10 +401,10 @@ export const content = {
     territory: {
       metaTitle: "Umgebung",
       metaDescription:
-        "Montopoli in Sabina und Umgebung: die Abtei Farfa, das Naturschutzgebiet Tevere-Farfa, die Dörfer der Sabina und Rom in etwa 45 Minuten.",
+        "Montopoli di Sabina und Umgebung: die Abtei Farfa, das Naturschutzgebiet Tevere-Farfa, die Dörfer der Sabina und Rom in etwa 45 Minuten.",
       eyebrow: "Die Umgebung",
       title: "Die Sabina, zwischen Hügeln und Geschichte",
-      lead: "Montopoli in Sabina liegt in der Provinz Rieti, auf den Hügeln zwischen dem Tibertal und der Via Salaria: ländliche Ruhe, weniger als eine Stunde vom Zentrum Roms.",
+      lead: "Montopoli di Sabina liegt in der Provinz Rieti, auf den Hügeln zwischen dem Tibertal und der Via Salaria: ländliche Ruhe, weniger als eine Stunde vom Zentrum Roms.",
       distancesTitle: "Ungefähre Entfernungen",
       distances: [
         { place: "Zentrum von Rom", time: "ca. 45 Minuten mit dem Auto" },
@@ -415,7 +415,7 @@ export const content = {
       placesTitle: "Sehenswerte Orte",
       places: [
         {
-          name: "Montopoli in Sabina",
+          name: "Montopoli di Sabina",
           photo: "/foto/borgo-vicolo.webp",
           text: "Der historische Ortskern aus Stein, mit engen Gassen, Ausblicken ins Tal und der Ruhe der Hügeldörfer der Sabina.",
         },
@@ -443,7 +443,7 @@ export const content = {
     contact: {
       metaTitle: "Kontakt und Buchung",
       metaDescription:
-        "Kontakt, Verfügbarkeit und Buchung für Orbis in Sabina, Ferienhaus in Montopoli in Sabina (Rieti).",
+        "Kontakt, Verfügbarkeit und Buchung für Orbis in Sabina, Ferienhaus in Montopoli di Sabina (Rieti).",
       eyebrow: "Kontakt",
       title: "Kontakt und Buchung",
       lead: "Für Fragen zu Ihrem Aufenthalt können Sie uns jederzeit schreiben. Unten finden Sie den Verfügbarkeitskalender und den Buchungslink.",
@@ -474,14 +474,14 @@ export const content = {
       skip: "Aller au contenu",
       menu: "Menu",
       language: "Langue",
-      address: "Montopoli in Sabina (RI), Latium — Italie",
+      address: "Montopoli di Sabina (RI), Latium — Italie",
       rights: "Tous droits réservés.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Maison de vacances à Montopoli in Sabina",
+      metaTitle: "Orbis in Sabina | Maison de vacances à Montopoli di Sabina",
       metaDescription:
-        "Maison de vacances à Montopoli in Sabina avec cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse panoramique avec vue sur la coupole de Saint-Pierre.",
-      eyebrow: "Maison de vacances · Montopoli in Sabina",
+        "Maison de vacances à Montopoli di Sabina avec cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse panoramique avec vue sur la coupole de Saint-Pierre.",
+      eyebrow: "Maison de vacances · Montopoli di Sabina",
       title: "Orbis in Sabina",
       lead: "Cinq chambres dédiées aux cinq continents, un espace bien-être réservé aux hôtes et une terrasse face aux collines de la Sabine, à moins d'une heure de Rome.",
       introEyebrow: "Le monde dans une maison",
@@ -500,7 +500,7 @@ export const content = {
       territoryEyebrow: "La région",
       territoryTitle: "La Sabine, à deux pas de Rome",
       territoryText:
-        "Montopoli in Sabina est un village perché de la province de Rieti, entre l'abbaye de Farfa, la vallée du Tibre et l'antique Via Salaria. Rome est à environ quarante-cinq minutes.",
+        "Montopoli di Sabina est un village perché de la province de Rieti, entre l'abbaye de Farfa, la vallée du Tibre et l'antique Via Salaria. Rome est à environ quarante-cinq minutes.",
       territoryLink: "Explorer la région",
       cta: {
         title: "Votre séjour en Sabine",
@@ -553,10 +553,10 @@ export const content = {
     territory: {
       metaTitle: "Alentours",
       metaDescription:
-        "Montopoli in Sabina et ses alentours : l'abbaye de Farfa, la réserve naturelle Tevere-Farfa, les villages de la Sabine et Rome à environ 45 minutes.",
+        "Montopoli di Sabina et ses alentours : l'abbaye de Farfa, la réserve naturelle Tevere-Farfa, les villages de la Sabine et Rome à environ 45 minutes.",
       eyebrow: "La région",
       title: "La Sabine, entre collines et histoire",
-      lead: "Montopoli in Sabina se trouve dans la province de Rieti, sur les collines entre la vallée du Tibre et la Via Salaria : le calme de la campagne à moins d'une heure du centre de Rome.",
+      lead: "Montopoli di Sabina se trouve dans la province de Rieti, sur les collines entre la vallée du Tibre et la Via Salaria : le calme de la campagne à moins d'une heure du centre de Rome.",
       distancesTitle: "Distances indicatives",
       distances: [
         { place: "Centre de Rome", time: "environ 45 minutes en voiture" },
@@ -567,7 +567,7 @@ export const content = {
       placesTitle: "Lieux à visiter",
       places: [
         {
-          name: "Montopoli in Sabina",
+          name: "Montopoli di Sabina",
           photo: "/foto/borgo-vicolo.webp",
           text: "Le centre historique en pierre, avec ses ruelles, ses vues sur la vallée et le calme des villages perchés de la Sabine.",
         },
@@ -595,7 +595,7 @@ export const content = {
     contact: {
       metaTitle: "Contact et réservation",
       metaDescription:
-        "Coordonnées, disponibilités et réservation d'Orbis in Sabina, maison de vacances à Montopoli in Sabina (Rieti).",
+        "Coordonnées, disponibilités et réservation d'Orbis in Sabina, maison de vacances à Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact et réservation",
       lead: "Pour toute information sur votre séjour, écrivez-nous à tout moment. Vous trouverez ci-dessous le calendrier des disponibilités et le lien de réservation.",
