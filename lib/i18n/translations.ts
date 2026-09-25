@@ -1,4 +1,15 @@
-export type Lang = "it" | "en";
+export const LANGS = ["it", "en", "de", "fr"] as const;
+export type Lang = (typeof LANGS)[number];
+
+/** Testo disponibile in tutte le lingue del sito. */
+export type Localized<T = string> = Record<Lang, T>;
+
+export const LANG_META: Record<Lang, { label: string; locale: string }> = {
+  it: { label: "Italiano", locale: "it-IT" },
+  en: { label: "English", locale: "en-GB" },
+  de: { label: "Deutsch", locale: "de-DE" },
+  fr: { label: "Français", locale: "fr-FR" },
+};
 
 export type TranslationDict = {
   nav: {
@@ -22,6 +33,7 @@ export type TranslationDict = {
     intro: string;
     amenitiesTitle: string;
     close: string;
+    discover: string;
     photoNote: string;
   };
   wellness: {
@@ -60,7 +72,7 @@ export type TranslationDict = {
     rights: string;
   };
   common: {
-    langSwitch: string;
+    language: string;
   };
   welcome: {
     backToSite: string;
@@ -114,6 +126,7 @@ export const translations: Record<Lang, TranslationDict> = {
         "Ogni camera è un viaggio: materiali, colori e dettagli raccontano un continente diverso, con lo stesso livello di cura e comfort.",
       amenitiesTitle: "Dotazioni",
       close: "Chiudi",
+      discover: "Scopri di più",
       photoNote: "Foto in arrivo",
     },
     wellness: {
@@ -161,7 +174,7 @@ export const translations: Record<Lang, TranslationDict> = {
       rights: "Tutti i diritti riservati.",
     },
     common: {
-      langSwitch: "EN",
+      language: "Lingua",
     },
     welcome: {
       backToSite: "Torna al sito",
@@ -231,6 +244,7 @@ export const translations: Record<Lang, TranslationDict> = {
         "Each room is a journey: materials, colors and details tell the story of a different continent, with the same level of care and comfort.",
       amenitiesTitle: "Amenities",
       close: "Close",
+      discover: "Discover more",
       photoNote: "Photos coming soon",
     },
     wellness: {
@@ -278,7 +292,7 @@ export const translations: Record<Lang, TranslationDict> = {
       rights: "All rights reserved.",
     },
     common: {
-      langSwitch: "IT",
+      language: "Language",
     },
     welcome: {
       backToSite: "Back to the site",
@@ -321,6 +335,242 @@ export const translations: Record<Lang, TranslationDict> = {
         intro:
           "Useful numbers and addresses if you need them. In a real emergency, always call 112.",
         numbersTitle: "Emergency numbers",
+      },
+    },
+  },
+  de: {
+    nav: {
+      rooms: "Zimmer",
+      wellness: "Wellness",
+      booking: "Verfügbarkeit",
+      location: "Lage",
+      contacts: "Kontakt",
+    },
+    hero: {
+      eyebrow: "Montopoli in Sabina · nur einen Schritt von Rom",
+      title: "Orbis in Sabina",
+      claim:
+        "Ein Ferienhaus, das die ganze Welt in fünf Zimmern vereint – inmitten der Hügel der Sabina.",
+      cta: "Die Zimmer entdecken",
+      ctaSecondary: "Verfügbarkeit",
+      photoNote: "Fotos der Unterkunft folgen in Kürze",
+    },
+    rooms: {
+      eyebrow: "Fünf Kontinente, ein Haus",
+      title: "Die Zimmer",
+      intro:
+        "Jedes Zimmer ist eine Reise: Materialien, Farben und Details erzählen von einem anderen Kontinent – mit derselben Sorgfalt und demselben Komfort.",
+      amenitiesTitle: "Ausstattung",
+      close: "Schließen",
+      discover: "Mehr erfahren",
+      photoNote: "Fotos folgen in Kürze",
+    },
+    wellness: {
+      eyebrow: "Der privateste Teil des Hauses",
+      title: "Wellness & Entspannung",
+      intro:
+        "Ein Ort zum Entschleunigen: Sauna, privater Fitnessraum, Panoramaterrasse und Whirlpool – um wieder Zeit für sich selbst zu finden.",
+      photoNote: "Fotos folgen in Kürze",
+    },
+    booking: {
+      eyebrow: "Buchen Sie Ihren Aufenthalt",
+      title: "Verfügbarkeit & Buchung",
+      intro:
+        "Der Kalender zeigt die bereits belegten Tage auf unseren Plattformen. Wählen Sie zum Buchen einfach den Kanal, den Sie bevorzugen.",
+      bookOnBooking: "Auf Booking.com buchen",
+      bookOnAirbnb: "Auf Airbnb buchen",
+      calendarLegendFree: "Verfügbar",
+      calendarLegendBusy: "Belegt",
+      loading: "Verfügbarkeit wird geladen…",
+      notConfigured:
+        "Der Kalender wird aktiviert, sobald wir die iCal-Links der Inserate auf Booking.com und Airbnb erhalten haben.",
+      error: "Der Kalender konnte gerade nicht geladen werden.",
+    },
+    location: {
+      eyebrow: "Sabina, nur einen Schritt von Rom",
+      title: "Lage",
+      intro:
+        "Orbis in Sabina liegt in Montopoli in Sabina in der Provinz Rieti: die Ruhe der römischen Landschaft, weniger als eine Stunde vom Zentrum Roms entfernt, zwischen Olivenhainen, historischen Dörfern und der antiken Via Salaria.",
+      distanceRome: "~45 Minuten bis ins Zentrum von Rom",
+      distanceAirport: "~55 Minuten zum Flughafen Fiumicino",
+      pointsOfInterestTitle: "In der Umgebung",
+      pointsOfInterest: [
+        "Historischer Ortskern von Montopoli in Sabina",
+        "Abtei Farfa",
+        "Naturschutzgebiet Tevere-Farfa",
+        "Rom und die Kuppel des Petersdoms – sichtbar von der Terrasse",
+      ],
+    },
+    footer: {
+      title: "Orbis in Sabina",
+      address: "Montopoli in Sabina (RI), Italien",
+      contactsTitle: "Kontakt",
+      whatsapp: "Schreiben Sie uns auf WhatsApp",
+      followUs: "Folgen Sie uns",
+      rights: "Alle Rechte vorbehalten.",
+    },
+    common: {
+      language: "Sprache",
+    },
+    welcome: {
+      backToSite: "Zurück zur Website",
+      eyebrow: "Ihr Aufenthalt beginnt hier",
+      title: "Willkommen im Orbis in Sabina",
+      intro:
+        "Dieser Leitfaden enthält alles, was Sie für Ihren Aufenthalt brauchen: Hausregeln, Restaurants, Ausflugsziele in der Umgebung, Anreise und Mobilität sowie Ansprechpartner im Notfall.",
+      hostNote: "Wenn Sie etwas brauchen, schreiben Sie uns jederzeit auf WhatsApp.",
+      houseRules: {
+        eyebrow: "Komfort, Sorgfalt und ein ruhiger Aufenthalt",
+        title: "Hausregeln",
+        thanks: "Vielen Dank für Ihre Rücksicht auf das Haus und unsere Nachbarn.",
+      },
+      restaurants: {
+        eyebrow: "Gut essen in der Sabina",
+        title: "Restaurants",
+        intro:
+          "Eine Auswahl an Adressen rund um Montopoli in Sabina – vom Frühstück bis zum Abendessen.",
+        breakfastTitle: "Frühstück",
+        localTitle: "Regionale Küche",
+        casualTitle: "Pizza & Ungezwungenes",
+        tipsTitle: "Tipps",
+      },
+      activities: {
+        eyebrow: "Erinnerungen schaffen, Moment für Moment",
+        title: "Ausflüge in der Umgebung",
+        intro:
+          "Ob Sie sich erholen oder die Sabina erkunden möchten – hier ein paar Ideen für Ihren Aufenthalt.",
+        tipsTitle: "Tipps",
+      },
+      transport: {
+        eyebrow: "Wohin Sie auch wollen – bequem unterwegs",
+        title: "Unterwegs",
+        intro:
+          "Die einfachsten Möglichkeiten, sich während Ihres Aufenthalts fortzubewegen – ob nach Rom oder in die umliegenden Dörfer.",
+      },
+      emergency: {
+        eyebrow: "Ruhe bewahren, Hilfe ist nah",
+        title: "Notfall",
+        intro:
+          "Nützliche Nummern und Adressen für den Fall der Fälle. Im echten Notfall wählen Sie immer die 112.",
+        numbersTitle: "Notrufnummern",
+      },
+    },
+  },
+  fr: {
+    nav: {
+      rooms: "Chambres",
+      wellness: "Bien-être",
+      booking: "Disponibilités",
+      location: "Accès",
+      contacts: "Contact",
+    },
+    hero: {
+      eyebrow: "Montopoli in Sabina · à deux pas de Rome",
+      title: "Orbis in Sabina",
+      claim:
+        "Une maison de vacances qui réunit le monde entier en cinq chambres, au cœur des collines de la Sabine.",
+      cta: "Découvrir les chambres",
+      ctaSecondary: "Disponibilités",
+      photoNote: "Photos de la maison bientôt disponibles",
+    },
+    rooms: {
+      eyebrow: "Cinq continents, une seule maison",
+      title: "Les chambres",
+      intro:
+        "Chaque chambre est un voyage : matières, couleurs et détails racontent un continent différent, avec le même soin et le même confort.",
+      amenitiesTitle: "Équipements",
+      close: "Fermer",
+      discover: "En savoir plus",
+      photoNote: "Photos bientôt disponibles",
+    },
+    wellness: {
+      eyebrow: "L'espace le plus intime de la maison",
+      title: "Bien-être & Détente",
+      intro:
+        "Un lieu pensé pour ralentir : sauna, salle de sport privée, terrasse panoramique et jacuzzi, pour retrouver votre propre rythme.",
+      photoNote: "Photos bientôt disponibles",
+    },
+    booking: {
+      eyebrow: "Réservez votre séjour",
+      title: "Disponibilités et réservation",
+      intro:
+        "Le calendrier indique les dates déjà réservées sur nos plateformes. Pour réserver, choisissez le canal que vous préférez.",
+      bookOnBooking: "Réserver sur Booking.com",
+      bookOnAirbnb: "Réserver sur Airbnb",
+      calendarLegendFree: "Disponible",
+      calendarLegendBusy: "Réservé",
+      loading: "Chargement des disponibilités…",
+      notConfigured:
+        "Le calendrier sera actif dès que nous aurons reçu les liens iCal des annonces Booking.com et Airbnb.",
+      error: "Le calendrier n'a pas pu être chargé pour le moment.",
+    },
+    location: {
+      eyebrow: "La Sabine, à deux pas de Rome",
+      title: "Accès",
+      intro:
+        "Orbis in Sabina se trouve à Montopoli in Sabina, dans la province de Rieti : le calme de la campagne romaine à moins d'une heure du centre de Rome, entre oliveraies, villages historiques et l'antique Via Salaria.",
+      distanceRome: "~45 minutes du centre de Rome",
+      distanceAirport: "~55 minutes de l'aéroport de Fiumicino",
+      pointsOfInterestTitle: "Aux alentours",
+      pointsOfInterest: [
+        "Le village historique de Montopoli in Sabina",
+        "L'abbaye de Farfa",
+        "La réserve naturelle Tevere-Farfa",
+        "Rome et la coupole de Saint-Pierre, visible depuis la terrasse",
+      ],
+    },
+    footer: {
+      title: "Orbis in Sabina",
+      address: "Montopoli in Sabina (RI), Italie",
+      contactsTitle: "Contact",
+      whatsapp: "Écrivez-nous sur WhatsApp",
+      followUs: "Suivez-nous",
+      rights: "Tous droits réservés.",
+    },
+    common: {
+      language: "Langue",
+    },
+    welcome: {
+      backToSite: "Retour au site",
+      eyebrow: "Votre séjour commence ici",
+      title: "Bienvenue à Orbis in Sabina",
+      intro:
+        "Ce guide réunit tout ce qu'il faut pour profiter de votre séjour : règles de la maison, où manger, que faire aux alentours, comment se déplacer et qui contacter en cas d'urgence.",
+      hostNote: "Pour toute demande, écrivez-nous sur WhatsApp, à tout moment.",
+      houseRules: {
+        eyebrow: "Confort, attention et séjour paisible",
+        title: "Règles de la maison",
+        thanks: "Merci pour le respect que vous portez à la maison et à nos voisins.",
+      },
+      restaurants: {
+        eyebrow: "Bien manger en Sabine",
+        title: "Restaurants",
+        intro:
+          "Une sélection d'adresses près de Montopoli in Sabina, du petit-déjeuner au dîner.",
+        breakfastTitle: "Petit-déjeuner",
+        localTitle: "Cuisine locale",
+        casualTitle: "Pizza et décontracté",
+        tipsTitle: "Conseils",
+      },
+      activities: {
+        eyebrow: "Créer des souvenirs, un moment à la fois",
+        title: "Que faire aux alentours",
+        intro:
+          "Que vous veniez pour vous détendre ou pour explorer la Sabine, voici quelques idées pour votre séjour.",
+        tipsTitle: "Conseils",
+      },
+      transport: {
+        eyebrow: "Où que vous alliez, voyagez en toute simplicité",
+        title: "Se déplacer",
+        intro:
+          "Les moyens les plus simples de se déplacer pendant votre séjour, pour rejoindre Rome ou explorer les villages voisins.",
+      },
+      emergency: {
+        eyebrow: "Gardez votre calme, les secours sont proches",
+        title: "Urgences",
+        intro:
+          "Numéros et adresses utiles en cas de besoin. En cas d'urgence réelle, appelez toujours le 112.",
+        numbersTitle: "Numéros d'urgence",
       },
     },
   },

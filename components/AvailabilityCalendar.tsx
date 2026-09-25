@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import type { Lang } from "@/lib/i18n/translations";
 
 type BusyRange = { start: string; end: string; source: "booking" | "airbnb" };
 type ApiResponse = {
@@ -12,6 +13,12 @@ type ApiResponse = {
 
 const WEEKDAYS_IT = ["L", "M", "M", "G", "V", "S", "D"];
 const WEEKDAYS_EN = ["M", "T", "W", "T", "F", "S", "S"];
+const WEEKDAYS: Record<Lang, string[]> = {
+  it: WEEKDAYS_IT,
+  en: WEEKDAYS_EN,
+  de: ["M", "D", "M", "D", "F", "S", "S"],
+  fr: ["L", "M", "M", "J", "V", "S", "D"],
+};
 
 function toDateOnly(d: Date) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -91,7 +98,7 @@ function MonthGrid({
 }
 
 export default function AvailabilityCalendar() {
-  const { t, lang } = useLanguage();
+  const { t, lang, locale } = useLanguage();
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loadError, setLoadError] = useState(false);
 
@@ -110,14 +117,14 @@ export default function AvailabilityCalendar() {
     };
   }, []);
 
-  const weekdays = lang === "it" ? WEEKDAYS_IT : WEEKDAYS_EN;
+  const weekdays = WEEKDAYS[lang];
   const now = new Date();
   const months = [0, 1].map((offset) => {
     const d = new Date(now.getFullYear(), now.getMonth() + offset, 1);
     return {
       year: d.getFullYear(),
       month: d.getMonth(),
-      label: d.toLocaleDateString(lang === "it" ? "it-IT" : "en-US", {
+      label: d.toLocaleDateString(locale, {
         month: "long",
         year: "numeric",
       }),

@@ -1,6 +1,6 @@
 # Orbis in Sabina
 
-Sito web bilingue (IT/EN) per "Orbis in Sabina", casa vacanze di fascia alta a
+Sito web in 4 lingue (IT/EN/DE/FR) per "Orbis in Sabina", casa vacanze di fascia alta a
 Montopoli in Sabina (Rieti). Progetto Next.js (App Router) + TypeScript +
 Tailwind, pensato per il deploy su Vercel.
 
@@ -9,8 +9,12 @@ Tailwind, pensato per il deploy su Vercel.
 - Next.js 14 (App Router)
 - TypeScript
 - Tailwind CSS
-- Switch lingua IT/EN client-side (nessun routing per lingua, nessun redirect
-  automatico)
+- Sito multipagina in 4 lingue con URL dedicati: IT alla radice (`/camere`),
+  EN sotto `/en`, DE sotto `/de` (`/de/zimmer`, `/de/das-haus`…), FR sotto
+  `/fr` (`/fr/chambres`, `/fr/la-maison`…). Percorsi in `lib/site.ts`, testi
+  in `lib/content.ts`, foto condivise da tutte le lingue in `public/foto`.
+- Welcome book `/benvenuto` con selettore IT/EN/DE/FR (si può forzare la
+  lingua con `?lang=de`, `?lang=fr`, `?lang=en`)
 - Route API `/api/availability` che legge i feed iCal di Booking.com e
   Airbnb lato server (evita problemi CORS) e restituisce le date occupate
 

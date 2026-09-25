@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Header fisso: le ancore (#prenota) non finiscono sotto il menu */
+  scroll-padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
 }
 
 body {
@@ -11,9 +13,6 @@ body {
   background-color: #140f0a;
 }
 
-/* Shared grain + hairline texture behind every section, so the site reads
-   as one continuous surface instead of the hero being the only "designed"
-   part and everything below it falling back to flat color. */
 body::before {
   content: "";
   position: fixed;
@@ -66,8 +65,6 @@ body::after {
   @apply h-px w-8 bg-gradient-to-r from-transparent to-sabina-400/80;
 }
 
-/* Recurring ornament used to separate major sections: a hairline with a
-   small rotated diamond at its center, echoing the eyebrow rule above. */
 .section-divider {
   @apply relative mx-auto flex max-w-6xl items-center gap-4 px-5 sm:px-8;
 }
@@ -98,6 +95,10 @@ body::after {
 
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-full bg-sabina-400 px-7 py-3 font-sans text-sm font-medium uppercase tracking-widest text-sabina-950 shadow-card transition duration-300 hover:-translate-y-0.5 hover:bg-sabina-300 active:translate-y-0;
+}
+
+.btn-book {
+  @apply inline-flex items-center justify-center rounded-full bg-sabina-400 px-5 py-2 font-sans text-xs font-medium uppercase tracking-[0.2em] text-sabina-950 transition duration-300 hover:bg-sabina-300;
 }
 
 .btn-outline {
