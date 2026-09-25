@@ -26,7 +26,7 @@ export default function TerritoryPage({ lang }: { lang: Lang }) {
               ))}
             </dl>
           </div>
-          <MapEmbed title={t.mapTitle} />
+          <MapEmbed lang={lang} title={t.mapTitle} />
         </div>
       </Section>
 

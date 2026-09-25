@@ -131,7 +131,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
           </div>
           <div>
             <h2 className="mb-6 font-serif text-3xl text-sabina-50">{t.mapTitle}</h2>
-            <MapEmbed title={t.mapTitle} />
+            <MapEmbed lang={lang} title={t.mapTitle} />
           </div>
         </div>
       </Section>

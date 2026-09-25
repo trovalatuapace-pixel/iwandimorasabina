@@ -4,6 +4,9 @@ import { useState, type FormEvent } from "react";
 import type { Lang } from "@/lib/i18n/translations";
 import { rooms } from "@/lib/data/rooms";
 import { ui } from "@/lib/data/extras";
+import { legalUi } from "@/lib/data/legalUi";
+import { href } from "@/lib/site";
+import Link from "next/link";
 
 type RoomReq = { room: string; adults: string; children: string };
 
@@ -138,7 +141,12 @@ export default function QuoteForm({ lang, whatsapp, email }: { lang: Lang; whats
       </div>
       <label className="flex gap-3 font-sans text-sm text-sabina-100/80 sm:col-span-2">
         <input type="checkbox" required className="mt-0.5 h-5 w-5 shrink-0 accent-[#c0904f]" />
-        {t.consent}
+        <span>
+          {t.consent}{" "}
+          <Link href={href(lang, "privacy")} target="_blank" className="text-sabina-300 underline underline-offset-4 hover:text-sabina-100">
+            {legalUi[lang].privacy}
+          </Link>
+        </span>
       </label>
       <div className="flex flex-wrap items-center gap-5 sm:col-span-2">
         <button type="submit" className="btn-primary">

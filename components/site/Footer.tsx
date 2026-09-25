@@ -3,6 +3,7 @@ import { LANG_META, LANGS, type Lang } from "@/lib/i18n/translations";
 import { contacts, href, hrefAll, navItems, type PageKey } from "@/lib/site";
 import { content } from "@/lib/content";
 import { ui } from "@/lib/data/extras";
+import { legalUi } from "@/lib/data/legalUi";
 
 export default function Footer({
   lang,
@@ -83,6 +84,10 @@ export default function Footer({
         <p>
           © {new Date().getFullYear()} Orbis in Sabina. {c.rights}
         </p>
+        <nav aria-label="Legal" className="flex gap-4">
+          <Link href={href(lang, "privacy")} className="nav-link">{legalUi[lang].privacy}</Link>
+          <Link href={href(lang, "cookies")} className="nav-link">{legalUi[lang].cookies}</Link>
+        </nav>
         <nav aria-label={c.language} className="flex gap-4">
           {LANGS.map((l) =>
             l === lang ? (

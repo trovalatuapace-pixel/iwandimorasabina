@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { page: "house" },
     { page: "territory" },
     { page: "contact" },
+    { page: "privacy" },
+    { page: "cookies" },
   ];
   return pages.flatMap(({ page, slug }) =>
     LANGS.map((lang) => ({
