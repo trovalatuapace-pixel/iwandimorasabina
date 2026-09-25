@@ -85,6 +85,18 @@ per il punto di innesto.
   2026 — nomi, orari e numeri di attività private cambiano, da verificare
   prima di condividere la pagina con i primi ospiti
 
+## Sezioni aggiunte (settembre 2026, ispirate a casabellariva.com)
+
+- Barra fissa su smartphone **Chiama · WhatsApp · Preventivo** (`components/site/MobileActionBar.tsx`)
+- Modulo **Chiedi un preventivo** in Contatti (`#preventivo`): date, dati ospite, una o più camere con adulti/bambini, messaggio. Senza backend: apre WhatsApp (o l'email) con il messaggio già compilato
+- **Servizi inclusi / su richiesta** con icone, in Home e La Casa (`lib/data/extras.ts`)
+- **Tutto attorno a te** nella pagina Territorio: ristoranti, farmacia, supermercato, bancomat, stazione (link a Google Maps)
+- **Distanze in km** dei luoghi e tre nuovi luoghi (Poggio Mirteto, Castelnuovo di Farfa, Rieti)
+- Badge **ospiti / mq** per camera (campi `guests` e `size` in `lib/data/rooms.ts`)
+- **CIN e P. IVA** nel footer tramite `NEXT_PUBLIC_CIN` e `NEXT_PUBLIC_VAT_NUMBER`; numero da chiamare in `NEXT_PUBLIC_PHONE_NUMBER`
+
+Da confermare con Iwan: Wi-Fi e biancheria inclusi, servizi su richiesta, distanze, ospiti e mq delle camere, CIN.
+
 ## Deploy
 
 Progetto Vercel esistente `dimora-sabina`, da rinominare in "Orbis in

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { LANG_META, LANGS, type Lang } from "@/lib/i18n/translations";
 import { contacts, href, hrefAll, navItems, type PageKey } from "@/lib/site";
 import { content } from "@/lib/content";
+import { ui } from "@/lib/data/extras";
 
 export default function Footer({
   lang,
@@ -28,6 +29,12 @@ export default function Footer({
             Orbis in Sabina
           </p>
           <p className="mt-3 font-sans text-sm text-sabina-300/80">{c.address}</p>
+          {(contacts.cin || contacts.vat) && (
+            <p className="mt-3 font-sans text-xs leading-relaxed text-sabina-300/70">
+              {contacts.cin && <span className="block">{ui[lang].legal.cin} {contacts.cin}</span>}
+              {contacts.vat && <span className="block">{ui[lang].legal.vat} {contacts.vat}</span>}
+            </p>
+          )}
         </div>
 
         <nav aria-label="Footer" className="flex flex-col gap-2">

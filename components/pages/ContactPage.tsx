@@ -5,6 +5,8 @@ import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import Shell from "./Shell";
 import MapEmbed from "./MapEmbed";
+import QuoteForm from "@/components/site/QuoteForm";
+import { ui } from "@/lib/data/extras";
 import { PageHero, Section, SectionHead } from "@/components/site/ui";
 
 export default function ContactPage({ lang }: { lang: Lang }) {
@@ -52,6 +54,14 @@ export default function ContactPage({ lang }: { lang: Lang }) {
           </div>
         )}
       </Section>
+
+      {(contacts.whatsapp || contacts.email) && (
+        <Section id="preventivo">
+          <SectionHead eyebrow={ui[lang].quote.eyebrow} title={ui[lang].quote.title} />
+          <p className="mb-10 mt-4 max-w-2xl font-sans text-sabina-100/80">{ui[lang].quote.lead}</p>
+          <QuoteForm lang={lang} whatsapp={contacts.whatsapp} email={contacts.email} />
+        </Section>
+      )}
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">

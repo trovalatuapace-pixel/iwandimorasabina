@@ -5,6 +5,7 @@ import { rooms } from "@/lib/data/rooms";
 import { content } from "@/lib/content";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
+import RoomBadges from "@/components/site/RoomBadges";
 import { BookingCta, Photo, Section, TextLink } from "@/components/site/ui";
 
 export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
@@ -31,6 +32,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
           </p>
           <h1 className="font-serif text-5xl text-sabina-50 sm:text-6xl md:text-7xl">{name}</h1>
           <p className="mt-5 max-w-2xl font-serif text-xl italic text-sabina-200">{room.tagline[lang]}</p>
+          <RoomBadges room={room} lang={lang} className="mt-6" />
         </div>
       </section>
 

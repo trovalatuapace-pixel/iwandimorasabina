@@ -13,6 +13,10 @@ export type Room = {
   photo?: string;
   /** Foto della galleria in /public */
   gallery?: string[];
+  /** Ospiti massimi, es. "2" o "2/3" (facoltativo: mostrato come badge) */
+  guests?: string;
+  /** Metratura in mq (facoltativa: mostrata come badge) */
+  size?: number;
 };
 
 export const rooms: Room[] = [
@@ -115,6 +119,7 @@ export const rooms: Room[] = [
   {
     slug: { it: "oceania", en: "oceania", de: "ozeanien", fr: "oceanie" },
     photo: "/foto/camera-oceania.webp",
+    guests: "2",
     gallery: ["/foto/camera-oceania-dettaglio.webp"],
     gradient: "from-[#1f3a3f] to-[#0a1618]",
     icon: "🌊",

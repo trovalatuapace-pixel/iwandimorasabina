@@ -5,6 +5,7 @@ import { wellnessItems } from "@/lib/data/wellness";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import RoomCard from "@/components/site/RoomCard";
+import Services from "@/components/site/Services";
 import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
 
 export default function HomePage({ lang }: { lang: Lang }) {
@@ -98,6 +99,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
           </ul>
         </div>
       </Section>
+
+      <Services lang={lang} />
 
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2">

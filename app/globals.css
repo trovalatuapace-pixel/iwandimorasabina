@@ -124,3 +124,10 @@ body::after {
     animation: none !important;
   }
 }
+
+/* Spazio per la barra azioni fissa su smartphone (Chiama · WhatsApp · Preventivo) */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+}

@@ -4,6 +4,7 @@ import { wellnessItems } from "@/lib/data/wellness";
 import { houseGallery } from "@/lib/data/gallery";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
+import Services from "@/components/site/Services";
 import { BookingCta, PageHero, Photo, Section, SectionHead } from "@/components/site/ui";
 
 export default function HousePage({ lang }: { lang: Lang }) {
@@ -49,6 +50,8 @@ export default function HousePage({ lang }: { lang: Lang }) {
           ))}
         </div>
       </Section>
+
+      <Services lang={lang} />
 
       <Section>
         <SectionHead eyebrow={t.galleryEyebrow} title={t.galleryTitle} />

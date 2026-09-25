@@ -25,6 +25,11 @@ export function bookingHref(lang: Lang) {
   return `${paths.contact[lang]}#prenota`;
 }
 
+/** Ancora del modulo "Chiedi un preventivo". */
+export function quoteHref(lang: Lang) {
+  return `${paths.contact[lang]}#preventivo`;
+}
+
 export const navItems: { key: Exclude<PageKey, "room">; label: Record<Lang, string> }[] = [
   { key: "home", label: { it: "Home", en: "Home", de: "Start", fr: "Accueil" } },
   { key: "rooms", label: { it: "Camere", en: "Rooms", de: "Zimmer", fr: "Chambres" } },
@@ -42,6 +47,11 @@ export const SITE_URL =
 export const contacts = {
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/[^\d]/g, ""),
+  /** Numero da chiamare (formato internazionale). Se vuoto si usa il numero WhatsApp. */
+  phone: (process.env.NEXT_PUBLIC_PHONE_NUMBER || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/[^\d+]/g, ""),
+  /** Codice Identificativo Nazionale (obbligatorio per affitti brevi) */
+  cin: process.env.NEXT_PUBLIC_CIN || "",
+  vat: process.env.NEXT_PUBLIC_VAT_NUMBER || "",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
   airbnbUrl: process.env.NEXT_PUBLIC_AIRBNB_URL || "",
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",

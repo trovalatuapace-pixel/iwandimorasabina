@@ -4,6 +4,7 @@ import type { Room } from "@/lib/data/rooms";
 import { rooms } from "@/lib/data/rooms";
 import { href } from "@/lib/site";
 import { content } from "@/lib/content";
+import RoomBadges from "./RoomBadges";
 
 export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
   const index = rooms.indexOf(room);
@@ -27,6 +28,7 @@ export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
         <span className="absolute left-5 top-4 z-10 font-serif text-xs uppercase tracking-[0.3em] text-sabina-50/70">
           {String(index + 1).padStart(2, "0")} / {String(rooms.length).padStart(2, "0")}
         </span>
+        <RoomBadges room={room} lang={lang} className="absolute bottom-4 right-4 z-10" />
         {!room.photo && (
           <span className="m-5 font-sans text-[10px] uppercase tracking-[0.3em] text-sabina-100/40">
             {content[lang].common.photoSoon}
