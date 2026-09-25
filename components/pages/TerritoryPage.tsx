@@ -4,23 +4,11 @@ import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import MapEmbed from "./MapEmbed";
 import Nearby from "@/components/site/Nearby";
-import Icon from "@/components/site/Icons";
-import { extraPlaces, placeDistances, ui } from "@/lib/data/extras";
-import { BookingCta, PageHero, Photo, Section, SectionHead } from "@/components/site/ui";
+import PlacesGuide from "@/components/site/PlacesGuide";
+import { BookingCta, PageHero, Section } from "@/components/site/ui";
 
 export default function TerritoryPage({ lang }: { lang: Lang }) {
   const t = content[lang].territory;
-  const x = ui[lang];
-  const places: { name: string; text: string; photo?: string; distance: string }[] = [
-    ...t.places.map((p, i) => ({
-      name: p.name,
-      text: p.text,
-      photo: "photo" in p ? (p.photo as string) : undefined,
-      distance: placeDistances[i] ?? "",
-    })),
-    ...extraPlaces.map((p) => ({ name: p.name, text: p.text[lang], distance: p.distance })),
-  ];
-
   return (
     <Shell lang={lang} current="territory">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} tone="#243a3a" />
@@ -42,26 +30,7 @@ export default function TerritoryPage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Section>
-        <SectionHead eyebrow={t.placesEyebrow} title={t.placesTitle} />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {places.map((p) => (
-            <article key={p.name} className="card-surface overflow-hidden rounded-2xl">
-              <Photo label={p.name} gradient="from-[#2d3a2a] to-[#10160d]" src={p.photo} alt={p.name} className="aspect-[16/9] rounded-none border-0" />
-              <div className="p-6">
-                <h3 className="font-serif text-2xl text-sabina-50">{p.name}</h3>
-                <p className="mt-2 font-sans text-sm leading-relaxed text-sabina-100/80">{p.text}</p>
-                {p.distance && (
-                  <p className="mt-4 flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-sabina-300">
-                    <Icon name="pin" className="h-4 w-4" />
-                    {x.distance} {p.distance}
-                  </p>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
+      <PlacesGuide lang={lang} />
 
       <Nearby lang={lang} />
 
