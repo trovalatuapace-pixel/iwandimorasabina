@@ -13,17 +13,6 @@ export default function ContactPage({ lang }: { lang: Lang }) {
   const t = content[lang].contact;
   const c = content[lang].common;
 
-  // Unica CTA di prenotazione: Booking.com se configurato, altrimenti Airbnb,
-  // altrimenti richiesta via WhatsApp.
-  const primary = contacts.bookingUrl
-    ? { url: contacts.bookingUrl, label: t.bookButton }
-    : contacts.airbnbUrl
-    ? { url: contacts.airbnbUrl, label: t.bookButton }
-    : contacts.whatsapp
-    ? { url: `https://wa.me/${contacts.whatsapp}`, label: t.bookFallback }
-    : null;
-  const showAirbnbNote = Boolean(contacts.bookingUrl && contacts.airbnbUrl);
-
   return (
     <Shell lang={lang} current="contact">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
@@ -33,26 +22,13 @@ export default function ContactPage({ lang }: { lang: Lang }) {
         <p className="mt-4 max-w-2xl font-sans text-sabina-100/80">{t.bookingText}</p>
         <div className="mt-10">
           <LanguageProvider initialLang={lang}>
-            <AvailabilityCalendar />
+            <AvailabilityCalendar
+              bookingUrl={contacts.bookingUrl}
+              airbnbUrl={contacts.airbnbUrl}
+              whatsapp={contacts.whatsapp}
+            />
           </LanguageProvider>
         </div>
-        {primary && (
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <a href={primary.url} target="_blank" rel="noopener noreferrer" className="btn-primary">
-              {primary.label}
-            </a>
-            {showAirbnbNote && (
-              <a
-                href={contacts.airbnbUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-sans text-sm text-sabina-300 underline decoration-sabina-600 underline-offset-4 hover:text-sabina-100"
-              >
-                {t.alsoAirbnb}
-              </a>
-            )}
-          </div>
-        )}
       </Section>
 
       {(contacts.whatsapp || contacts.email) && (
