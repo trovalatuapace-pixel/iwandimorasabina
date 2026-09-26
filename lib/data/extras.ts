@@ -57,16 +57,6 @@ export const servicesIncluded: ServiceItem[] = [
     },
   },
   {
-    icon: "breakfast",
-    title: { it: "Angolo bar in cucina", en: "Kitchen bar corner", de: "Bar-Ecke in der Küche", fr: "Coin bar dans la cuisine" },
-    text: {
-      it: "Dispenser di bibite, vino, succhi e golosità; caffè, cappuccino e caffè americano.",
-      en: "Dispenser with soft drinks, wine, juices and treats; espresso, cappuccino and American coffee.",
-      de: "Spender mit Getränken, Wein, Säften und Naschereien; Espresso, Cappuccino und Caffè Americano.",
-      fr: "Distributeur de boissons, vin, jus et gourmandises ; expresso, cappuccino et café américain.",
-    },
-  },
-  {
     icon: "terrace",
     title: { it: "Terrazzo panoramico", en: "Panoramic terrace", de: "Panoramaterrasse", fr: "Terrasse panoramique" },
     text: {
@@ -79,6 +69,16 @@ export const servicesIncluded: ServiceItem[] = [
 ];
 
 export const servicesOnRequest: ServiceItem[] = [
+  {
+    icon: "breakfast",
+    title: { it: "Angolo bar in cucina", en: "Kitchen bar corner", de: "Bar-Ecke in der Küche", fr: "Coin bar dans la cuisine" },
+    text: {
+      it: "A pagamento: bibite, vino, succhi e golosità; caffè, cappuccino e caffè americano.",
+      en: "Paid: soft drinks, wine, juices and treats; espresso, cappuccino and American coffee.",
+      de: "Kostenpflichtig: Getränke, Wein, Säfte und Naschereien; Espresso, Cappuccino und Caffè Americano.",
+      fr: "Payant : boissons, vin, jus et gourmandises ; expresso, cappuccino et café américain.",
+    },
+  },
   {
     icon: "clean",
     title: { it: "Riassetto e cambio biancheria", en: "Extra cleaning and linen change", de: "Zwischenreinigung und Wäschewechsel", fr: "Ménage et changement de linge" },
