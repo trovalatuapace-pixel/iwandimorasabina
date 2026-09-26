@@ -6,6 +6,7 @@ import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import RoomCard from "@/components/site/RoomCard";
 import Services from "@/components/site/Services";
+import StructuredData from "@/components/site/StructuredData";
 import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
 
 export default function HomePage({ lang }: { lang: Lang }) {
@@ -14,6 +15,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
   return (
     <Shell lang={lang} current="home" overHero>
+      <StructuredData lang={lang} />
       {/* HERO — punto di innesto della futura scena 3D (vedi README) */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
