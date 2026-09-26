@@ -32,7 +32,7 @@ export const bannerText: Record<Lang, BannerText> = {
     tabs: ["Consenso", "Dettagli", "Informazioni sui cookie"],
     title: "Questo sito web utilizza i cookie",
     intro:
-      "Utilizziamo cookie tecnici, necessari per il funzionamento del sito, e — solo con il tuo consenso — cookie di terze parti per mostrarti contenuti esterni come la mappa di Google Maps. Non usiamo cookie per pubblicità personalizzata. Il titolare del trattamento è Iwan Donateo (Orbis in Sabina), contattabile all'email iwandonateo@hotmail.com. Puoi accettare tutti i cookie, sceglierli uno per uno con «Personalizza» oppure usare solo quelli necessari. Puoi cambiare idea in qualsiasi momento dal link «Preferenze cookie» in fondo a ogni pagina.",
+      "Utilizziamo cookie tecnici, necessari per il funzionamento del sito, e — solo con il tuo consenso — cookie di terze parti per mostrarti contenuti esterni come la mappa di Google Maps. Non usiamo cookie per pubblicità personalizzata. Il titolare del trattamento è Iwan Donateo (Dimora Pangea), contattabile all'email iwandonateo@hotmail.com. Puoi accettare tutti i cookie, sceglierli uno per uno con «Personalizza» oppure usare solo quelli necessari. Puoi cambiare idea in qualsiasi momento dal link «Preferenze cookie» in fondo a ogni pagina.",
     acceptAll: "Accetta tutti i cookie",
     customize: "Personalizza",
     saveSelection: "Consenti la selezione",
@@ -45,7 +45,7 @@ export const bannerText: Record<Lang, BannerText> = {
         key: "necessary",
         title: "Necessari",
         text: "Servono al funzionamento del sito e a ricordare le tue scelte sui cookie. Non si possono disattivare.",
-        cookies: [{ name: cookieNames.consent, provider: "Orbis in Sabina", purpose: "Ricorda le tue preferenze sui cookie", duration: "6 mesi (local storage)" }],
+        cookies: [{ name: cookieNames.consent, provider: "Dimora Pangea", purpose: "Ricorda le tue preferenze sui cookie", duration: "6 mesi (local storage)" }],
       },
       {
         key: "statistics",
@@ -76,7 +76,7 @@ export const bannerText: Record<Lang, BannerText> = {
     tabs: ["Consent", "Details", "About cookies"],
     title: "This website uses cookies",
     intro:
-      "We use technical cookies needed for the website to work and — only with your consent — third-party cookies to show external content such as the Google Maps map. We do not use cookies for personalised advertising. The data controller is Iwan Donateo (Orbis in Sabina), iwandonateo@hotmail.com. You can accept all cookies, choose them one by one with “Customise”, or use only the necessary ones. You can change your mind at any time via the “Cookie settings” link at the bottom of every page.",
+      "We use technical cookies needed for the website to work and — only with your consent — third-party cookies to show external content such as the Google Maps map. We do not use cookies for personalised advertising. The data controller is Iwan Donateo (Dimora Pangea), iwandonateo@hotmail.com. You can accept all cookies, choose them one by one with “Customise”, or use only the necessary ones. You can change your mind at any time via the “Cookie settings” link at the bottom of every page.",
     acceptAll: "Accept all cookies",
     customize: "Customise",
     saveSelection: "Allow selection",
@@ -89,7 +89,7 @@ export const bannerText: Record<Lang, BannerText> = {
         key: "necessary",
         title: "Necessary",
         text: "Needed for the website to work and to remember your cookie choices. They cannot be switched off.",
-        cookies: [{ name: cookieNames.consent, provider: "Orbis in Sabina", purpose: "Remembers your cookie preferences", duration: "6 months (local storage)" }],
+        cookies: [{ name: cookieNames.consent, provider: "Dimora Pangea", purpose: "Remembers your cookie preferences", duration: "6 months (local storage)" }],
       },
       {
         key: "statistics",
@@ -120,7 +120,7 @@ export const bannerText: Record<Lang, BannerText> = {
     tabs: ["Einwilligung", "Details", "Über Cookies"],
     title: "Diese Website verwendet Cookies",
     intro:
-      "Wir verwenden technische Cookies, die für den Betrieb der Website nötig sind, und — nur mit Ihrer Einwilligung — Cookies von Drittanbietern, um externe Inhalte wie die Google-Maps-Karte anzuzeigen. Wir verwenden keine Cookies für personalisierte Werbung. Verantwortlicher ist Iwan Donateo (Orbis in Sabina), iwandonateo@hotmail.com. Sie können alle Cookies akzeptieren, sie mit „Anpassen“ einzeln auswählen oder nur die notwendigen verwenden. Über den Link „Cookie-Einstellungen“ unten auf jeder Seite können Sie Ihre Wahl jederzeit ändern.",
+      "Wir verwenden technische Cookies, die für den Betrieb der Website nötig sind, und — nur mit Ihrer Einwilligung — Cookies von Drittanbietern, um externe Inhalte wie die Google-Maps-Karte anzuzeigen. Wir verwenden keine Cookies für personalisierte Werbung. Verantwortlicher ist Iwan Donateo (Dimora Pangea), iwandonateo@hotmail.com. Sie können alle Cookies akzeptieren, sie mit „Anpassen“ einzeln auswählen oder nur die notwendigen verwenden. Über den Link „Cookie-Einstellungen“ unten auf jeder Seite können Sie Ihre Wahl jederzeit ändern.",
     acceptAll: "Alle Cookies akzeptieren",
     customize: "Anpassen",
     saveSelection: "Auswahl erlauben",
@@ -133,7 +133,7 @@ export const bannerText: Record<Lang, BannerText> = {
         key: "necessary",
         title: "Notwendig",
         text: "Für den Betrieb der Website und zum Speichern Ihrer Cookie-Auswahl erforderlich. Sie können nicht deaktiviert werden.",
-        cookies: [{ name: cookieNames.consent, provider: "Orbis in Sabina", purpose: "Speichert Ihre Cookie-Einstellungen", duration: "6 Monate (Local Storage)" }],
+        cookies: [{ name: cookieNames.consent, provider: "Dimora Pangea", purpose: "Speichert Ihre Cookie-Einstellungen", duration: "6 Monate (Local Storage)" }],
       },
       {
         key: "statistics",
@@ -164,7 +164,7 @@ export const bannerText: Record<Lang, BannerText> = {
     tabs: ["Consentement", "Détails", "À propos des cookies"],
     title: "Ce site utilise des cookies",
     intro:
-      "Nous utilisons des cookies techniques nécessaires au fonctionnement du site et — uniquement avec votre accord — des cookies tiers pour afficher des contenus externes comme la carte Google Maps. Nous n'utilisons pas de cookies de publicité personnalisée. Le responsable du traitement est Iwan Donateo (Orbis in Sabina), iwandonateo@hotmail.com. Vous pouvez accepter tous les cookies, les choisir un par un avec « Personnaliser » ou n'utiliser que les cookies nécessaires. Vous pouvez changer d'avis à tout moment via le lien « Préférences cookies » en bas de chaque page.",
+      "Nous utilisons des cookies techniques nécessaires au fonctionnement du site et — uniquement avec votre accord — des cookies tiers pour afficher des contenus externes comme la carte Google Maps. Nous n'utilisons pas de cookies de publicité personnalisée. Le responsable du traitement est Iwan Donateo (Dimora Pangea), iwandonateo@hotmail.com. Vous pouvez accepter tous les cookies, les choisir un par un avec « Personnaliser » ou n'utiliser que les cookies nécessaires. Vous pouvez changer d'avis à tout moment via le lien « Préférences cookies » en bas de chaque page.",
     acceptAll: "Accepter tous les cookies",
     customize: "Personnaliser",
     saveSelection: "Autoriser la sélection",
@@ -177,7 +177,7 @@ export const bannerText: Record<Lang, BannerText> = {
         key: "necessary",
         title: "Nécessaires",
         text: "Indispensables au fonctionnement du site et pour mémoriser vos choix de cookies. Ils ne peuvent pas être désactivés.",
-        cookies: [{ name: cookieNames.consent, provider: "Orbis in Sabina", purpose: "Mémorise vos préférences de cookies", duration: "6 mois (local storage)" }],
+        cookies: [{ name: cookieNames.consent, provider: "Dimora Pangea", purpose: "Mémorise vos préférences de cookies", duration: "6 mois (local storage)" }],
       },
       {
         key: "statistics",

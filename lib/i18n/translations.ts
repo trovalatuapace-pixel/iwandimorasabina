@@ -112,7 +112,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     hero: {
       eyebrow: "Montopoli di Sabina · a un passo da Roma",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       claim:
         "Una casa vacanze che racchiude il mondo in cinque camere, tra le colline della Sabina.",
       cta: "Scopri le camere",
@@ -154,7 +154,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, a un passo da Roma",
       title: "Dove siamo",
       intro:
-        "Orbis in Sabina si trova a Montopoli di Sabina, in provincia di Rieti: la quiete della campagna romana a meno di un'ora dal centro di Roma, tra uliveti, borghi storici e la Via Salaria.",
+        "Dimora Pangea si trova a Montopoli di Sabina, in provincia di Rieti: la quiete della campagna romana a meno di un'ora dal centro di Roma, tra uliveti, borghi storici e la Via Salaria.",
       distanceRome: "~45 minuti da Roma centro",
       distanceAirport: "~55 minuti dall'aeroporto di Fiumicino",
       pointsOfInterestTitle: "Nei dintorni",
@@ -166,7 +166,7 @@ export const translations: Record<Lang, TranslationDict> = {
       ],
     },
     footer: {
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       address: "Montopoli di Sabina (RI), Italia",
       contactsTitle: "Contatti",
       whatsapp: "Scrivici su WhatsApp",
@@ -179,7 +179,7 @@ export const translations: Record<Lang, TranslationDict> = {
     welcome: {
       backToSite: "Torna al sito",
       eyebrow: "Il vostro soggiorno inizia qui",
-      title: "Benvenuti a Orbis in Sabina",
+      title: "Benvenuti a Dimora Pangea",
       intro:
         "Questa guida raccoglie tutto quello che serve per godersi il soggiorno: regole della casa, dove mangiare, cosa fare nei dintorni, come muoversi e a chi rivolgersi in caso di emergenza.",
       hostNote: "Per qualsiasi necessità scriveteci pure su WhatsApp, in qualsiasi momento.",
@@ -230,7 +230,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     hero: {
       eyebrow: "Montopoli di Sabina · a step from Rome",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       claim:
         "A vacation home that holds the whole world in five rooms, among the hills of Sabina.",
       cta: "Discover the rooms",
@@ -272,7 +272,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, a step from Rome",
       title: "Location",
       intro:
-        "Orbis in Sabina is located in Montopoli di Sabina, in the province of Rieti: the quiet of the Roman countryside less than an hour from central Rome, among olive groves, historic villages and the ancient Via Salaria.",
+        "Dimora Pangea is located in Montopoli di Sabina, in the province of Rieti: the quiet of the Roman countryside less than an hour from central Rome, among olive groves, historic villages and the ancient Via Salaria.",
       distanceRome: "~45 minutes from central Rome",
       distanceAirport: "~55 minutes from Fiumicino airport",
       pointsOfInterestTitle: "Nearby",
@@ -284,7 +284,7 @@ export const translations: Record<Lang, TranslationDict> = {
       ],
     },
     footer: {
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       address: "Montopoli di Sabina (RI), Italy",
       contactsTitle: "Contacts",
       whatsapp: "Message us on WhatsApp",
@@ -297,7 +297,7 @@ export const translations: Record<Lang, TranslationDict> = {
     welcome: {
       backToSite: "Back to the site",
       eyebrow: "Your stay starts here",
-      title: "Welcome to Orbis in Sabina",
+      title: "Welcome to Dimora Pangea",
       intro:
         "This guide has everything you need for your stay: house rules, where to eat, what to do nearby, how to get around and who to contact in an emergency.",
       hostNote: "For anything you need, just message us on WhatsApp, any time.",
@@ -348,7 +348,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     hero: {
       eyebrow: "Montopoli di Sabina · nur einen Schritt von Rom",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       claim:
         "Ein Ferienhaus, das die ganze Welt in fünf Zimmern vereint – inmitten der Hügel der Sabina.",
       cta: "Die Zimmer entdecken",
@@ -390,7 +390,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Sabina, nur einen Schritt von Rom",
       title: "Lage",
       intro:
-        "Orbis in Sabina liegt in Montopoli di Sabina in der Provinz Rieti: die Ruhe der römischen Landschaft, weniger als eine Stunde vom Zentrum Roms entfernt, zwischen Olivenhainen, historischen Dörfern und der antiken Via Salaria.",
+        "Dimora Pangea liegt in Montopoli di Sabina in der Provinz Rieti: die Ruhe der römischen Landschaft, weniger als eine Stunde vom Zentrum Roms entfernt, zwischen Olivenhainen, historischen Dörfern und der antiken Via Salaria.",
       distanceRome: "~45 Minuten bis ins Zentrum von Rom",
       distanceAirport: "~55 Minuten zum Flughafen Fiumicino",
       pointsOfInterestTitle: "In der Umgebung",
@@ -402,7 +402,7 @@ export const translations: Record<Lang, TranslationDict> = {
       ],
     },
     footer: {
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       address: "Montopoli di Sabina (RI), Italien",
       contactsTitle: "Kontakt",
       whatsapp: "Schreiben Sie uns auf WhatsApp",
@@ -415,7 +415,7 @@ export const translations: Record<Lang, TranslationDict> = {
     welcome: {
       backToSite: "Zurück zur Website",
       eyebrow: "Ihr Aufenthalt beginnt hier",
-      title: "Willkommen im Orbis in Sabina",
+      title: "Willkommen im Dimora Pangea",
       intro:
         "Dieser Leitfaden enthält alles, was Sie für Ihren Aufenthalt brauchen: Hausregeln, Restaurants, Ausflugsziele in der Umgebung, Anreise und Mobilität sowie Ansprechpartner im Notfall.",
       hostNote: "Wenn Sie etwas brauchen, schreiben Sie uns jederzeit auf WhatsApp.",
@@ -466,7 +466,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     hero: {
       eyebrow: "Montopoli di Sabina · à deux pas de Rome",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       claim:
         "Une maison de vacances qui réunit le monde entier en cinq chambres, au cœur des collines de la Sabine.",
       cta: "Découvrir les chambres",
@@ -508,7 +508,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "La Sabine, à deux pas de Rome",
       title: "Accès",
       intro:
-        "Orbis in Sabina se trouve à Montopoli di Sabina, dans la province de Rieti : le calme de la campagne romaine à moins d'une heure du centre de Rome, entre oliveraies, villages historiques et l'antique Via Salaria.",
+        "Dimora Pangea se trouve à Montopoli di Sabina, dans la province de Rieti : le calme de la campagne romaine à moins d'une heure du centre de Rome, entre oliveraies, villages historiques et l'antique Via Salaria.",
       distanceRome: "~45 minutes du centre de Rome",
       distanceAirport: "~55 minutes de l'aéroport de Fiumicino",
       pointsOfInterestTitle: "Aux alentours",
@@ -520,7 +520,7 @@ export const translations: Record<Lang, TranslationDict> = {
       ],
     },
     footer: {
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       address: "Montopoli di Sabina (RI), Italie",
       contactsTitle: "Contact",
       whatsapp: "Écrivez-nous sur WhatsApp",
@@ -533,7 +533,7 @@ export const translations: Record<Lang, TranslationDict> = {
     welcome: {
       backToSite: "Retour au site",
       eyebrow: "Votre séjour commence ici",
-      title: "Bienvenue à Orbis in Sabina",
+      title: "Bienvenue à Dimora Pangea",
       intro:
         "Ce guide réunit tout ce qu'il faut pour profiter de votre séjour : règles de la maison, où manger, que faire aux alentours, comment se déplacer et qui contacter en cas d'urgence.",
       hostNote: "Pour toute demande, écrivez-nous sur WhatsApp, à tout moment.",

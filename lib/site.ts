@@ -81,7 +81,7 @@ export function hrefAll(page: PageKey, roomSlugIt?: string): Record<Lang, string
 }
 
 /** Immagine di anteprima (WhatsApp, Facebook, ecc.) usata quando la pagina non ne ha una propria. */
-const DEFAULT_OG_IMAGE = "/og/orbis-in-sabina.jpg";
+const DEFAULT_OG_IMAGE = "/og/dimora-pangea.jpg";
 
 const OG_LOCALE: Record<Lang, string> = { it: "it_IT", en: "en_GB", de: "de_DE", fr: "fr_FR" };
 
@@ -99,10 +99,10 @@ export function pageMeta(
     url: room?.ogImage ?? DEFAULT_OG_IMAGE,
     width: 1200,
     height: 630,
-    alt: room ? `${room.name[lang]} — Orbis in Sabina` : "Orbis in Sabina — Montopoli di Sabina",
+    alt: room ? `${room.name[lang]} — Dimora Pangea` : "Dimora Pangea — Montopoli di Sabina",
   };
   return {
-    title: page === "home" ? title : `${title} | Orbis in Sabina`,
+    title: page === "home" ? title : `${title} | Dimora Pangea`,
     description,
     metadataBase: new URL(SITE_URL),
     alternates: {
@@ -110,9 +110,9 @@ export function pageMeta(
       languages: { ...all, "x-default": all.it },
     },
     openGraph: {
-      title: page === "home" ? title : `${title} | Orbis in Sabina`,
+      title: page === "home" ? title : `${title} | Dimora Pangea`,
       description,
-      siteName: "Orbis in Sabina",
+      siteName: "Dimora Pangea",
       locale: OG_LOCALE[lang],
       type: "website" as const,
       images: [image],

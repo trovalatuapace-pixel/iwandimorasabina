@@ -5,6 +5,8 @@ import { wellnessItems } from "@/lib/data/wellness";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import RoomCard from "@/components/site/RoomCard";
+import LogoMark, { RoomArc } from "@/components/site/Logo";
+import Link from "next/link";
 import Services from "@/components/site/Services";
 import StructuredData from "@/components/site/StructuredData";
 import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
@@ -39,6 +41,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
           aria-hidden="true"
         />
         <div className="mx-auto w-full max-w-6xl px-5 pt-24 sm:px-8">
+          <LogoMark size={72} className="mb-6 animate-fade-in-up" />
           <p className="section-eyebrow mb-5 animate-fade-in-up">{t.eyebrow}</p>
           <h1 className="animate-fade-in-up font-serif text-5xl leading-tight text-sabina-50 [animation-delay:100ms] sm:text-6xl md:text-7xl">
             {t.title}
@@ -63,6 +66,19 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 {p}
               </p>
             ))}
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              {rooms.map((room) => (
+                <li key={room.slug.it}>
+                  <Link
+                    href={href(lang, "room", room.slug.it)}
+                    className="flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-sabina-100/85 transition-colors hover:text-sabina-50"
+                  >
+                    <RoomArc color={room.colorLight} size={16} />
+                    {room.name[lang]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
           <Photo label={c.photoSoon} src="/foto/living-biliardo-1.webp" alt={t.introTitle} className="aspect-[5/4]" />
         </div>

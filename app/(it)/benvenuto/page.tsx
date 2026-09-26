@@ -31,7 +31,7 @@ export default function BenvenutoPage() {
             className="flex items-center gap-2.5 font-serif text-lg tracking-wide text-sabina-50"
           >
             <span className="h-2 w-2 rotate-45 border border-sabina-400/70" aria-hidden="true" />
-            Orbis in Sabina
+            Dimora Pangea
           </Link>
           <div className="flex items-center gap-5">
             <Link

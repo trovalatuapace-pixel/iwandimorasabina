@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Benvenuti | Orbis in Sabina",
+  title: "Benvenuti | Dimora Pangea",
   robots: { index: false, follow: false },
 };
 

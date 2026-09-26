@@ -5,6 +5,10 @@ export type Room = {
   slug: Localized;
   gradient: string;
   icon: string;
+  /** Colore della camera nel logo Dimora Pangea (arco dell'anello) */
+  color: string;
+  /** Versione più chiara dello stesso colore, leggibile sui fondi scuri del sito */
+  colorLight: string;
   name: Localized;
   tagline: Localized;
   description: Localized;
@@ -24,7 +28,9 @@ export type Room = {
 export const rooms: Room[] = [
   {
     slug: { it: "europa", en: "europe", de: "europa", fr: "europe" },
-    gradient: "from-[#2b3a4a] to-[#0e141c]",
+    gradient: "from-[#4F5A3A] to-[#10160d]",
+    color: "#4F5A3A",
+    colorLight: "#8A976A",
     icon: "🏛️",
     name: { it: "Europa", en: "Europe", de: "Europa", fr: "Europe" },
     tagline: {
@@ -48,7 +54,9 @@ export const rooms: Room[] = [
   },
   {
     slug: { it: "asia", en: "asia", de: "asien", fr: "asie" },
-    gradient: "from-[#3a2a3f] to-[#150e18]",
+    gradient: "from-[#C99A3E] to-[#1c140a]",
+    color: "#C99A3E",
+    colorLight: "#D9B366",
     icon: "🏮",
     name: { it: "Asia", en: "Asia", de: "Asien", fr: "Asie" },
     tagline: {
@@ -72,7 +80,9 @@ export const rooms: Room[] = [
   },
   {
     slug: { it: "africa", en: "africa", de: "afrika", fr: "afrique" },
-    gradient: "from-[#4a3420] to-[#1c130a]",
+    gradient: "from-[#A94F2B] to-[#1c0f0a]",
+    color: "#A94F2B",
+    colorLight: "#D07A55",
     icon: "🌍",
     name: { it: "Africa", en: "Africa", de: "Afrika", fr: "Afrique" },
     tagline: {
@@ -96,7 +106,9 @@ export const rooms: Room[] = [
   },
   {
     slug: { it: "americhe", en: "americas", de: "amerika", fr: "ameriques" },
-    gradient: "from-[#2f3a2a] to-[#10160d]",
+    gradient: "from-[#8C6A55] to-[#1a120d]",
+    color: "#8C6A55",
+    colorLight: "#B08D74",
     icon: "🗽",
     name: { it: "Americhe", en: "Americas", de: "Amerika", fr: "Amériques" },
     tagline: {
@@ -124,7 +136,9 @@ export const rooms: Room[] = [
     ogImage: "/og/camera-oceania.jpg",
     guests: "2",
     gallery: ["/foto/camera-oceania-dettaglio.webp"],
-    gradient: "from-[#1f3a3f] to-[#0a1618]",
+    gradient: "from-[#2E4A5C] to-[#0a1419]",
+    color: "#2E4A5C",
+    colorLight: "#6F93AB",
     icon: "🌊",
     name: { it: "Oceania", en: "Oceania", de: "Ozeanien", fr: "Océanie" },
     tagline: {

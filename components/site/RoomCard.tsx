@@ -5,6 +5,7 @@ import { rooms } from "@/lib/data/rooms";
 import { href } from "@/lib/site";
 import { content } from "@/lib/content";
 import RoomBadges from "./RoomBadges";
+import { RoomArc } from "./Logo";
 
 export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
   const index = rooms.indexOf(room);
@@ -25,6 +26,7 @@ export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
         {room.photo && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" aria-hidden="true" />
         )}
+        <span className="absolute inset-x-0 top-0 z-10 h-1.5" style={{ backgroundColor: room.color }} aria-hidden="true" />
         <span className="absolute left-5 top-4 z-10 font-serif text-xs uppercase tracking-[0.3em] text-sabina-50/70">
           {String(index + 1).padStart(2, "0")} / {String(rooms.length).padStart(2, "0")}
         </span>
@@ -36,7 +38,10 @@ export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
         )}
       </div>
       <div className="card-surface rounded-b-2xl border-t-0 p-6">
-        <h3 className="font-serif text-2xl text-sabina-50">{room.name[lang]}</h3>
+        <h3 className="flex items-center gap-2.5 font-serif text-2xl text-sabina-50">
+          <RoomArc color={room.colorLight} size={18} />
+          {room.name[lang]}
+        </h3>
         <p className="mt-2 font-sans text-sm text-sabina-100/75">{room.tagline[lang]}</p>
       </div>
     </Link>

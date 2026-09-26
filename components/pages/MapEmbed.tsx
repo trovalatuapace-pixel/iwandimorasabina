@@ -23,7 +23,7 @@ export default function MapEmbed({ lang, title }: { lang: Lang; title: string })
     <div className="overflow-hidden rounded-2xl border border-sabina-800">
       {ok ? (
         <iframe
-          title={`${title} — Orbis in Sabina`}
+          title={`${title} — Dimora Pangea`}
           src={src}
           className="h-[380px] w-full"
           loading="lazy"

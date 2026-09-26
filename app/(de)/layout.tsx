@@ -3,7 +3,7 @@ import "../globals.css";
 import { playfair, jost } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Orbis in Sabina",
+  title: "Dimora Pangea",
 };
 
 export const viewport: Viewport = {
