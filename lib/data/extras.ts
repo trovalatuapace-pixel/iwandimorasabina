@@ -50,10 +50,20 @@ export const servicesIncluded: ServiceItem[] = [
     icon: "spa",
     title: { it: "Area benessere", en: "Wellness area", de: "Wellnessbereich", fr: "Espace bien-être" },
     text: {
-      it: "Sauna, palestra e vasca idromassaggio a disposizione degli ospiti.",
-      en: "Sauna, gym and hot tub available to guests.",
-      de: "Sauna, Fitnessraum und Whirlpool stehen den Gästen zur Verfügung.",
-      fr: "Sauna, salle de sport et bain à remous à la disposition des hôtes.",
+      it: "Sauna, palestra, vasca idromassaggio e sala biliardo a disposizione degli ospiti.",
+      en: "Sauna, gym, hot tub and billiards room available to guests.",
+      de: "Sauna, Fitnessraum, Whirlpool und Billardraum stehen den Gästen zur Verfügung.",
+      fr: "Sauna, salle de sport, bain à remous et salle de billard à la disposition des hôtes.",
+    },
+  },
+  {
+    icon: "breakfast",
+    title: { it: "Angolo bar in cucina", en: "Kitchen bar corner", de: "Bar-Ecke in der Küche", fr: "Coin bar dans la cuisine" },
+    text: {
+      it: "Dispenser di bibite, vino, succhi e golosità; caffè, cappuccino e caffè americano.",
+      en: "Dispenser with soft drinks, wine, juices and treats; espresso, cappuccino and American coffee.",
+      de: "Spender mit Getränken, Wein, Säften und Naschereien; Espresso, Cappuccino und Caffè Americano.",
+      fr: "Distributeur de boissons, vin, jus et gourmandises ; expresso, cappuccino et café américain.",
     },
   },
   {

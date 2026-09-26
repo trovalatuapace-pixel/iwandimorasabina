@@ -9,7 +9,7 @@ import { SITE_URL, contacts, href } from "@/lib/site";
  */
 export default function StructuredData({ lang }: { lang: Lang }) {
   const t = content[lang].home;
-  const amenities = ["Sauna", "Fitness center", "Hot tub", "Panoramic terrace", "Free Wi-Fi", "Bed linen and towels"];
+  const amenities = ["Sauna", "Fitness center", "Hot tub", "Panoramic terrace", "Billiards", "Coffee machine", "Free Wi-Fi", "Bed linen and towels"];
   const sameAs = [contacts.instagram, contacts.facebook, contacts.bookingUrl, contacts.airbnbUrl].filter(Boolean);
 
   const data = {

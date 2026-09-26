@@ -87,4 +87,42 @@ export const wellnessItems: WellnessItem[] = [
       fr: "Le jacuzzi est le cœur de l'espace bien-être : une invitation à ralentir, de jour comme de nuit.",
     },
   },
+  {
+    slug: "biliardo",
+    photo: "/foto/living-biliardo-3.webp",
+    gradient: "from-[#1f3a2a] to-[#0a160f]",
+    icon: "🎱",
+    name: { it: "Sala biliardo", en: "Billiards room", de: "Billardraum", fr: "Salle de billard" },
+    tagline: {
+      it: "Una partita tra amici, nel cuore della casa",
+      en: "A game among friends, at the heart of the house",
+      de: "Eine Partie unter Freunden, mitten im Haus",
+      fr: "Une partie entre amis, au cœur de la maison",
+    },
+    description: {
+      it: "Nel grande living c'è un tavolo da biliardo professionale, con stecche e palle a disposizione degli ospiti: perfetto per le serate in compagnia, tra un aperitivo e l'altro.",
+      en: "The large living room features a professional pool table, with cues and balls available to guests: perfect for evenings together, between one aperitif and the next.",
+      de: "Im großen Wohnbereich steht ein professioneller Billardtisch, Queues und Kugeln stehen den Gästen zur Verfügung – ideal für gesellige Abende beim Aperitif.",
+      fr: "Le grand salon accueille une table de billard professionnelle, avec queues et boules à la disposition des hôtes : idéale pour les soirées entre amis, autour d'un apéritif.",
+    },
+  },
+  {
+    slug: "angolo-bar",
+    photo: "/foto/cucina.webp",
+    gradient: "from-[#3a2a1f] to-[#160f0a]",
+    icon: "☕",
+    name: { it: "Angolo bar in cucina", en: "Kitchen bar corner", de: "Bar-Ecke in der Küche", fr: "Coin bar dans la cuisine" },
+    tagline: {
+      it: "Caffè, cappuccino, bibite, vino e golosità",
+      en: "Coffee, cappuccino, soft drinks, wine and treats",
+      de: "Kaffee, Cappuccino, Getränke, Wein und Naschereien",
+      fr: "Café, cappuccino, boissons, vin et gourmandises",
+    },
+    description: {
+      it: "In cucina trovate un dispenser di bibite, vino, succhi e golosità, oltre alla macchina per caffè espresso, cappuccino e caffè americano: tutto a portata di mano, a qualsiasi ora del giorno.",
+      en: "In the kitchen you will find a dispenser with soft drinks, wine, juices and treats, plus a machine for espresso, cappuccino and American coffee: everything within reach, at any time of day.",
+      de: "In der Küche finden Sie einen Spender mit Softdrinks, Wein, Säften und Naschereien sowie eine Maschine für Espresso, Cappuccino und Caffè Americano – alles griffbereit, zu jeder Tageszeit.",
+      fr: "Dans la cuisine, vous trouverez un distributeur de boissons, vin, jus de fruits et gourmandises, ainsi qu'une machine pour expresso, cappuccino et café américain : tout à portée de main, à toute heure.",
+    },
+  },
 ];
