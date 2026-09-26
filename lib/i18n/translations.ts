@@ -140,7 +140,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Prenota il tuo soggiorno",
       title: "Disponibilità e prenotazione",
       intro:
-        "Il calendario mostra le date già occupate sulle nostre piattaforme. Per prenotare, scegli il canale che preferisci.",
+        "La casa si prenota sempre intera e in esclusiva: da 2 a 11 ospiti, solo il tuo gruppo, mai estranei. Il calendario mostra le date già occupate sulle nostre piattaforme. Per prenotare, scegli il canale che preferisci.",
       bookOnBooking: "Prenota su Booking.com",
       bookOnAirbnb: "Prenota su Airbnb",
       calendarLegendFree: "Disponibile",
@@ -258,7 +258,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Book your stay",
       title: "Availability & booking",
       intro:
-        "The calendar shows the dates already booked on our platforms. To book, choose the channel you prefer.",
+        "The house is always booked whole and exclusively: from 2 to 11 guests, only your group, never strangers. The calendar shows the dates already booked on our platforms. To book, choose the channel you prefer.",
       bookOnBooking: "Book on Booking.com",
       bookOnAirbnb: "Book on Airbnb",
       calendarLegendFree: "Available",
@@ -376,7 +376,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Buchen Sie Ihren Aufenthalt",
       title: "Verfügbarkeit & Buchung",
       intro:
-        "Der Kalender zeigt die bereits belegten Tage auf unseren Plattformen. Wählen Sie zum Buchen einfach den Kanal, den Sie bevorzugen.",
+        "Das Haus wird immer komplett und exklusiv vermietet: von 2 bis 11 Gäste, nur Ihre Gruppe, nie Fremde. Der Kalender zeigt die bereits belegten Tage auf unseren Plattformen. Wählen Sie zum Buchen einfach den Kanal, den Sie bevorzugen.",
       bookOnBooking: "Auf Booking.com buchen",
       bookOnAirbnb: "Auf Airbnb buchen",
       calendarLegendFree: "Verfügbar",
@@ -494,7 +494,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Réservez votre séjour",
       title: "Disponibilités et réservation",
       intro:
-        "Le calendrier indique les dates déjà réservées sur nos plateformes. Pour réserver, choisissez le canal que vous préférez.",
+        "La maison se loue toujours entière et en exclusivité : de 2 à 11 personnes, uniquement votre groupe, jamais d'inconnus. Le calendrier indique les dates déjà réservées sur nos plateformes. Pour réserver, choisissez le canal que vous préférez.",
       bookOnBooking: "Réserver sur Booking.com",
       bookOnAirbnb: "Réserver sur Airbnb",
       calendarLegendFree: "Disponible",

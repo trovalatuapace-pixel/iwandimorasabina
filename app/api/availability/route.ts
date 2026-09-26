@@ -10,7 +10,13 @@ async function fetchFeed(
 ): Promise<{ ranges: BusyRange[]; error: string | null }> {
   if (!url) return { ranges: [], error: null };
   try {
-    const res = await fetch(url, { next: { revalidate: 3600 } });
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; DimoraPangeaCalendar/1.0)",
+        Accept: "text/calendar, text/plain, */*",
+      },
+      next: { revalidate: 1800 },
+    });
     if (!res.ok) {
       return { ranges: [], error: `${source}: HTTP ${res.status}` };
     }
