@@ -80,6 +80,9 @@ export function hrefAll(page: PageKey, roomSlugIt?: string): Record<Lang, string
   return Object.fromEntries(LANGS.map((l) => [l, href(l, page, roomSlugIt)])) as Record<Lang, string>;
 }
 
+/** Immagine di anteprima (WhatsApp, Facebook, ecc.) usata quando la pagina non ne ha una propria. */
+const DEFAULT_OG_IMAGE = "/og/orbis-in-sabina.jpg";
+
 const OG_LOCALE: Record<Lang, string> = { it: "it_IT", en: "en_GB", de: "de_DE", fr: "fr_FR" };
 
 /** Metadati con link hreflang tra le versioni della stessa pagina. */
@@ -91,6 +94,13 @@ export function pageMeta(
   roomSlugIt?: string
 ) {
   const all = hrefAll(page, roomSlugIt);
+  const room = page === "room" ? rooms.find((r) => r.slug.it === roomSlugIt) : undefined;
+  const image = {
+    url: room?.ogImage ?? DEFAULT_OG_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: room ? `${room.name[lang]} — Orbis in Sabina` : "Orbis in Sabina — Montopoli di Sabina",
+  };
   return {
     title: page === "home" ? title : `${title} | Orbis in Sabina`,
     description,
@@ -105,6 +115,11 @@ export function pageMeta(
       siteName: "Orbis in Sabina",
       locale: OG_LOCALE[lang],
       type: "website" as const,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      images: [image.url],
     },
   };
 }

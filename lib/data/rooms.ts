@@ -17,6 +17,8 @@ export type Room = {
   guests?: string;
   /** Metratura in mq (facoltativa: mostrata come badge) */
   size?: number;
+  /** Immagine di anteprima 1200x630 per WhatsApp/Facebook (facoltativa: senza, si usa quella generale) */
+  ogImage?: string;
 };
 
 export const rooms: Room[] = [
@@ -119,6 +121,7 @@ export const rooms: Room[] = [
   {
     slug: { it: "oceania", en: "oceania", de: "ozeanien", fr: "oceanie" },
     photo: "/foto/camera-oceania.webp",
+    ogImage: "/og/camera-oceania.jpg",
     guests: "2",
     gallery: ["/foto/camera-oceania-dettaglio.webp"],
     gradient: "from-[#1f3a3f] to-[#0a1618]",
