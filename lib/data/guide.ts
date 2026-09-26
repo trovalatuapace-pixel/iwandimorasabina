@@ -213,10 +213,77 @@ export const guideGroups: GuideGroup[] = [
         name: same("Rieti"),
         map: "Rieti centro storico",
         text: {
-          it: "Il capoluogo della Sabina, con il centro storico, il Palazzo Papale e i percorsi sotterranei della Rieti romana.",
-          en: "The capital of Sabina, with its old town, the Papal Palace and the underground routes of Roman Rieti.",
-          de: "Die Hauptstadt der Sabina mit Altstadt, Papstpalast und den unterirdischen Wegen des römischen Rieti.",
-          fr: "Le chef-lieu de la Sabine, avec son centre historique, le Palais papal et les souterrains de la Rieti romaine.",
+          it: "Il capoluogo della Sabina, con il centro storico, il Palazzo Papale e la piazza che segna l'Umbilicus Italiae, il centro geografico d'Italia.",
+          en: "The capital of Sabina, with its old town, the Papal Palace and the square marking the Umbilicus Italiae, the geographical centre of Italy.",
+          de: "Die Hauptstadt der Sabina mit Altstadt, Papstpalast und dem Platz des Umbilicus Italiae, des geografischen Mittelpunkts Italiens.",
+          fr: "Le chef-lieu de la Sabine, avec son centre historique, le Palais papal et la place qui marque l'Umbilicus Italiae, le centre géographique de l'Italie.",
+        },
+      },
+      {
+        name: { it: "Rieti Sotterranea", en: "Underground Rieti", de: "Unterirdisches Rieti", fr: "Rieti souterraine" },
+        map: "Rieti Sotterranea",
+        text: {
+          it: "Un percorso sotto i palazzi del centro storico, lungo l'antico viadotto romano della Via Salaria: si visita con guida, un viaggio affascinante nella Rieti di duemila anni fa.",
+          en: "A route beneath the palaces of the old town, along the ancient Roman viaduct of the Via Salaria: guided tours only, a fascinating journey into the Rieti of two thousand years ago.",
+          de: "Ein Weg unter den Palästen der Altstadt entlang des antiken römischen Viadukts der Via Salaria: nur mit Führung, eine faszinierende Reise in das Rieti vor zweitausend Jahren.",
+          fr: "Un parcours sous les palais du centre historique, le long de l'ancien viaduc romain de la Via Salaria : visite guidée uniquement, un voyage fascinant dans la Rieti d'il y a deux mille ans.",
+        },
+      },
+    ],
+  },
+  {
+    id: "fuori-porta",
+    when: { it: "Da 30 minuti a 1 ora e ¼", en: "30 minutes to 1¼ hours away", de: "30 Minuten bis 1¼ Stunden", fr: "De 30 minutes à 1h15" },
+    title: { it: "Gite fuori porta: storia, laghi e montagna", en: "Day trips: history, lakes and mountains", de: "Ausflüge: Geschichte, Seen und Berge", fr: "Escapades : histoire, lacs et montagne" },
+    items: [
+      {
+        name: { it: "Bunker del Monte Soratte", en: "Monte Soratte Bunker", de: "Bunker am Monte Soratte", fr: "Bunker du mont Soratte" },
+        map: "Bunker Soratte Sant'Oreste",
+        text: {
+          it: "Chilometri di gallerie scavate nella montagna a Sant'Oreste: rifugio voluto negli anni '30, quartier generale tedesco durante la guerra e poi bunker antiatomico della Guerra Fredda. Visite guidate su prenotazione.",
+          en: "Kilometres of tunnels dug into the mountain at Sant'Oreste: a shelter built in the 1930s, German headquarters during the war and later a Cold War nuclear bunker. Guided tours by reservation.",
+          de: "Kilometerlange Stollen im Berg bei Sant'Oreste: in den 1930er-Jahren als Schutzraum angelegt, im Krieg deutsches Hauptquartier, später Atombunker des Kalten Krieges. Führungen nach Voranmeldung.",
+          fr: "Des kilomètres de galeries creusées dans la montagne à Sant'Oreste : abri construit dans les années 1930, quartier général allemand pendant la guerre puis bunker antiatomique de la guerre froide. Visites guidées sur réservation.",
+        },
+      },
+      {
+        name: { it: "Santuario di Greccio", en: "Greccio Sanctuary", de: "Heiligtum von Greccio", fr: "Sanctuaire de Greccio" },
+        map: "Santuario di Greccio",
+        text: {
+          it: "Aggrappato alla roccia sopra la Valle Santa reatina, è il luogo dove San Francesco nel Natale del 1223 allestì il primo presepe della storia.",
+          en: "Clinging to the rock above the Holy Valley of Rieti, this is where St Francis created the very first nativity scene at Christmas 1223.",
+          de: "Am Felsen über dem Heiligen Tal von Rieti gelegen: Hier gestaltete der heilige Franziskus an Weihnachten 1223 die erste Krippe der Geschichte.",
+          fr: "Accroché à la roche au-dessus de la Vallée sainte de Rieti, c'est ici que saint François créa la toute première crèche de l'histoire, à Noël 1223.",
+        },
+      },
+      {
+        name: { it: "Lago del Turano", en: "Lake Turano", de: "Turano-See", fr: "Lac du Turano" },
+        map: "Lago del Turano Castel di Tora",
+        text: {
+          it: "Un lago verde smeraldo tra le montagne, con i borghi di Castel di Tora e Colle di Tora affacciati sull'acqua: kayak, SUP, passeggiate e pranzo vista lago.",
+          en: "An emerald-green lake among the mountains, with the villages of Castel di Tora and Colle di Tora overlooking the water: kayak, SUP, walks and lunch with a lake view.",
+          de: "Ein smaragdgrüner See zwischen den Bergen mit den Dörfern Castel di Tora und Colle di Tora direkt am Wasser: Kajak, SUP, Spaziergänge und Mittagessen mit Seeblick.",
+          fr: "Un lac vert émeraude entre les montagnes, avec les villages de Castel di Tora et Colle di Tora au bord de l'eau : kayak, paddle, balades et déjeuner avec vue sur le lac.",
+        },
+      },
+      {
+        name: { it: "Cascate delle Marmore", en: "Marmore Falls", de: "Marmore-Wasserfälle", fr: "Cascades des Marmore" },
+        map: "Cascata delle Marmore",
+        text: {
+          it: "Tra le cascate più alte d'Europa (165 metri), create dai Romani più di duemila anni fa. Il salto d'acqua si apre a orari prestabiliti: controllate il calendario prima di partire.",
+          en: "Among the highest waterfalls in Europe (165 metres), created by the Romans over two thousand years ago. The water flow is released at set times: check the schedule before you go.",
+          de: "Einer der höchsten Wasserfälle Europas (165 Meter), von den Römern vor über zweitausend Jahren geschaffen. Das Wasser wird zu festen Zeiten freigegeben: Prüfen Sie vorher den Kalender.",
+          fr: "L'une des plus hautes cascades d'Europe (165 mètres), créée par les Romains il y a plus de deux mille ans. L'eau est lâchée à heures fixes : consultez le calendrier avant de partir.",
+        },
+      },
+      {
+        name: same("Monte Terminillo"),
+        map: "Monte Terminillo",
+        text: {
+          it: "La \"montagna di Roma\" (2.217 m): d'inverno piste da sci e neve, d'estate trekking, mountain bike e aria fresca con panorami su tutto l'Appennino.",
+          en: "\"Rome's mountain\" (2,217 m): skiing and snow in winter, hiking, mountain biking and fresh air in summer, with views across the Apennines.",
+          de: "Der „Hausberg Roms\" (2.217 m): im Winter Skipisten und Schnee, im Sommer Wandern, Mountainbiken und frische Luft mit Blick über den Apennin.",
+          fr: "La « montagne de Rome » (2 217 m) : ski et neige en hiver, randonnée, VTT et air frais en été, avec des panoramas sur tout l'Apennin.",
         },
       },
     ],
@@ -227,25 +294,25 @@ export const guideUi: Record<Lang, { eyebrow: string; title: string; lead: strin
   it: {
     eyebrow: "Dove andare",
     title: "Cosa vedere attorno alla casa",
-    lead: "Dal borgo di Montopoli alle abbazie, dai borghi medievali alle gole del Farfa: la nostra selezione di luoghi ed esperienze, ordinati per distanza. Toccate un luogo per aprirlo sulla mappa.",
+    lead: "Dal borgo di Montopoli alle abbazie, dai borghi medievali alle gole del Farfa, fino al Lago del Turano, al Terminillo e alle Cascate delle Marmore: la nostra selezione di luoghi ed esperienze, ordinati per distanza. Toccate un luogo per aprirlo sulla mappa.",
     map: "Apri sulla mappa",
   },
   en: {
     eyebrow: "Where to go",
     title: "What to see around the house",
-    lead: "From the village of Montopoli to abbeys, medieval villages and the Farfa gorges: our selection of places and experiences, ordered by distance. Tap a place to open it on the map.",
+    lead: "From the village of Montopoli to abbeys, medieval villages and the Farfa gorges, all the way to Lake Turano, Mount Terminillo and the Marmore Falls: our selection of places and experiences, ordered by distance. Tap a place to open it on the map.",
     map: "Open on the map",
   },
   de: {
     eyebrow: "Ausflugsziele",
     title: "Sehenswertes rund um das Haus",
-    lead: "Vom Ort Montopoli bis zu Abteien, mittelalterlichen Dörfern und der Farfa-Schlucht: unsere Auswahl an Orten und Erlebnissen, nach Entfernung geordnet. Tippen Sie auf einen Ort, um ihn auf der Karte zu öffnen.",
+    lead: "Vom Ort Montopoli bis zu Abteien, mittelalterlichen Dörfern und der Farfa-Schlucht bis zum Turano-See, zum Terminillo und zu den Marmore-Wasserfällen: unsere Auswahl an Orten und Erlebnissen, nach Entfernung geordnet. Tippen Sie auf einen Ort, um ihn auf der Karte zu öffnen.",
     map: "Auf der Karte öffnen",
   },
   fr: {
     eyebrow: "Où aller",
     title: "À voir autour de la maison",
-    lead: "Du village de Montopoli aux abbayes, des villages médiévaux aux gorges du Farfa : notre sélection de lieux et d'expériences, classés par distance. Touchez un lieu pour l'ouvrir sur la carte.",
+    lead: "Du village de Montopoli aux abbayes, des villages médiévaux aux gorges du Farfa, jusqu'au lac du Turano, au Terminillo et aux cascades des Marmore : notre sélection de lieux et d'expériences, classés par distance. Touchez un lieu pour l'ouvrir sur la carte.",
     map: "Ouvrir sur la carte",
   },
 };
