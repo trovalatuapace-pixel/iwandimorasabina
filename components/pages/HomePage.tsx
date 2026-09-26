@@ -9,6 +9,8 @@ import LogoMark, { RoomArc } from "@/components/site/Logo";
 import Link from "next/link";
 import Services from "@/components/site/Services";
 import StructuredData from "@/components/site/StructuredData";
+import HouseSlider from "@/components/site/HouseSlider";
+import { houseGallery } from "@/lib/data/gallery";
 import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
 
 export default function HomePage({ lang }: { lang: Lang }) {
@@ -80,7 +82,15 @@ export default function HomePage({ lang }: { lang: Lang }) {
               ))}
             </ul>
           </div>
-          <Photo label={c.photoSoon} src="/foto/living-biliardo-1.webp" alt={t.introTitle} className="aspect-[5/4]" />
+          <HouseSlider
+            className="aspect-[5/4]"
+            slides={[
+              { src: "/foto/living-biliardo-1.webp", alt: t.introTitle },
+              ...houseGallery
+                .filter((g) => g.src !== "/foto/living-biliardo-1.webp")
+                .map((g) => ({ src: g.src, alt: g.alt[lang] })),
+            ]}
+          />
         </div>
       </Section>
 
