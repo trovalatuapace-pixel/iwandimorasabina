@@ -16,11 +16,11 @@ export default function StructuredData({ lang }: { lang: Lang }) {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "@id": `${SITE_URL}/#struttura`,
-    name: "Orbis in Sabina",
+    name: "Dimora Pangea",
     description: t.metaDescription,
     url: `${SITE_URL}${href(lang, "home")}`,
     image: [
-      `${SITE_URL}/og/orbis-in-sabina.jpg`,
+      `${SITE_URL}/og/dimora-pangea.jpg`,
       `${SITE_URL}/foto/vista-cupola-san-pietro.webp`,
       `${SITE_URL}/foto/idromassaggio-tramonto.webp`,
       `${SITE_URL}/foto/camera-oceania.webp`,

@@ -1,6 +1,6 @@
-# Orbis in Sabina
+# Dimora Pangea
 
-Sito web in 4 lingue (IT/EN/DE/FR) per "Orbis in Sabina", casa vacanze di fascia alta a
+Sito web in 4 lingue (IT/EN/DE/FR) per "Dimora Pangea", casa vacanze di fascia alta a
 Montopoli di Sabina (Rieti). Progetto Next.js (App Router) + TypeScript +
 Tailwind, pensato per il deploy su Vercel.
 
@@ -99,6 +99,5 @@ Da confermare con Iwan: Wi-Fi e biancheria inclusi, servizi su richiesta, distan
 
 ## Deploy
 
-Progetto Vercel esistente `dimora-sabina`, da rinominare in "Orbis in
-Sabina". Collegare questo repository e impostare le variabili d'ambiente
+Progetto Vercel esistente `dimora-sabina` (nome della struttura: "Dimora Pangea"). Collegare questo repository e impostare le variabili d'ambiente
 sopra elencate nel progetto Vercel.

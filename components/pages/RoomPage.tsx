@@ -6,6 +6,7 @@ import { content } from "@/lib/content";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import RoomBadges from "@/components/site/RoomBadges";
+import { RoomArc } from "@/components/site/Logo";
 import { BookingCta, Photo, Section, TextLink } from "@/components/site/ui";
 
 export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
@@ -27,10 +28,12 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
           >
             ← {c.backToRooms}
           </Link>
-          <p className="section-eyebrow mb-4 mt-8">
+          <p className="section-eyebrow mb-4 mt-8 flex items-center gap-2">
+            <RoomArc color={room.colorLight} size={16} />
             {c.room} {String(index + 1).padStart(2, "0")} / {String(rooms.length).padStart(2, "0")}
           </p>
           <h1 className="font-serif text-5xl text-sabina-50 sm:text-6xl md:text-7xl">{name}</h1>
+          <span className="mt-6 block h-1 w-24 rounded-full" style={{ backgroundColor: room.colorLight }} aria-hidden="true" />
           <p className="mt-5 max-w-2xl font-serif text-xl italic text-sabina-200">{room.tagline[lang]}</p>
           <RoomBadges room={room} lang={lang} className="mt-6" />
         </div>
@@ -44,12 +47,12 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
               {room.description[lang]}
             </p>
           </div>
-          <aside className="card-surface h-fit rounded-2xl p-7">
+          <aside className="card-surface h-fit overflow-hidden rounded-2xl p-7" style={{ borderTopColor: room.color, borderTopWidth: 4 }}>
             <p className="section-eyebrow mb-5">{t.amenities}</p>
             <ul className="space-y-3">
               {room.amenities[lang].map((a) => (
                 <li key={a} className="flex gap-3 font-sans text-sm text-sabina-100/90">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 border border-sabina-400" aria-hidden="true" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 border" style={{ borderColor: room.colorLight }} aria-hidden="true" />
                   {a}
                 </li>
               ))}
@@ -88,7 +91,10 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
                 href={href(lang, "room", r.slug.it)}
                 className="card-surface block rounded-2xl p-5 transition hover:border-sabina-400/50"
               >
-                <span className="font-serif text-xl text-sabina-50">{r.name[lang]}</span>
+                <span className="flex items-center gap-2 font-serif text-xl text-sabina-50">
+                  <RoomArc color={r.colorLight} size={16} />
+                  {r.name[lang]}
+                </span>
                 <span className="mt-1 block font-sans text-xs text-sabina-100/70">{r.tagline[lang]}</span>
               </Link>
             </li>

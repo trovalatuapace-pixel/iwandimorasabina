@@ -6,6 +6,7 @@ import { ui } from "@/lib/data/extras";
 import { legalUi } from "@/lib/data/legalUi";
 import { bannerText } from "@/lib/data/cookieBanner";
 import CookieSettingsLink from "./CookieSettingsLink";
+import LogoMark from "./Logo";
 
 export default function Footer({
   lang,
@@ -27,9 +28,9 @@ export default function Footer({
       </div>
       <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-3">
         <div>
-          <p className="flex items-center gap-2.5 font-serif text-2xl text-sabina-50">
-            <span className="h-2 w-2 rotate-45 border border-sabina-400/70" aria-hidden="true" />
-            Orbis in Sabina
+          <p className="flex items-center gap-3 font-serif text-2xl text-sabina-50">
+            <LogoMark size={40} />
+            Dimora Pangea
           </p>
           <p className="mt-3 font-sans text-sm text-sabina-300/80">{c.address}</p>
           {(contacts.cin || contacts.cir || contacts.vat) && (
@@ -84,7 +85,7 @@ export default function Footer({
 
       <div className="mx-auto mt-12 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-sabina-900 pt-6 font-sans text-xs text-sabina-300/60">
         <p>
-          © {new Date().getFullYear()} Orbis in Sabina. {c.rights}
+          © {new Date().getFullYear()} Dimora Pangea. {c.rights}
         </p>
         <nav aria-label="Legal" className="flex flex-wrap gap-4">
           <Link href={href(lang, "privacy")} className="nav-link">{legalUi[lang].privacy}</Link>

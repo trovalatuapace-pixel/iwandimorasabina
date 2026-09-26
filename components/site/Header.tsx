@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { LANGS, LANG_META, type Lang } from "@/lib/i18n/translations";
 import { bookingHref, href, hrefAll, navItems, type PageKey } from "@/lib/site";
 import { content } from "@/lib/content";
+import LogoMark from "./Logo";
 
 type Props = {
   lang: Lang;
@@ -51,8 +52,8 @@ export default function Header({ lang, current, roomSlugIt, overHero = false }: 
           href={href(lang, "home")}
           className="flex shrink-0 items-center gap-2.5 font-serif text-lg tracking-wide text-sabina-50 sm:text-xl"
         >
-          <span className="h-2 w-2 rotate-45 border border-sabina-400/70" aria-hidden="true" />
-          Orbis in Sabina
+          <LogoMark size={30} />
+          Dimora Pangea
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Principale">

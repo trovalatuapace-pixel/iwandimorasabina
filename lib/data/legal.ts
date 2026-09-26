@@ -33,7 +33,7 @@ const owner = "Iwan Donateo";
 const privacy: Record<Lang, LegalDoc> = {
   it: {
     metaTitle: "Informativa privacy",
-    metaDescription: "Come Orbis in Sabina tratta i dati personali di chi visita il sito e di chi chiede un preventivo o soggiorna in struttura.",
+    metaDescription: "Come Dimora Pangea tratta i dati personali di chi visita il sito e di chi chiede un preventivo o soggiorna in struttura.",
     eyebrow: "Privacy",
     title: "Informativa sulla privacy",
     lead: "Come trattiamo i tuoi dati quando visiti il sito, ci scrivi o soggiorni da noi. Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR).",
@@ -42,7 +42,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "1. Titolare del trattamento",
         p: [
-          `Il titolare del trattamento è ${owner}, gestore dell'alloggio per uso turistico «Orbis in Sabina», Montopoli di Sabina (RI), Italia — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
+          `Il titolare del trattamento è ${owner}, gestore dell'alloggio per uso turistico «Dimora Pangea», Montopoli di Sabina (RI), Italia — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
           `Per qualsiasi domanda sulla privacy puoi scrivere a ${email} o contattarci al ${phone}.`,
         ],
       },
@@ -122,7 +122,7 @@ const privacy: Record<Lang, LegalDoc> = {
 
   en: {
     metaTitle: "Privacy policy",
-    metaDescription: "How Orbis in Sabina handles the personal data of website visitors, guests and anyone requesting a quote.",
+    metaDescription: "How Dimora Pangea handles the personal data of website visitors, guests and anyone requesting a quote.",
     eyebrow: "Privacy",
     title: "Privacy policy",
     lead: "How we handle your data when you visit the website, contact us or stay with us. Pursuant to Art. 13 of EU Regulation 2016/679 (GDPR).",
@@ -131,7 +131,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "1. Data controller",
         p: [
-          `The data controller is ${owner}, host of the tourist accommodation “Orbis in Sabina”, Montopoli di Sabina (RI), Italy — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
+          `The data controller is ${owner}, host of the tourist accommodation “Dimora Pangea”, Montopoli di Sabina (RI), Italy — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
           `For any privacy question, write to ${email} or call ${phone}.`,
         ],
       },
@@ -211,7 +211,7 @@ const privacy: Record<Lang, LegalDoc> = {
 
   de: {
     metaTitle: "Datenschutzerklärung",
-    metaDescription: "Wie Orbis in Sabina die personenbezogenen Daten von Website-Besuchern, Gästen und Anfragenden verarbeitet.",
+    metaDescription: "Wie Dimora Pangea die personenbezogenen Daten von Website-Besuchern, Gästen und Anfragenden verarbeitet.",
     eyebrow: "Datenschutz",
     title: "Datenschutzerklärung",
     lead: "Wie wir Ihre Daten verarbeiten, wenn Sie die Website besuchen, uns kontaktieren oder bei uns übernachten. Gemäß Art. 13 der Verordnung (EU) 2016/679 (DSGVO).",
@@ -220,7 +220,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "1. Verantwortlicher",
         p: [
-          `Verantwortlicher ist ${owner}, Betreiber der Ferienunterkunft „Orbis in Sabina“, Montopoli di Sabina (RI), Italien — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
+          `Verantwortlicher ist ${owner}, Betreiber der Ferienunterkunft „Dimora Pangea“, Montopoli di Sabina (RI), Italien — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
           `Bei Fragen zum Datenschutz schreiben Sie an ${email} oder rufen Sie ${phone} an.`,
         ],
       },
@@ -300,7 +300,7 @@ const privacy: Record<Lang, LegalDoc> = {
 
   fr: {
     metaTitle: "Politique de confidentialité",
-    metaDescription: "Comment Orbis in Sabina traite les données personnelles des visiteurs du site, des hôtes et des demandes de devis.",
+    metaDescription: "Comment Dimora Pangea traite les données personnelles des visiteurs du site, des hôtes et des demandes de devis.",
     eyebrow: "Confidentialité",
     title: "Politique de confidentialité",
     lead: "Comment nous traitons vos données lorsque vous visitez le site, nous contactez ou séjournez chez nous. Conformément à l'art. 13 du Règlement UE 2016/679 (RGPD).",
@@ -309,7 +309,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "1. Responsable du traitement",
         p: [
-          `Le responsable du traitement est ${owner}, exploitant du logement touristique « Orbis in Sabina », Montopoli di Sabina (RI), Italie — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
+          `Le responsable du traitement est ${owner}, exploitant du logement touristique « Dimora Pangea », Montopoli di Sabina (RI), Italie — CIN ${contacts.cin}, CIR ${contacts.cir}.`,
           `Pour toute question relative à la confidentialité, écrivez à ${email} ou appelez le ${phone}.`,
         ],
       },
@@ -391,7 +391,7 @@ const privacy: Record<Lang, LegalDoc> = {
 const cookies: Record<Lang, LegalDoc> = {
   it: {
     metaTitle: "Cookie policy",
-    metaDescription: "Quali cookie usa il sito di Orbis in Sabina: nessun cookie di profilazione o statistico, mappa Google solo su consenso.",
+    metaDescription: "Quali cookie usa il sito di Dimora Pangea: nessun cookie di profilazione o statistico, mappa Google solo su consenso.",
     eyebrow: "Cookie",
     title: "Cookie policy",
     lead: "In breve: questo sito non usa cookie di profilazione né statistiche. L'unico servizio esterno che può usare cookie è la mappa di Google, che si carica solo se la attivi tu.",
@@ -439,7 +439,7 @@ const cookies: Record<Lang, LegalDoc> = {
 
   en: {
     metaTitle: "Cookie policy",
-    metaDescription: "Which cookies the Orbis in Sabina website uses: no profiling or analytics cookies, Google map only with consent.",
+    metaDescription: "Which cookies the Dimora Pangea website uses: no profiling or analytics cookies, Google map only with consent.",
     eyebrow: "Cookies",
     title: "Cookie policy",
     lead: "In short: this website uses no profiling or analytics cookies. The only external service that may use cookies is the Google map, which only loads if you activate it.",
@@ -487,7 +487,7 @@ const cookies: Record<Lang, LegalDoc> = {
 
   de: {
     metaTitle: "Cookie-Richtlinie",
-    metaDescription: "Welche Cookies die Website von Orbis in Sabina verwendet: keine Tracking- oder Statistik-Cookies, Google-Karte nur mit Einwilligung.",
+    metaDescription: "Welche Cookies die Website von Dimora Pangea verwendet: keine Tracking- oder Statistik-Cookies, Google-Karte nur mit Einwilligung.",
     eyebrow: "Cookies",
     title: "Cookie-Richtlinie",
     lead: "Kurz gesagt: Diese Website verwendet keine Profiling- oder Statistik-Cookies. Der einzige externe Dienst, der Cookies setzen kann, ist die Google-Karte — und die wird nur geladen, wenn Sie sie aktivieren.",
@@ -535,7 +535,7 @@ const cookies: Record<Lang, LegalDoc> = {
 
   fr: {
     metaTitle: "Politique cookies",
-    metaDescription: "Les cookies utilisés par le site d'Orbis in Sabina : aucun cookie de profilage ou de mesure d'audience, carte Google uniquement avec votre accord.",
+    metaDescription: "Les cookies utilisés par le site d'Dimora Pangea : aucun cookie de profilage ou de mesure d'audience, carte Google uniquement avec votre accord.",
     eyebrow: "Cookies",
     title: "Politique cookies",
     lead: "En bref : ce site n'utilise aucun cookie de profilage ni de mesure d'audience. Le seul service externe susceptible d'utiliser des cookies est la carte Google, qui ne se charge que si vous l'activez.",

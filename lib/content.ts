@@ -22,16 +22,16 @@ export const content = {
       rights: "Tutti i diritti riservati.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Casa vacanze a Montopoli di Sabina",
+      metaTitle: "Dimora Pangea | Casa vacanze a Montopoli di Sabina",
       metaDescription:
         "Casa vacanze a Montopoli di Sabina con cinque camere dedicate ai continenti, sauna, palestra, vasca idromassaggio e terrazzo panoramico con vista sulla Cupola di San Pietro.",
       eyebrow: "Casa vacanze · Montopoli di Sabina",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       lead: "Cinque camere dedicate ai cinque continenti, un'area benessere riservata agli ospiti e un terrazzo affacciato sulle colline della Sabina, a meno di un'ora da Roma.",
       introEyebrow: "Il mondo in una casa",
       introTitle: "Un nome, un'idea",
       introText: [
-        "Orbis, in latino, significa mondo. È l'idea da cui nasce la casa: accogliere sotto lo stesso tetto il carattere di cinque continenti, ciascuno interpretato in una camera attraverso colori, materiali e dettagli.",
+        "Pangea era il supercontinente che, milioni di anni fa, univa tutte le terre emerse. È l'idea da cui nasce la casa: riunire sotto lo stesso tetto il carattere di cinque continenti, ciascuno interpretato in una camera attraverso colori, materiali e dettagli.",
         "Intorno, il paesaggio è quello della Sabina: uliveti, borghi in pietra e un orizzonte che nelle giornate limpide arriva fino a Roma.",
       ],
       roomsEyebrow: "Cinque camere",
@@ -55,7 +55,7 @@ export const content = {
     rooms: {
       metaTitle: "Camere",
       metaDescription:
-        "Le cinque camere di Orbis in Sabina, ciascuna dedicata a un continente: Europa, Asia, Africa, Americhe e Oceania.",
+        "Le cinque camere di Dimora Pangea, ciascuna dedicata a un continente: Europa, Asia, Africa, Americhe e Oceania.",
       eyebrow: "Cinque continenti, una sola casa",
       title: "Le camere",
       lead: "Ogni camera racconta un continente attraverso colori, materiali e dettagli, con lo stesso livello di cura e di comfort.",
@@ -75,13 +75,13 @@ export const content = {
     house: {
       metaTitle: "La Casa",
       metaDescription:
-        "Gli spazi di Orbis in Sabina: sauna, palestra, vasca idromassaggio e terrazzo panoramico con binocolo puntato sulla Cupola di San Pietro.",
+        "Gli spazi di Dimora Pangea: sauna, palestra, vasca idromassaggio e terrazzo panoramico con binocolo puntato sulla Cupola di San Pietro.",
       eyebrow: "La casa",
       title: "Spazi pensati per rallentare",
       lead: "Oltre alle cinque camere, la casa offre agli ospiti un'area benessere completa e un terrazzo da cui, nelle giornate limpide, si vede Roma.",
       conceptTitle: "Una casa, cinque viaggi",
       conceptText: [
-        "Orbis in Sabina è una casa vacanze di fascia alta con cinque camere, ciascuna intitolata e arredata secondo un continente. Gli spazi comuni sono condivisi tra gli ospiti e pensati per offrire, dentro casa, ciò che di solito si cerca fuori.",
+        "Dimora Pangea è una casa vacanze di fascia alta con cinque camere, ciascuna intitolata e arredata secondo un continente. Gli spazi comuni sono condivisi tra gli ospiti e pensati per offrire, dentro casa, ciò che di solito si cerca fuori.",
         "Ogni ambiente è curato per accompagnare giornate lente: il calore della sauna, l'allenamento del mattino, l'acqua dell'idromassaggio al tramonto.",
       ],
       spacesEyebrow: "Benessere e spazi comuni",
@@ -139,7 +139,7 @@ export const content = {
     contact: {
       metaTitle: "Contatti e prenotazioni",
       metaDescription:
-        "Contatti, disponibilità e prenotazione di Orbis in Sabina, casa vacanze a Montopoli di Sabina (Rieti).",
+        "Contatti, disponibilità e prenotazione di Dimora Pangea, casa vacanze a Montopoli di Sabina (Rieti).",
       eyebrow: "Contatti",
       title: "Contatti e prenotazioni",
       lead: "Per informazioni sul soggiorno potete scriverci in qualsiasi momento. Qui sotto trovate il calendario delle disponibilità e il link per prenotare.",
@@ -174,16 +174,16 @@ export const content = {
       rights: "All rights reserved.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Holiday home in Montopoli di Sabina",
+      metaTitle: "Dimora Pangea | Holiday home in Montopoli di Sabina",
       metaDescription:
         "Holiday home in Montopoli di Sabina with five continent-themed rooms, sauna, gym, hot tub and a panoramic terrace overlooking St. Peter's Dome.",
       eyebrow: "Holiday home · Montopoli di Sabina",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       lead: "Five rooms dedicated to the five continents, a private wellness area for guests and a terrace overlooking the Sabine hills, less than an hour from Rome.",
       introEyebrow: "The world in one house",
       introTitle: "A name, an idea",
       introText: [
-        "Orbis is Latin for world. It is the idea behind the house: to bring the character of five continents under one roof, each one interpreted in a room through colours, materials and details.",
+        "Pangaea was the supercontinent that, millions of years ago, joined all the land on Earth. It is the idea behind the house: to bring the character of five continents back together under one roof, each one interpreted in a room through colours, materials and details.",
         "All around lies the Sabine countryside: olive groves, stone villages and a horizon that, on clear days, reaches all the way to Rome.",
       ],
       roomsEyebrow: "Five rooms",
@@ -207,7 +207,7 @@ export const content = {
     rooms: {
       metaTitle: "Rooms",
       metaDescription:
-        "The five rooms of Orbis in Sabina, each dedicated to a continent: Europe, Asia, Africa, the Americas and Oceania.",
+        "The five rooms of Dimora Pangea, each dedicated to a continent: Europe, Asia, Africa, the Americas and Oceania.",
       eyebrow: "Five continents, one house",
       title: "The rooms",
       lead: "Each room tells the story of a continent through colours, materials and details, with the same level of care and comfort.",
@@ -227,13 +227,13 @@ export const content = {
     house: {
       metaTitle: "The House",
       metaDescription:
-        "The spaces of Orbis in Sabina: sauna, gym, hot tub and a panoramic terrace with binoculars pointed at St. Peter's Dome.",
+        "The spaces of Dimora Pangea: sauna, gym, hot tub and a panoramic terrace with binoculars pointed at St. Peter's Dome.",
       eyebrow: "The house",
       title: "Spaces designed to slow down",
       lead: "Beyond the five rooms, the house offers guests a complete wellness area and a terrace from which, on clear days, you can see Rome.",
       conceptTitle: "One house, five journeys",
       conceptText: [
-        "Orbis in Sabina is an upscale holiday home with five rooms, each named and furnished after a continent. The shared spaces are open to all guests and designed to offer, inside the house, what one usually looks for elsewhere.",
+        "Dimora Pangea is an upscale holiday home with five rooms, each named and furnished after a continent. The shared spaces are open to all guests and designed to offer, inside the house, what one usually looks for elsewhere.",
         "Every space is arranged for slow days: the warmth of the sauna, a morning workout, the hot tub at sunset.",
       ],
       spacesEyebrow: "Wellness and shared spaces",
@@ -291,7 +291,7 @@ export const content = {
     contact: {
       metaTitle: "Contact and booking",
       metaDescription:
-        "Contact details, availability and booking for Orbis in Sabina, holiday home in Montopoli di Sabina (Rieti).",
+        "Contact details, availability and booking for Dimora Pangea, holiday home in Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact and booking",
       lead: "For any information about your stay, feel free to write to us at any time. Below you will find the availability calendar and the booking link.",
@@ -326,16 +326,16 @@ export const content = {
       rights: "Alle Rechte vorbehalten.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Ferienhaus in Montopoli di Sabina",
+      metaTitle: "Dimora Pangea | Ferienhaus in Montopoli di Sabina",
       metaDescription:
         "Ferienhaus in Montopoli di Sabina mit fünf Zimmern im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Panoramaterrasse mit Blick auf die Kuppel des Petersdoms.",
       eyebrow: "Ferienhaus · Montopoli di Sabina",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       lead: "Fünf Zimmer, den fünf Kontinenten gewidmet, ein privater Wellnessbereich für die Gäste und eine Terrasse mit Blick auf die Hügel der Sabina – weniger als eine Stunde von Rom.",
       introEyebrow: "Die Welt in einem Haus",
       introTitle: "Ein Name, eine Idee",
       introText: [
-        "Orbis bedeutet auf Latein Welt. Das ist die Idee hinter dem Haus: den Charakter von fünf Kontinenten unter einem Dach zu vereinen – jeder davon in einem Zimmer durch Farben, Materialien und Details interpretiert.",
+        "Pangäa war der Superkontinent, der vor Millionen von Jahren alle Landmassen der Erde vereinte. Das ist die Idee hinter dem Haus: den Charakter von fünf Kontinenten wieder unter einem Dach zu vereinen – jeder davon in einem Zimmer durch Farben, Materialien und Details interpretiert.",
         "Ringsum liegt die Landschaft der Sabina: Olivenhaine, Dörfer aus Stein und ein Horizont, der an klaren Tagen bis nach Rom reicht.",
       ],
       roomsEyebrow: "Fünf Zimmer",
@@ -359,7 +359,7 @@ export const content = {
     rooms: {
       metaTitle: "Zimmer",
       metaDescription:
-        "Die fünf Zimmer von Orbis in Sabina, jedes einem Kontinent gewidmet: Europa, Asien, Afrika, Amerika und Ozeanien.",
+        "Die fünf Zimmer von Dimora Pangea, jedes einem Kontinent gewidmet: Europa, Asien, Afrika, Amerika und Ozeanien.",
       eyebrow: "Fünf Kontinente, ein Haus",
       title: "Die Zimmer",
       lead: "Jedes Zimmer erzählt von einem Kontinent – durch Farben, Materialien und Details, mit derselben Sorgfalt und demselben Komfort.",
@@ -379,13 +379,13 @@ export const content = {
     house: {
       metaTitle: "Das Haus",
       metaDescription:
-        "Die Räume von Orbis in Sabina: Sauna, Fitnessraum, Whirlpool und eine Panoramaterrasse mit Fernglas, das auf die Kuppel des Petersdoms gerichtet ist.",
+        "Die Räume von Dimora Pangea: Sauna, Fitnessraum, Whirlpool und eine Panoramaterrasse mit Fernglas, das auf die Kuppel des Petersdoms gerichtet ist.",
       eyebrow: "Das Haus",
       title: "Räume zum Entschleunigen",
       lead: "Neben den fünf Zimmern bietet das Haus einen kompletten Wellnessbereich und eine Terrasse, von der aus man an klaren Tagen Rom sieht.",
       conceptTitle: "Ein Haus, fünf Reisen",
       conceptText: [
-        "Orbis in Sabina ist ein gehobenes Ferienhaus mit fünf Zimmern, jedes nach einem Kontinent benannt und eingerichtet. Die Gemeinschaftsbereiche teilen sich die Gäste; sie sollen im Haus bieten, was man sonst draußen sucht.",
+        "Dimora Pangea ist ein gehobenes Ferienhaus mit fünf Zimmern, jedes nach einem Kontinent benannt und eingerichtet. Die Gemeinschaftsbereiche teilen sich die Gäste; sie sollen im Haus bieten, was man sonst draußen sucht.",
         "Jeder Raum ist für ruhige Tage gestaltet: die Wärme der Sauna, das Training am Morgen, der Whirlpool bei Sonnenuntergang.",
       ],
       spacesEyebrow: "Wellness und Gemeinschaftsbereiche",
@@ -443,7 +443,7 @@ export const content = {
     contact: {
       metaTitle: "Kontakt und Buchung",
       metaDescription:
-        "Kontakt, Verfügbarkeit und Buchung für Orbis in Sabina, Ferienhaus in Montopoli di Sabina (Rieti).",
+        "Kontakt, Verfügbarkeit und Buchung für Dimora Pangea, Ferienhaus in Montopoli di Sabina (Rieti).",
       eyebrow: "Kontakt",
       title: "Kontakt und Buchung",
       lead: "Für Fragen zu Ihrem Aufenthalt können Sie uns jederzeit schreiben. Unten finden Sie den Verfügbarkeitskalender und den Buchungslink.",
@@ -478,16 +478,16 @@ export const content = {
       rights: "Tous droits réservés.",
     },
     home: {
-      metaTitle: "Orbis in Sabina | Maison de vacances à Montopoli di Sabina",
+      metaTitle: "Dimora Pangea | Maison de vacances à Montopoli di Sabina",
       metaDescription:
         "Maison de vacances à Montopoli di Sabina avec cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse panoramique avec vue sur la coupole de Saint-Pierre.",
       eyebrow: "Maison de vacances · Montopoli di Sabina",
-      title: "Orbis in Sabina",
+      title: "Dimora Pangea",
       lead: "Cinq chambres dédiées aux cinq continents, un espace bien-être réservé aux hôtes et une terrasse face aux collines de la Sabine, à moins d'une heure de Rome.",
       introEyebrow: "Le monde dans une maison",
       introTitle: "Un nom, une idée",
       introText: [
-        "Orbis signifie monde en latin. C'est l'idée d'où naît la maison : réunir sous un même toit le caractère de cinq continents, chacun interprété dans une chambre à travers couleurs, matières et détails.",
+        "La Pangée était le supercontinent qui, il y a des millions d'années, réunissait toutes les terres émergées. C'est l'idée d'où naît la maison : rassembler de nouveau sous un même toit le caractère de cinq continents, chacun interprété dans une chambre à travers couleurs, matières et détails.",
         "Tout autour s'étend la campagne de la Sabine : oliveraies, villages de pierre et un horizon qui, par temps clair, s'étend jusqu'à Rome.",
       ],
       roomsEyebrow: "Cinq chambres",
@@ -511,7 +511,7 @@ export const content = {
     rooms: {
       metaTitle: "Chambres",
       metaDescription:
-        "Les cinq chambres d'Orbis in Sabina, chacune dédiée à un continent : Europe, Asie, Afrique, Amériques et Océanie.",
+        "Les cinq chambres d'Dimora Pangea, chacune dédiée à un continent : Europe, Asie, Afrique, Amériques et Océanie.",
       eyebrow: "Cinq continents, une seule maison",
       title: "Les chambres",
       lead: "Chaque chambre raconte un continent à travers couleurs, matières et détails, avec le même soin et le même confort.",
@@ -531,13 +531,13 @@ export const content = {
     house: {
       metaTitle: "La Maison",
       metaDescription:
-        "Les espaces d'Orbis in Sabina : sauna, salle de sport, jacuzzi et terrasse panoramique avec des jumelles tournées vers la coupole de Saint-Pierre.",
+        "Les espaces d'Dimora Pangea : sauna, salle de sport, jacuzzi et terrasse panoramique avec des jumelles tournées vers la coupole de Saint-Pierre.",
       eyebrow: "La maison",
       title: "Des espaces pensés pour ralentir",
       lead: "En plus des cinq chambres, la maison offre aux hôtes un espace bien-être complet et une terrasse d'où, par temps clair, on aperçoit Rome.",
       conceptTitle: "Une maison, cinq voyages",
       conceptText: [
-        "Orbis in Sabina est une maison de vacances haut de gamme de cinq chambres, chacune nommée et aménagée d'après un continent. Les espaces communs sont partagés entre les hôtes et pensés pour offrir, à la maison, ce que l'on cherche habituellement ailleurs.",
+        "Dimora Pangea est une maison de vacances haut de gamme de cinq chambres, chacune nommée et aménagée d'après un continent. Les espaces communs sont partagés entre les hôtes et pensés pour offrir, à la maison, ce que l'on cherche habituellement ailleurs.",
         "Chaque espace accompagne des journées paisibles : la chaleur du sauna, l'entraînement du matin, le jacuzzi au coucher du soleil.",
       ],
       spacesEyebrow: "Bien-être et espaces communs",
@@ -595,7 +595,7 @@ export const content = {
     contact: {
       metaTitle: "Contact et réservation",
       metaDescription:
-        "Coordonnées, disponibilités et réservation d'Orbis in Sabina, maison de vacances à Montopoli di Sabina (Rieti).",
+        "Coordonnées, disponibilités et réservation d'Dimora Pangea, maison de vacances à Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact et réservation",
       lead: "Pour toute information sur votre séjour, écrivez-nous à tout moment. Vous trouverez ci-dessous le calendrier des disponibilités et le lien de réservation.",
