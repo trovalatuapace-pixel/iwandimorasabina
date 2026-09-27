@@ -167,7 +167,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Dimora Pangea",
-      address: "Montopoli di Sabina (RI), Italia",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Italia",
       contactsTitle: "Contatti",
       whatsapp: "Scrivici su WhatsApp",
       followUs: "Seguici",
@@ -285,7 +285,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Dimora Pangea",
-      address: "Montopoli di Sabina (RI), Italy",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Italy",
       contactsTitle: "Contacts",
       whatsapp: "Message us on WhatsApp",
       followUs: "Follow us",
@@ -403,7 +403,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Dimora Pangea",
-      address: "Montopoli di Sabina (RI), Italien",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Italien",
       contactsTitle: "Kontakt",
       whatsapp: "Schreiben Sie uns auf WhatsApp",
       followUs: "Folgen Sie uns",
@@ -521,7 +521,7 @@ export const translations: Record<Lang, TranslationDict> = {
     },
     footer: {
       title: "Dimora Pangea",
-      address: "Montopoli di Sabina (RI), Italie",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Italie",
       contactsTitle: "Contact",
       whatsapp: "Écrivez-nous sur WhatsApp",
       followUs: "Suivez-nous",

@@ -6,7 +6,7 @@ import { href } from "@/lib/site";
 import { legalUi } from "@/lib/data/legalUi";
 import { useMapsConsent } from "@/lib/consent";
 
-const MAPS_QUERY = "Montopoli di Sabina, Provincia di Rieti, Italia";
+const MAPS_QUERY = "Via Roma 33, 02034 Montopoli di Sabina RI, Italia";
 
 /**
  * Mappa Google caricata SOLO dopo il clic dell'utente (consenso ai cookie di terze parti,
@@ -17,7 +17,7 @@ export default function MapEmbed({ lang, title }: { lang: Lang; title: string })
   const t = legalUi[lang];
   const src =
     process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC ||
-    `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=11&output=embed`;
+    `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=15&output=embed`;
 
   return (
     <div className="overflow-hidden rounded-2xl border border-sabina-800">

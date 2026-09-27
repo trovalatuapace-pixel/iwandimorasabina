@@ -18,7 +18,7 @@ export const content = {
       skip: "Vai al contenuto",
       menu: "Menu",
       language: "Lingua",
-      address: "Montopoli di Sabina (RI), Lazio — Italia",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Lazio — Italia",
       rights: "Tutti i diritti riservati.",
     },
     home: {
@@ -170,7 +170,7 @@ export const content = {
       skip: "Skip to content",
       menu: "Menu",
       language: "Language",
-      address: "Montopoli di Sabina (RI), Lazio — Italy",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Lazio — Italy",
       rights: "All rights reserved.",
     },
     home: {
@@ -322,7 +322,7 @@ export const content = {
       skip: "Zum Inhalt springen",
       menu: "Menü",
       language: "Sprache",
-      address: "Montopoli di Sabina (RI), Latium — Italien",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Latium — Italien",
       rights: "Alle Rechte vorbehalten.",
     },
     home: {
@@ -474,7 +474,7 @@ export const content = {
       skip: "Aller au contenu",
       menu: "Menu",
       language: "Langue",
-      address: "Montopoli di Sabina (RI), Latium — Italie",
+      address: "Via Roma 33, 02034 Montopoli di Sabina (RI), Latium — Italie",
       rights: "Tous droits réservés.",
     },
     home: {
