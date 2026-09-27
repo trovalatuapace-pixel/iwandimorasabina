@@ -52,7 +52,7 @@ export default function HouseSlider({
   const stop = () => setPaused(true);
 
   return (
-    <div className={`group relative w-full overflow-hidden rounded-2xl ${className}`} aria-roledescription="carousel">
+    <div className={`tone-dark group relative w-full overflow-hidden rounded-2xl ${className}`} aria-roledescription="carousel">
       <div
         ref={track}
         className="flex h-full w-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

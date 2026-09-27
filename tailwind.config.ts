@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         sabina: {
-          50: "#faf6f0",
-          100: "#f2e8d9",
-          200: "#e3cead",
-          300: "#d0ac78",
+          50: "rgb(var(--s-50) / <alpha-value>)",
+          100: "rgb(var(--s-100) / <alpha-value>)",
+          200: "rgb(var(--s-200) / <alpha-value>)",
+          300: "rgb(var(--s-300) / <alpha-value>)",
           400: "#c0904f",
           500: "#a8753a",
           600: "#8a5c2e",
           700: "#6d4726",
-          800: "#4a3019",
-          900: "#241a10",
+          800: "rgb(var(--s-800) / <alpha-value>)",
+          900: "rgb(var(--s-900) / <alpha-value>)",
           950: "#140f0a",
         },
         pine: {

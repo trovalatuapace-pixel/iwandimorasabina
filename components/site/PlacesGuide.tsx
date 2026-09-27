@@ -7,7 +7,7 @@ import { Photo, Section, SectionHead } from "./ui";
 export default function PlacesGuide({ lang }: { lang: Lang }) {
   const t = guideUi[lang];
   return (
-    <Section id="dove-andare">
+    <Section id="dove-andare" tone="dark">
       <SectionHead eyebrow={t.eyebrow} title={t.title} />
       <p className="mt-5 max-w-2xl font-sans leading-relaxed text-sabina-100/80">{t.lead}</p>
 

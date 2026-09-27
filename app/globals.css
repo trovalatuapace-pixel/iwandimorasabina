@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Palette "sabina" a variabili: nelle sezioni .tone-light i toni chiari e
+   scuri si invertono, così gli stessi componenti funzionano su fondo crema. */
+:root,
+.tone-dark {
+  --s-50: 250 246 240;
+  --s-100: 242 232 217;
+  --s-200: 227 206 173;
+  --s-300: 208 172 120;
+  --s-800: 74 48 25;
+  --s-900: 36 26 16;
+}
+
+.tone-light {
+  --s-50: 36 26 16;
+  --s-100: 74 52 33;
+  --s-200: 109 71 38;
+  --s-300: 150 99 45;
+  --s-800: 226 208 181;
+  --s-900: 239 228 211;
+  color: rgb(36 26 16);
+  background-color: #f6eee2;
+  background-image:
+    radial-gradient(ellipse at 12% 0%, rgba(192, 144, 79, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 95% 100%, rgba(192, 144, 79, 0.12) 0%, transparent 50%);
+}
+
+.tone-light ::selection {
+  color: #241a10;
+}
+
+.tone-light .card-surface {
+  background: rgba(255, 252, 247, 0.75);
+  box-shadow: 0 10px 30px rgba(74, 48, 25, 0.08);
+}
+
+.tone-light .card-interactive:hover {
+  box-shadow: 0 0 0 1px rgba(150, 99, 45, 0.35), 0 14px 40px rgba(74, 48, 25, 0.18);
+}
+
+.tone-dark-warm {
+  background-color: #1a120b;
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(192, 144, 79, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(60, 111, 106, 0.16) 0%, transparent 50%);
+}
+
 html {
   scroll-behavior: smooth;
   /* Header fisso: le ancore (#prenota) non finiscono sotto il menu */

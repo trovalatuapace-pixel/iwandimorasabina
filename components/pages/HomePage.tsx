@@ -12,11 +12,31 @@ import StructuredData from "@/components/site/StructuredData";
 import HouseSlider from "@/components/site/HouseSlider";
 import Hero360 from "@/components/site/Hero360";
 import { houseGallery } from "@/lib/data/gallery";
-import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
+import { BookingCta, Photo, PhotoBand, Section, SectionHead, TextLink } from "@/components/site/ui";
+
+const BANDS: Record<Lang, { spa: [string, string]; view: [string, string] }> = {
+  it: {
+    spa: ["Area benessere", "Un brindisi in idromassaggio, mentre il sole scende sulla Sabina"],
+    view: ["Dal terrazzo", "Nelle giornate limpide, all'orizzonte, la Cupola di San Pietro"],
+  },
+  en: {
+    spa: ["Wellness area", "A toast in the hot tub as the sun sets over the Sabina hills"],
+    view: ["From the terrace", "On clear days, St Peter's Dome on the horizon"],
+  },
+  de: {
+    spa: ["Wellnessbereich", "Ein Glas im Whirlpool, während die Sonne über der Sabina untergeht"],
+    view: ["Von der Terrasse", "An klaren Tagen die Kuppel des Petersdoms am Horizont"],
+  },
+  fr: {
+    spa: ["Espace bien-être", "Un verre dans le jacuzzi, pendant que le soleil se couche sur la Sabine"],
+    view: ["Depuis la terrasse", "Par temps clair, la coupole de Saint-Pierre à l'horizon"],
+  },
+};
 
 export default function HomePage({ lang }: { lang: Lang }) {
   const t = content[lang].home;
   const c = content[lang].common;
+  const band = BANDS[lang];
 
   return (
     <Shell lang={lang} current="home" overHero>
@@ -62,7 +82,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <Section divider={false}>
+      <Section tone="light">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <SectionHead eyebrow={t.introEyebrow} title={t.introTitle} />
@@ -97,7 +117,9 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Section>
+      <PhotoBand src="/foto/brindisi.webp" eyebrow={band.spa[0]} title={band.spa[1]} position="center 60%" />
+
+      <Section tone="dark">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <SectionHead eyebrow={t.roomsEyebrow} title={t.roomsTitle} />
@@ -111,7 +133,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Section>
+      <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <SectionHead eyebrow={t.houseEyebrow} title={t.houseTitle} />
@@ -131,9 +153,11 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Services lang={lang} />
+      <Services lang={lang} tone="dark" />
 
-      <Section>
+      <PhotoBand src="/foto/vista-cupola-san-pietro.webp" eyebrow={band.view[0]} title={band.view[1]} position="center 45%" />
+
+      <Section tone="light">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Photo label={c.photoSoon} src="/foto/borgo-vicolo.webp" alt={t.territoryTitle} className="aspect-[5/4]" />
           <div>

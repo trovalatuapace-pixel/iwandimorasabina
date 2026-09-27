@@ -12,7 +12,7 @@ export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
   return (
     <Link href={href(lang, "room", room.slug.it)} className="card-interactive group block">
       <div
-        className={`relative flex aspect-[4/3] items-end overflow-hidden rounded-t-2xl bg-gradient-to-br ${room.gradient}`}
+        className={`tone-dark relative flex aspect-[4/3] items-end overflow-hidden rounded-t-2xl bg-gradient-to-br ${room.gradient}`}
       >
         {room.photo && (
           // eslint-disable-next-line @next/next/no-img-element

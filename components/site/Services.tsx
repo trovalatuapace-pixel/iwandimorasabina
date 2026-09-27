@@ -22,10 +22,18 @@ function List({ items, lang }: { items: ServiceItem[]; lang: Lang }) {
 }
 
 /** Servizi inclusi e su richiesta, con icone (ispirato alla sezione "I servizi" del sito di riferimento). */
-export default function Services({ lang, id = "servizi" }: { lang: Lang; id?: string }) {
+export default function Services({
+  lang,
+  id = "servizi",
+  tone,
+}: {
+  lang: Lang;
+  id?: string;
+  tone?: "light" | "dark";
+}) {
   const t = ui[lang];
   return (
-    <Section id={id}>
+    <Section id={id} tone={tone}>
       <SectionHead eyebrow={t.servicesEyebrow} title={t.servicesTitle} />
       <h3 className="mb-5 mt-12 font-sans text-xs uppercase tracking-[0.3em] text-sabina-300">{t.included}</h3>
       <List items={servicesIncluded} lang={lang} />

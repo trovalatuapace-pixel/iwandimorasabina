@@ -17,7 +17,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
     <Shell lang={lang} current="contact">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section id="prenota" divider={false}>
+      <Section id="prenota" tone="light">
         <SectionHead eyebrow={t.bookingEyebrow} title={t.bookingTitle} />
         <p className="mt-4 max-w-2xl font-sans text-sabina-100/80">{t.bookingText}</p>
         <div className="mt-10">
@@ -32,14 +32,14 @@ export default function ContactPage({ lang }: { lang: Lang }) {
       </Section>
 
       {(contacts.whatsapp || contacts.email) && (
-        <Section id="preventivo">
+        <Section id="preventivo" tone="dark">
           <SectionHead eyebrow={ui[lang].quote.eyebrow} title={ui[lang].quote.title} />
           <p className="mb-10 mt-4 max-w-2xl font-sans text-sabina-100/80">{ui[lang].quote.lead}</p>
           <QuoteForm lang={lang} whatsapp={contacts.whatsapp} email={contacts.email} />
         </Section>
       )}
 
-      <Section>
+      <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <h2 className="font-serif text-3xl text-sabina-50">{t.infoTitle}</h2>

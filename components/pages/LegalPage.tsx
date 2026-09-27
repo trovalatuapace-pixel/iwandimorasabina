@@ -20,7 +20,7 @@ export default function LegalPage({ lang, kind }: { lang: Lang; kind: "privacy" 
   return (
     <Shell lang={lang} current={kind}>
       <PageHero eyebrow={d.eyebrow} title={d.title} lead={d.lead} />
-      <Section divider={false}>
+      <Section tone="light">
         <div className="max-w-3xl space-y-10 font-sans text-sabina-100/85">
           {d.blocks.map((b, i) => (
             <section key={i}>

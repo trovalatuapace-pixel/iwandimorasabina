@@ -37,15 +37,20 @@ export function PageHero({
 export function Section({
   children,
   id,
-  divider = true,
+  divider,
+  tone,
 }: {
   children: ReactNode;
   id?: string;
   divider?: boolean;
+  /** "light" = fondo crema con testo scuro, "dark" = fondo scuro caldo. Senza tone resta lo sfondo della pagina. */
+  tone?: "light" | "dark";
 }) {
+  const showDivider = divider ?? !tone;
+  const toneClass = tone === "light" ? "tone-light" : tone === "dark" ? "tone-dark tone-dark-warm" : "";
   return (
-    <section id={id} className="relative scroll-mt-24 px-5 py-20 sm:px-8">
-      {divider && (
+    <section id={id} className={`relative scroll-mt-24 px-5 sm:px-8 ${tone ? "py-24 sm:py-28" : "py-20"} ${toneClass}`}>
+      {showDivider && (
         <div className="section-divider mb-16">
           <span className="section-divider__mark" aria-hidden="true" />
         </div>
@@ -140,6 +145,43 @@ export function BookingCta({
             {button}
           </Link>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Fascia fotografica a tutta larghezza tra una sezione e l'altra.
+ */
+export function PhotoBand({
+  src,
+  eyebrow,
+  title,
+  position = "center",
+}: {
+  src: string;
+  eyebrow: string;
+  title: string;
+  position?: string;
+}) {
+  return (
+    <section className="tone-dark relative isolate flex min-h-[62vh] items-end overflow-hidden sm:min-h-[70vh]">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={title}
+        loading="lazy"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        style={{ objectPosition: position }}
+      />
+      <div
+        className="absolute inset-0 -z-10"
+        style={{ background: "linear-gradient(to top, rgba(20,15,10,0.85) 0%, rgba(20,15,10,0.25) 45%, rgba(20,15,10,0.05) 100%)" }}
+        aria-hidden="true"
+      />
+      <div className="mx-auto w-full max-w-6xl px-5 pb-14 sm:px-8 sm:pb-20">
+        <p className="section-eyebrow mb-4">{eyebrow}</p>
+        <p className="max-w-3xl font-serif text-3xl leading-tight text-sabina-50 sm:text-4xl md:text-5xl">{title}</p>
       </div>
     </section>
   );

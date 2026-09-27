@@ -7,7 +7,7 @@ import { Section, SectionHead } from "./ui";
 export default function Nearby({ lang }: { lang: Lang }) {
   const t = ui[lang];
   return (
-    <Section id="dintorni">
+    <Section id="dintorni" tone="light">
       <SectionHead eyebrow={t.nearbyEyebrow} title={t.nearbyTitle} />
       <p className="mt-5 max-w-2xl font-sans leading-relaxed text-sabina-100/80">{t.nearbyLead}</p>
       <ul className="mt-10 grid gap-3 sm:grid-cols-2">

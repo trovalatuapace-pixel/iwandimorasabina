@@ -39,7 +39,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
         </div>
       </section>
 
-      <Section divider={false}>
+      <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <Photo label={c.photoSoon} gradient={room.gradient} src={room.photo} alt={name} className="aspect-[16/10]" />
@@ -79,7 +79,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
         target={bookingHref(lang)}
       />
 
-      <Section>
+      <Section tone="dark">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-serif text-3xl text-sabina-50">{c.otherRooms}</h2>
           <TextLink href={href(lang, "rooms")}>{c.allRooms}</TextLink>

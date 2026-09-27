@@ -13,7 +13,7 @@ export default function TerritoryPage({ lang }: { lang: Lang }) {
     <Shell lang={lang} current="territory">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} tone="#243a3a" />
 
-      <Section divider={false}>
+      <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <h2 className="font-serif text-3xl text-sabina-50">{t.distancesTitle}</h2>

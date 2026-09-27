@@ -15,7 +15,7 @@ export default function HousePage({ lang }: { lang: Lang }) {
     <Shell lang={lang} current="house">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section divider={false}>
+      <Section tone="light">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h2 className="section-title">{t.conceptTitle}</h2>
@@ -29,7 +29,7 @@ export default function HousePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Section>
+      <Section tone="dark">
         <SectionHead eyebrow={t.spacesEyebrow} title={t.spacesTitle} />
         <div className="mt-12 space-y-16">
           {wellnessItems.map((w, i) => (
@@ -51,9 +51,9 @@ export default function HousePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Services lang={lang} />
+      <Services lang={lang} tone="light" />
 
-      <Section>
+      <Section tone="dark">
         <SectionHead eyebrow={t.galleryEyebrow} title={t.galleryTitle} />
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
           {houseGallery.map((g) => (

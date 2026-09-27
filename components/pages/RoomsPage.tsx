@@ -11,7 +11,7 @@ export default function RoomsPage({ lang }: { lang: Lang }) {
   return (
     <Shell lang={lang} current="rooms">
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
-      <Section divider={false}>
+      <Section tone="light">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rooms.map((room) => (
             <RoomCard key={room.slug.it} room={room} lang={lang} />
