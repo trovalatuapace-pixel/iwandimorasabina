@@ -10,6 +10,7 @@ import Link from "next/link";
 import Services from "@/components/site/Services";
 import StructuredData from "@/components/site/StructuredData";
 import HouseSlider from "@/components/site/HouseSlider";
+import Hero360 from "@/components/site/Hero360";
 import { houseGallery } from "@/lib/data/gallery";
 import { BookingCta, Photo, Section, SectionHead, TextLink } from "@/components/site/ui";
 
@@ -20,15 +21,17 @@ export default function HomePage({ lang }: { lang: Lang }) {
   return (
     <Shell lang={lang} current="home" overHero>
       <StructuredData lang={lang} />
-      {/* HERO — punto di innesto della futura scena 3D (vedi README) */}
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+      {/* HERO 360° — foto sferica del salone esplorabile (components/site/Hero360.tsx) */}
+      <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden">
+        {/* Foto statica: visibile finché la scena 360° non è pronta o se WebGL manca */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/foto/vista-cupola-san-pietro.webp"
+          src="/foto/living-biliardo-1.webp"
           alt=""
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
           fetchPriority="high"
         />
+        <Hero360 lang={lang} />
         <div
           className="absolute inset-0 -z-10"
           style={{
@@ -42,7 +45,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
           style={{ boxShadow: "inset 0 0 160px 40px rgba(11,7,4,0.65)" }}
           aria-hidden="true"
         />
-        <div className="mx-auto w-full max-w-6xl px-5 pt-24 sm:px-8">
+        <div className="pointer-events-none mx-auto w-full max-w-6xl px-5 pt-24 sm:px-8">
           <LogoMark size={72} className="mb-6 animate-fade-in-up" />
           <p className="section-eyebrow mb-5 animate-fade-in-up">{t.eyebrow}</p>
           <h1 className="animate-fade-in-up font-serif text-5xl leading-tight text-sabina-50 [animation-delay:100ms] sm:text-6xl md:text-7xl">

@@ -60,14 +60,16 @@ Finché `ICAL_BOOKING_URL` e `ICAL_AIRBNB_URL` non sono impostati, la sezione
 disponibilità mostra un messaggio di calendario non ancora attivo invece di
 un errore.
 
-## Hero 3D (placeholder attuale)
+## Hero 360°
 
-L'hero usa al momento un gradiente CSS come sfondo, in attesa delle foto
-reali della struttura. Quando Miriam riceverà il video di riferimento, lo
-sfondo potrà essere sostituito da una scena Three.js seguendo il metodo già
-usato per PrintLab (canvas fisso in `position:fixed; z-index:0` dietro a
-tutte le sezioni, camera legata allo scroll) — vedi `components/Hero.tsx`
-per il punto di innesto.
+L'hero della home mostra la foto sferica del salone (biliardo, divani,
+murale) in `public/360/` (4096 px desktop, 2048 px mobile), proiettata in
+una sfera Three.js dal componente `components/site/Hero360.tsx`: gira
+lentamente da sola, si esplora trascinando con mouse o dito e con lo scroll
+la visuale si avvicina e ruota verso il murale. Finché la scena non è pronta
+(o se il browser non supporta WebGL) resta visibile la foto
+`/foto/living-biliardo-1.webp`. L'originale 8000×4000 è nella cartella
+"casa montopoli/foto-360".
 
 ## Da confermare con Miriam/Iwan
 
