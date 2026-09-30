@@ -2,6 +2,7 @@ import type { Lang } from "@/lib/i18n/translations";
 import { content } from "@/lib/content";
 import { wellnessItems } from "@/lib/data/wellness";
 import { houseGallery } from "@/lib/data/gallery";
+import { commonAreas, commonAreasHead } from "@/lib/data/commonAreas";
 import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import Services from "@/components/site/Services";
@@ -53,7 +54,44 @@ export default function HousePage({ lang }: { lang: Lang }) {
 
       <Services lang={lang} tone="light" />
 
-      <Section tone="dark">
+      <Section tone="dark" id="parti-comuni">
+        <SectionHead eyebrow={commonAreasHead.eyebrow[lang]} title={commonAreasHead.title[lang]} />
+        <div className="mt-12 space-y-20">
+          {commonAreas.map((a) => (
+            <article key={a.slug} id={a.slug} className="scroll-mt-28">
+              <div className="max-w-3xl">
+                <h3 className="font-serif text-3xl text-sabina-50">{a.name[lang]}</h3>
+                <p className="mt-4 font-sans leading-relaxed text-sabina-100/80">{a.text[lang]}</p>
+              </div>
+              <div className={`mt-8 grid gap-3 sm:gap-4 ${a.photos.length === 1 ? "grid-cols-1" : a.photos.length === 2 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2 md:grid-cols-3"}`}>
+                {a.photos.map((p, n) => (
+                  <Photo
+                    key={p.src}
+                    label={p.alt[lang]}
+                    src={p.src}
+                    alt={p.alt[lang]}
+                    className={
+                      a.photos.length === 1
+                        ? "aspect-[16/9]"
+                        : a.photos.length === 2
+                          ? "aspect-[4/3]"
+                          : n === a.photos.length - 1 && (a.photos.length - 3) % 3 === 1
+                            ? "col-span-2 aspect-[16/9] md:col-span-3 md:aspect-[21/9]"
+                            : n === 1 && (a.photos.length - 3) % 3 === 1 && (a.photos.length - 2) % 2 === 1
+                              ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-square"
+                              : n === 0
+                          ? "col-span-2 aspect-[16/10] md:row-span-2 md:aspect-auto md:h-full"
+                          : "aspect-square"
+                    }
+                  />
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="light">
         <SectionHead eyebrow={t.galleryEyebrow} title={t.galleryTitle} />
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
           {houseGallery.map((g) => (
