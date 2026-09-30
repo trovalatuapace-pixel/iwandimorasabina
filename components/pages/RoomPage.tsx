@@ -21,16 +21,12 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
       <section className="relative overflow-hidden px-5 pb-12 pt-36 sm:px-8 sm:pt-44">
         <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${room.gradient}`} aria-hidden="true" />
         {room.heroPhoto && (
-          <div
-            className="absolute inset-0 -z-10 flex items-center justify-center opacity-20 md:bottom-0 md:left-auto md:top-20 md:w-[45%] md:opacity-100"
-            aria-hidden="true"
-          >
+          <div className="absolute inset-y-0 right-0 -z-10 flex w-full justify-end" aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={room.heroPhoto}
               alt=""
-              className="aspect-square w-[85%] max-w-[22rem] rounded-full object-cover shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] ring-4 md:w-[70%]"
-              style={{ ["--tw-ring-color" as string]: room.colorLight }}
+              className="h-full w-full object-cover opacity-25 md:w-auto md:max-w-[60%] md:translate-y-[12%] md:opacity-100 md:[mask-image:linear-gradient(to_right,transparent,black_35%)]"
             />
           </div>
         )}
