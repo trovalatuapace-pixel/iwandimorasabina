@@ -30,6 +30,15 @@ export type Room = {
 export const rooms: Room[] = [
   {
     slug: { it: "europa", en: "europe", de: "europa", fr: "europe" },
+    photo: "/foto/camera-europa.webp",
+    ogImage: "/og/camera-europa.jpg",
+    gallery: [
+      "/foto/camera-europa-letto.webp",
+      "/foto/camera-europa-scrivania.webp",
+      "/foto/camera-europa-doccia.webp",
+      "/foto/camera-europa-bagno.webp",
+      "/foto/camera-europa-sanitari.webp",
+    ],
     gradient: "from-[#4F5A3A] to-[#10160d]",
     color: "#4F5A3A",
     colorLight: "#8A976A",
