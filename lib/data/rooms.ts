@@ -15,6 +15,8 @@ export type Room = {
   amenities: Localized<string[]>;
   /** Foto principale in /public (facoltativa: senza, resta il segnaposto) */
   photo?: string;
+  /** Foto della porta con il simbolo della camera, mostrata nella fascia scura in alto (facoltativa) */
+  heroPhoto?: string;
   /** Foto della galleria in /public */
   gallery?: string[];
   /** Ospiti massimi, es. "2" o "2/3" (facoltativo: mostrato come badge) */
@@ -109,6 +111,7 @@ export const rooms: Room[] = [
     photo: "/foto/camera-americhe.webp",
     ogImage: "/og/camera-americhe.jpg",
     guests: "3",
+    heroPhoto: "/foto/camera-americhe-porta.webp",
     gallery: [
       "/foto/camera-americhe-letto.webp",
       "/foto/camera-americhe-poltrone.webp",

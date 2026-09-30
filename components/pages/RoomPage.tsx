@@ -20,6 +20,16 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
     <Shell lang={lang} current="room" roomSlugIt={room.slug.it}>
       <section className="relative overflow-hidden px-5 pb-12 pt-36 sm:px-8 sm:pt-44">
         <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${room.gradient}`} aria-hidden="true" />
+        {room.heroPhoto && (
+          <div className="absolute inset-y-0 right-0 -z-10 flex w-full justify-end" aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={room.heroPhoto}
+              alt=""
+              className="h-full w-full object-cover opacity-25 md:w-auto md:max-w-[60%] md:opacity-100 md:[mask-image:linear-gradient(to_right,transparent,black_35%)]"
+            />
+          </div>
+        )}
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#140f0a] via-transparent to-transparent" aria-hidden="true" />
         <div className="mx-auto max-w-6xl">
           <Link
