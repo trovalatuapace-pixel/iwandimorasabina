@@ -105,11 +105,12 @@ export const rooms: Room[] = [
   },
   {
     slug: { it: "africa", en: "africa", de: "afrika", fr: "afrique" },
-    photo: "/foto/camera-africa-letto.webp",
+    photo: "/foto/camera-africa-copertina.webp",
     ogImage: "/og/camera-africa.jpg",
     guests: "2",
     heroPhoto: "/foto/camera-africa-porta.webp",
     gallery: [
+      "/foto/camera-africa-letto.webp",
       "/foto/camera-africa.webp",
       "/foto/camera-africa-laterale.webp",
       "/foto/camera-africa-murale.webp",
