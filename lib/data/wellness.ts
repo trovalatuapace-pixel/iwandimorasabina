@@ -33,6 +33,7 @@ export const wellnessItems: WellnessItem[] = [
   },
   {
     slug: "palestra",
+    photo: "/foto/comuni-palestra-murale.webp",
     gradient: "from-[#2a2f3a] to-[#0d1016]",
     icon: "🏋️",
     name: { it: "Palestra", en: "Gym", de: "Fitnessraum", fr: "Salle de sport" },

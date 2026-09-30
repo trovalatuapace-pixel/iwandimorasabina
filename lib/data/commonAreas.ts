@@ -48,6 +48,22 @@ export const commonAreas: CommonArea[] = [
     ],
   },
   {
+    slug: "palestra-attrezzata",
+    name: { it: "Palestra", en: "Gym", de: "Fitnessraum", fr: "Salle de sport" },
+    text: {
+      it: "Una palestra attrezzata Technogym, con tapis roulant, ellittica, cyclette e una stazione multifunzione per i pesi, su parquet e con un grande murale in bianco e nero: per non rinunciare all'allenamento neanche in vacanza.",
+      en: "A gym equipped by Technogym, with treadmill, elliptical trainer, exercise bikes and a multi-station for weights, on parquet floors with a large black-and-white mural: so you never have to skip a workout, even on holiday.",
+      de: "Ein mit Technogym ausgestatteter Fitnessraum mit Laufband, Crosstrainer, Ergometern und einer Kraftstation, auf Parkett und mit einem großen Schwarz-Weiß-Wandbild – damit Sie auch im Urlaub nicht auf Ihr Training verzichten müssen.",
+      fr: "Une salle de sport équipée Technogym, avec tapis de course, vélo elliptique, vélos d'appartement et une station de musculation multifonction, sur parquet et avec une grande fresque en noir et blanc : pour ne pas renoncer à l'entraînement, même en vacances.",
+    },
+    photos: [
+      { src: "/foto/comuni-palestra-murale.webp", alt: { it: "La palestra con attrezzi Technogym e il murale in bianco e nero", en: "The gym with Technogym equipment and the black-and-white mural", de: "Der Fitnessraum mit Technogym-Geräten und dem Schwarz-Weiß-Wandbild", fr: "La salle de sport avec équipements Technogym et la fresque en noir et blanc" } },
+      { src: "/foto/comuni-palestra-sala.webp", alt: { it: "Tapis roulant, cyclette ed ellittica in palestra", en: "Treadmill, exercise bikes and elliptical trainer in the gym", de: "Laufband, Ergometer und Crosstrainer im Fitnessraum", fr: "Tapis de course, vélos et vélo elliptique dans la salle de sport" } },
+      { src: "/foto/comuni-palestra-ellittica.webp", alt: { it: "Ellittica e cyclette davanti allo specchio", en: "Elliptical trainer and exercise bike in front of the mirror", de: "Crosstrainer und Ergometer vor dem Spiegel", fr: "Vélo elliptique et vélo d'appartement devant le miroir" } },
+      { src: "/foto/comuni-palestra-multistazione.webp", alt: { it: "La stazione multifunzione per i pesi e il tapis roulant", en: "The multi-station for weights and the treadmill", de: "Die Kraftstation und das Laufband", fr: "La station de musculation multifonction et le tapis de course" } },
+    ],
+  },
+  {
     slug: "cucina",
     name: { it: "Cucina", en: "Kitchen", de: "Küche", fr: "Cuisine" },
     text: {
