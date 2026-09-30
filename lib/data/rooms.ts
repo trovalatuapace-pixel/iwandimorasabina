@@ -32,6 +32,7 @@ export const rooms: Room[] = [
     slug: { it: "europa", en: "europe", de: "europa", fr: "europe" },
     photo: "/foto/camera-europa.webp",
     ogImage: "/og/camera-europa.jpg",
+    guests: "2",
     gallery: [
       "/foto/camera-europa-letto.webp",
       "/foto/camera-europa-scrivania.webp",
