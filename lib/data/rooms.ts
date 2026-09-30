@@ -108,6 +108,7 @@ export const rooms: Room[] = [
     slug: { it: "americhe", en: "americas", de: "amerika", fr: "ameriques" },
     photo: "/foto/camera-americhe.webp",
     ogImage: "/og/camera-americhe.jpg",
+    guests: "3",
     gallery: [
       "/foto/camera-americhe-letto.webp",
       "/foto/camera-americhe-poltrone.webp",
