@@ -5,6 +5,7 @@ import Shell from "./Shell";
 import MapEmbed from "./MapEmbed";
 import Nearby from "@/components/site/Nearby";
 import PlacesGuide from "@/components/site/PlacesGuide";
+import TerritoryGallery from "@/components/site/TerritoryGallery";
 import { BookingCta, PageHero, Section } from "@/components/site/ui";
 
 export default function TerritoryPage({ lang }: { lang: Lang }) {
@@ -31,6 +32,8 @@ export default function TerritoryPage({ lang }: { lang: Lang }) {
       </Section>
 
       <PlacesGuide lang={lang} />
+
+      <TerritoryGallery lang={lang} />
 
       <Nearby lang={lang} />
 

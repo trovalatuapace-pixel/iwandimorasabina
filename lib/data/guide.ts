@@ -21,7 +21,7 @@ export const guideGroups: GuideGroup[] = [
     id: "montopoli",
     when: { it: "Nel borgo della casa", en: "In the village", de: "Im Ort", fr: "Dans le village" },
     title: same("Montopoli di Sabina"),
-    photo: "/foto/borgo-vicolo.webp",
+    photo: "/foto/territorio-borgo-dall-alto.webp",
     items: [
       {
         name: { it: "Centro storico e Torre Ugonesca", en: "Old town and Torre Ugonesca", de: "Altstadt und Torre Ugonesca", fr: "Centre historique et Torre Ugonesca" },
@@ -96,6 +96,7 @@ export const guideGroups: GuideGroup[] = [
     id: "cultura",
     when: { it: "Entro 20 minuti", en: "Within 20 minutes", de: "Bis 20 Minuten", fr: "À moins de 20 minutes" },
     title: { it: "Cultura, storia e borghi incantati", en: "Culture, history and enchanting villages", de: "Kultur, Geschichte und zauberhafte Dörfer", fr: "Culture, histoire et villages enchanteurs" },
+    photo: "/foto/territorio-porta-orologio.webp",
     items: [
       {
         name: { it: "Abbazia di Farfa", en: "Farfa Abbey", de: "Abtei Farfa", fr: "Abbaye de Farfa" },
@@ -133,6 +134,7 @@ export const guideGroups: GuideGroup[] = [
     id: "natura",
     when: { it: "Entro 20–30 minuti", en: "Within 20–30 minutes", de: "20–30 Minuten", fr: "À 20–30 minutes" },
     title: { it: "Natura, trekking e relax", en: "Nature, hiking and relaxation", de: "Natur, Wandern und Entspannung", fr: "Nature, randonnée et détente" },
+    photo: "/foto/territorio-piana.webp",
     items: [
       {
         name: { it: "Riserva Naturale Nazzano Tevere-Farfa", en: "Nazzano Tevere-Farfa Nature Reserve", de: "Naturschutzgebiet Nazzano Tevere-Farfa", fr: "Réserve naturelle Nazzano Tevere-Farfa" },
@@ -235,6 +237,7 @@ export const guideGroups: GuideGroup[] = [
     id: "fuori-porta",
     when: { it: "Da 30 minuti a 1 ora e ¼", en: "30 minutes to 1¼ hours away", de: "30 Minuten bis 1¼ Stunden", fr: "De 30 minutes à 1h15" },
     title: { it: "Gite fuori porta: storia, laghi e montagna", en: "Day trips: history, lakes and mountains", de: "Ausflüge: Geschichte, Seen und Berge", fr: "Escapades : histoire, lacs et montagne" },
+    photo: "/foto/territorio-lago-turano.webp",
     items: [
       {
         name: { it: "Bunker del Monte Soratte", en: "Monte Soratte Bunker", de: "Bunker am Monte Soratte", fr: "Bunker du mont Soratte" },

@@ -159,7 +159,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
       <Section tone="light">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Photo label={c.photoSoon} src="/foto/borgo-vicolo.webp" alt={t.territoryTitle} className="aspect-[5/4]" />
+          <Photo label={c.photoSoon} src="/foto/territorio-borgo-dall-alto.webp" alt={t.territoryTitle} className="aspect-[5/4]" />
           <div>
             <SectionHead eyebrow={t.territoryEyebrow} title={t.territoryTitle} />
             <p className="mt-5 font-sans leading-relaxed text-sabina-100/80">{t.territoryText}</p>

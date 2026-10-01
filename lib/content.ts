@@ -112,7 +112,7 @@ export const content = {
       places: [
         {
           name: "Borgo di Montopoli di Sabina",
-          photo: "/foto/borgo-vicolo.webp",
+          photo: "/foto/territorio-borgo-dall-alto.webp",
           text: "Il centro storico in pietra, con vicoli, scorci panoramici sulla valle e la tranquillità dei borghi collinari sabini.",
         },
         {
@@ -264,7 +264,7 @@ export const content = {
       places: [
         {
           name: "Montopoli di Sabina",
-          photo: "/foto/borgo-vicolo.webp",
+          photo: "/foto/territorio-borgo-dall-alto.webp",
           text: "The stone-built historic centre, with narrow lanes, views over the valley and the quiet of the Sabine hill villages.",
         },
         {
@@ -416,7 +416,7 @@ export const content = {
       places: [
         {
           name: "Montopoli di Sabina",
-          photo: "/foto/borgo-vicolo.webp",
+          photo: "/foto/territorio-borgo-dall-alto.webp",
           text: "Der historische Ortskern aus Stein, mit engen Gassen, Ausblicken ins Tal und der Ruhe der Hügeldörfer der Sabina.",
         },
         {
@@ -568,7 +568,7 @@ export const content = {
       places: [
         {
           name: "Montopoli di Sabina",
-          photo: "/foto/borgo-vicolo.webp",
+          photo: "/foto/territorio-borgo-dall-alto.webp",
           text: "Le centre historique en pierre, avec ses ruelles, ses vues sur la vallée et le calme des villages perchés de la Sabine.",
         },
         {
