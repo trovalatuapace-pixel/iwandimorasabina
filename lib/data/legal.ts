@@ -535,7 +535,7 @@ const cookies: Record<Lang, LegalDoc> = {
 
   fr: {
     metaTitle: "Politique cookies",
-    metaDescription: "Les cookies utilisés par le site d'Dimora Pangea : aucun cookie de profilage ou de mesure d'audience, carte Google uniquement avec votre accord.",
+    metaDescription: "Les cookies utilisés par le site de Dimora Pangea : aucun cookie de profilage ou de mesure d'audience, carte Google uniquement avec votre accord.",
     eyebrow: "Cookies",
     title: "Politique cookies",
     lead: "En bref : ce site n'utilise aucun cookie de profilage ni de mesure d'audience. Le seul service externe susceptible d'utiliser des cookies est la carte Google, qui ne se charge que si vous l'activez.",

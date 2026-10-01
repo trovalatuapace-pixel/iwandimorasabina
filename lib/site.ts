@@ -105,6 +105,10 @@ export function pageMeta(
     title: page === "home" ? title : `${title} | Dimora Pangea`,
     description,
     metadataBase: new URL(SITE_URL),
+    // Verifica Google Search Console (metodo "tag HTML"), se impostata su Vercel
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+      : {}),
     alternates: {
       canonical: all[lang],
       languages: { ...all, "x-default": all.it },

@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const room = findRoom("en", params.slug);
   if (!room) return {};
-  return pageMeta("en", "room", room.name.en + " room", room.description.en, room.slug.it);
+  return pageMeta("en", "room", room.name.en + " room – holiday home in Sabina", room.description.en, room.slug.it);
 }
 
 export default function Page({ params }: { params: { slug: string } }) {

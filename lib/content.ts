@@ -22,9 +22,9 @@ export const content = {
       rights: "Tutti i diritti riservati.",
     },
     home: {
-      metaTitle: "Dimora Pangea | Casa vacanze a Montopoli di Sabina",
+      metaTitle: "Casa vacanze in Sabina vicino a Roma | Dimora Pangea",
       metaDescription:
-        "Casa vacanze a Montopoli di Sabina con cinque camere dedicate ai continenti, sauna, palestra, vasca idromassaggio e terrazzo panoramico con vista sulla Cupola di San Pietro.",
+        "Casa vacanze in esclusiva per 2-11 ospiti a Montopoli di Sabina, a 45 minuti da Roma: cinque camere dedicate ai continenti, sauna, palestra, idromassaggio e terrazzo con vista sulla Cupola di San Pietro.",
       eyebrow: "Casa vacanze · Montopoli di Sabina",
       title: "Dimora Pangea",
       lead: "Cinque camere dedicate ai cinque continenti, un'area benessere riservata agli ospiti e un terrazzo affacciato sulle colline della Sabina, a meno di un'ora da Roma.",
@@ -53,7 +53,7 @@ export const content = {
       },
     },
     rooms: {
-      metaTitle: "Camere",
+      metaTitle: "Camere a tema continenti, casa vacanze in Sabina",
       metaDescription:
         "Le cinque camere di Dimora Pangea, ciascuna dedicata a un continente: Europa, Asia, Africa, Americhe e Oceania.",
       eyebrow: "Cinque continenti, una sola casa",
@@ -73,7 +73,7 @@ export const content = {
       ctaButton: (name: string) => `Prenota la camera ${name}`,
     },
     house: {
-      metaTitle: "La Casa",
+      metaTitle: "Casa vacanze con sauna, palestra e idromassaggio",
       metaDescription:
         "Gli spazi di Dimora Pangea: sauna, palestra, vasca idromassaggio e terrazzo panoramico con binocolo puntato sulla Cupola di San Pietro.",
       eyebrow: "La casa",
@@ -95,7 +95,7 @@ export const content = {
       },
     },
     territory: {
-      metaTitle: "Territorio",
+      metaTitle: "Cosa vedere in Sabina: Farfa, borghi e Roma",
       metaDescription:
         "Montopoli di Sabina e dintorni: l'Abbazia di Farfa, la Riserva Naturale Tevere-Farfa, i borghi sabini e Roma a circa 45 minuti.",
       eyebrow: "Il territorio",
@@ -137,7 +137,7 @@ export const content = {
       },
     },
     contact: {
-      metaTitle: "Contatti e prenotazioni",
+      metaTitle: "Prenota la casa vacanze a Montopoli di Sabina",
       metaDescription:
         "Contatti, disponibilità e prenotazione di Dimora Pangea, casa vacanze a Montopoli di Sabina (Rieti).",
       eyebrow: "Contatti",
@@ -174,9 +174,9 @@ export const content = {
       rights: "All rights reserved.",
     },
     home: {
-      metaTitle: "Dimora Pangea | Holiday home in Montopoli di Sabina",
+      metaTitle: "Holiday home in Sabina near Rome | Dimora Pangea",
       metaDescription:
-        "Holiday home in Montopoli di Sabina with five continent-themed rooms, sauna, gym, hot tub and a panoramic terrace overlooking St. Peter's Dome.",
+        "Private holiday home for 2-11 guests in Montopoli di Sabina, 45 minutes from Rome: five continent-themed rooms, sauna, gym, hot tub and a terrace overlooking St. Peter's Dome.",
       eyebrow: "Holiday home · Montopoli di Sabina",
       title: "Dimora Pangea",
       lead: "Five rooms dedicated to the five continents, a private wellness area for guests and a terrace overlooking the Sabine hills, less than an hour from Rome.",
@@ -205,7 +205,7 @@ export const content = {
       },
     },
     rooms: {
-      metaTitle: "Rooms",
+      metaTitle: "Continent-themed rooms, holiday home in Sabina",
       metaDescription:
         "The five rooms of Dimora Pangea, each dedicated to a continent: Europe, Asia, Africa, the Americas and Oceania.",
       eyebrow: "Five continents, one house",
@@ -225,7 +225,7 @@ export const content = {
       ctaButton: (name: string) => `Book the ${name} room`,
     },
     house: {
-      metaTitle: "The House",
+      metaTitle: "Holiday home with sauna, gym and hot tub",
       metaDescription:
         "The spaces of Dimora Pangea: sauna, gym, hot tub and a panoramic terrace with binoculars pointed at St. Peter's Dome.",
       eyebrow: "The house",
@@ -247,7 +247,7 @@ export const content = {
       },
     },
     territory: {
-      metaTitle: "Surroundings",
+      metaTitle: "Things to do in Sabina: Farfa, villages and Rome",
       metaDescription:
         "Montopoli di Sabina and its surroundings: Farfa Abbey, the Tevere-Farfa Nature Reserve, Sabine villages and Rome about 45 minutes away.",
       eyebrow: "Surroundings",
@@ -289,7 +289,7 @@ export const content = {
       },
     },
     contact: {
-      metaTitle: "Contact and booking",
+      metaTitle: "Book the holiday home in Montopoli di Sabina",
       metaDescription:
         "Contact details, availability and booking for Dimora Pangea, holiday home in Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
@@ -326,9 +326,9 @@ export const content = {
       rights: "Alle Rechte vorbehalten.",
     },
     home: {
-      metaTitle: "Dimora Pangea | Ferienhaus in Montopoli di Sabina",
+      metaTitle: "Ferienhaus in der Sabina bei Rom | Dimora Pangea",
       metaDescription:
-        "Ferienhaus in Montopoli di Sabina mit fünf Zimmern im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Panoramaterrasse mit Blick auf die Kuppel des Petersdoms.",
+        "Exklusives Ferienhaus für 2-11 Gäste in Montopoli di Sabina, 45 Minuten von Rom: fünf Zimmer im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Terrasse mit Blick auf den Petersdom.",
       eyebrow: "Ferienhaus · Montopoli di Sabina",
       title: "Dimora Pangea",
       lead: "Fünf Zimmer, den fünf Kontinenten gewidmet, ein privater Wellnessbereich für die Gäste und eine Terrasse mit Blick auf die Hügel der Sabina – weniger als eine Stunde von Rom.",
@@ -357,7 +357,7 @@ export const content = {
       },
     },
     rooms: {
-      metaTitle: "Zimmer",
+      metaTitle: "Zimmer im Zeichen der Kontinente, Ferienhaus in der Sabina",
       metaDescription:
         "Die fünf Zimmer von Dimora Pangea, jedes einem Kontinent gewidmet: Europa, Asien, Afrika, Amerika und Ozeanien.",
       eyebrow: "Fünf Kontinente, ein Haus",
@@ -377,7 +377,7 @@ export const content = {
       ctaButton: (name: string) => `Zimmer ${name} buchen`,
     },
     house: {
-      metaTitle: "Das Haus",
+      metaTitle: "Ferienhaus mit Sauna, Fitnessraum und Whirlpool",
       metaDescription:
         "Die Räume von Dimora Pangea: Sauna, Fitnessraum, Whirlpool und eine Panoramaterrasse mit Fernglas, das auf die Kuppel des Petersdoms gerichtet ist.",
       eyebrow: "Das Haus",
@@ -399,7 +399,7 @@ export const content = {
       },
     },
     territory: {
-      metaTitle: "Umgebung",
+      metaTitle: "Sehenswertes in der Sabina: Farfa, Dörfer und Rom",
       metaDescription:
         "Montopoli di Sabina und Umgebung: die Abtei Farfa, das Naturschutzgebiet Tevere-Farfa, die Dörfer der Sabina und Rom in etwa 45 Minuten.",
       eyebrow: "Die Umgebung",
@@ -441,7 +441,7 @@ export const content = {
       },
     },
     contact: {
-      metaTitle: "Kontakt und Buchung",
+      metaTitle: "Ferienhaus in Montopoli di Sabina buchen",
       metaDescription:
         "Kontakt, Verfügbarkeit und Buchung für Dimora Pangea, Ferienhaus in Montopoli di Sabina (Rieti).",
       eyebrow: "Kontakt",
@@ -478,9 +478,9 @@ export const content = {
       rights: "Tous droits réservés.",
     },
     home: {
-      metaTitle: "Dimora Pangea | Maison de vacances à Montopoli di Sabina",
+      metaTitle: "Maison de vacances en Sabine près de Rome | Dimora Pangea",
       metaDescription:
-        "Maison de vacances à Montopoli di Sabina avec cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse panoramique avec vue sur la coupole de Saint-Pierre.",
+        "Maison de vacances privée pour 2 à 11 personnes à Montopoli di Sabina, à 45 minutes de Rome : cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse avec vue sur Saint-Pierre.",
       eyebrow: "Maison de vacances · Montopoli di Sabina",
       title: "Dimora Pangea",
       lead: "Cinq chambres dédiées aux cinq continents, un espace bien-être réservé aux hôtes et une terrasse face aux collines de la Sabine, à moins d'une heure de Rome.",
@@ -509,9 +509,9 @@ export const content = {
       },
     },
     rooms: {
-      metaTitle: "Chambres",
+      metaTitle: "Chambres sur le thème des continents, maison de vacances en Sabine",
       metaDescription:
-        "Les cinq chambres d'Dimora Pangea, chacune dédiée à un continent : Europe, Asie, Afrique, Amériques et Océanie.",
+        "Les cinq chambres de Dimora Pangea, chacune dédiée à un continent : Europe, Asie, Afrique, Amériques et Océanie.",
       eyebrow: "Cinq continents, une seule maison",
       title: "Les chambres",
       lead: "Chaque chambre raconte un continent à travers couleurs, matières et détails, avec le même soin et le même confort.",
@@ -529,9 +529,9 @@ export const content = {
       ctaButton: (name: string) => `Réserver la chambre ${name}`,
     },
     house: {
-      metaTitle: "La Maison",
+      metaTitle: "Maison de vacances avec sauna, salle de sport et jacuzzi",
       metaDescription:
-        "Les espaces d'Dimora Pangea : sauna, salle de sport, jacuzzi et terrasse panoramique avec des jumelles tournées vers la coupole de Saint-Pierre.",
+        "Les espaces de Dimora Pangea : sauna, salle de sport, jacuzzi et terrasse panoramique avec des jumelles tournées vers la coupole de Saint-Pierre.",
       eyebrow: "La maison",
       title: "Des espaces pensés pour ralentir",
       lead: "En plus des cinq chambres, la maison offre aux hôtes un espace bien-être complet et une terrasse d'où, par temps clair, on aperçoit Rome.",
@@ -551,7 +551,7 @@ export const content = {
       },
     },
     territory: {
-      metaTitle: "Alentours",
+      metaTitle: "Que voir en Sabine : Farfa, villages et Rome",
       metaDescription:
         "Montopoli di Sabina et ses alentours : l'abbaye de Farfa, la réserve naturelle Tevere-Farfa, les villages de la Sabine et Rome à environ 45 minutes.",
       eyebrow: "La région",
@@ -593,9 +593,9 @@ export const content = {
       },
     },
     contact: {
-      metaTitle: "Contact et réservation",
+      metaTitle: "Réserver la maison de vacances à Montopoli di Sabina",
       metaDescription:
-        "Coordonnées, disponibilités et réservation d'Dimora Pangea, maison de vacances à Montopoli di Sabina (Rieti).",
+        "Coordonnées, disponibilités et réservation de Dimora Pangea, maison de vacances à Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact et réservation",
       lead: "Pour toute information sur votre séjour, écrivez-nous à tout moment. Vous trouverez ci-dessous le calendrier des disponibilités et le lien de réservation.",

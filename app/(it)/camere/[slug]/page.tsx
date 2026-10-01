@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const room = findRoom("it", params.slug);
   if (!room) return {};
-  return pageMeta("it", "room", "Camera " + room.name.it, room.description.it, room.slug.it);
+  return pageMeta("it", "room", "Camera " + room.name.it + " – casa vacanze in Sabina", room.description.it, room.slug.it);
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
