@@ -18,7 +18,7 @@ export default function RoomsPage({ lang }: { lang: Lang }) {
           ))}
         </div>
       </Section>
-      <BookingCta {...t.cta} target={bookingHref(lang)} />
+      <BookingCta {...t.cta} target={bookingHref(lang)} lang={lang} />
     </Shell>
   );
 }

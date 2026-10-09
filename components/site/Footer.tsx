@@ -70,6 +70,16 @@ export default function Footer({
               {k.whatsappText}
             </a>
           )}
+          {contacts.bookingUrl && (
+            <a href={contacts.bookingUrl} target="_blank" rel="noopener noreferrer" className="nav-link w-fit">
+              Booking.com
+            </a>
+          )}
+          {contacts.airbnbUrl && (
+            <a href={contacts.airbnbUrl} target="_blank" rel="noopener noreferrer" className="nav-link w-fit">
+              Airbnb
+            </a>
+          )}
           {contacts.instagram && (
             <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className="nav-link w-fit">
               Instagram

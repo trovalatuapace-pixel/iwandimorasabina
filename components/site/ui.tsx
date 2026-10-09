@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { Lang } from "@/lib/i18n/translations";
+import PlatformLinks from "./PlatformLinks";
 
 export function PageHero({
   eyebrow,
@@ -129,11 +131,13 @@ export function BookingCta({
   text,
   button,
   target,
+  lang,
 }: {
   title: string;
   text: string;
   button: string;
   target: string;
+  lang?: Lang;
 }) {
   return (
     <section className="relative px-5 py-20 sm:px-8">
@@ -141,9 +145,12 @@ export function BookingCta({
         <div className="card-surface rounded-3xl px-6 py-14 text-center sm:px-12">
           <h2 className="font-serif text-3xl text-sabina-50 sm:text-4xl">{title}</h2>
           <p className="mx-auto mt-4 max-w-xl font-sans text-sabina-100/80">{text}</p>
-          <Link href={target} className="btn-primary mt-8">
-            {button}
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link href={target} className="btn-primary">
+              {button}
+            </Link>
+            {lang && <PlatformLinks lang={lang} />}
+          </div>
         </div>
       </div>
     </section>

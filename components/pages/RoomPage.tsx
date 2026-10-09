@@ -87,6 +87,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
         text={t.ctaText}
         button={t.ctaButton(name)}
         target={bookingHref(lang)}
+        lang={lang}
       />
 
       <Section tone="dark">

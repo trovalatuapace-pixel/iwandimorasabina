@@ -37,7 +37,7 @@ export default function TerritoryPage({ lang }: { lang: Lang }) {
 
       <Nearby lang={lang} />
 
-      <BookingCta {...t.cta} target={bookingHref(lang)} />
+      <BookingCta {...t.cta} target={bookingHref(lang)} lang={lang} />
     </Shell>
   );
 }

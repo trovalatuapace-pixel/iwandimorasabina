@@ -12,6 +12,7 @@ import StructuredData from "@/components/site/StructuredData";
 import HouseSlider from "@/components/site/HouseSlider";
 import Hero360 from "@/components/site/Hero360";
 import { houseGallery } from "@/lib/data/gallery";
+import PlatformLinks from "@/components/site/PlatformLinks";
 import { BookingCta, Photo, PhotoBand, Section, SectionHead, TextLink } from "@/components/site/ui";
 
 const BANDS: Record<Lang, { spa: [string, string]; view: [string, string] }> = {
@@ -74,6 +75,12 @@ export default function HomePage({ lang }: { lang: Lang }) {
           <p className="mt-6 max-w-xl animate-fade-in-up font-sans text-lg leading-relaxed text-sabina-100/90 [animation-delay:200ms] sm:text-xl">
             {t.lead}
           </p>
+          <div className="pointer-events-auto mt-8 flex animate-fade-in-up flex-wrap items-center gap-3 [animation-delay:300ms]">
+            <Link href={bookingHref(lang)} className="btn-primary">
+              {t.cta.button}
+            </Link>
+            <PlatformLinks lang={lang} />
+          </div>
         </div>
         <div className="absolute inset-x-0 bottom-8 hidden justify-center sm:flex" aria-hidden="true">
           <div className="flex h-9 w-6 animate-drift items-start justify-center rounded-full border border-sabina-300/40 p-1.5">
@@ -170,7 +177,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <BookingCta {...t.cta} target={bookingHref(lang)} />
+      <BookingCta {...t.cta} target={bookingHref(lang)} lang={lang} />
     </Shell>
   );
 }
