@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
  * Consenso cookie salvato nel local storage del browser.
  * - necessary: sempre attivi
  * - statistics: statistiche (oggi non usate, pronte per il futuro)
- * - marketing: marketing e contenuti esterni (oggi: mappa Google Maps)
+ * - marketing: marketing e contenuti esterni (oggi: mappa Google Maps e Meta Pixel)
+ * - map: consenso dato solo con il clic su «Mostra la mappa»: vale per la mappa, NON per il Meta Pixel
  * La scelta dura 6 mesi, poi il banner viene riproposto (Linee guida Garante 10/06/2021).
  */
 export const CONSENT_KEY = "orbis-cookie-consent";
@@ -15,7 +16,7 @@ const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 180;
 const CHANGE = "orbis-consent-change";
 const OPEN = "orbis-open-cookie-banner";
 
-export type Consent = { statistics: boolean; marketing: boolean; ts: number; v: number };
+export type Consent = { statistics: boolean; marketing: boolean; map?: boolean; ts: number; v: number };
 
 export function readConsent(): Consent | null {
   try {
@@ -29,7 +30,7 @@ export function readConsent(): Consent | null {
   }
 }
 
-export function saveConsent(choice: { statistics: boolean; marketing: boolean }) {
+export function saveConsent(choice: { statistics: boolean; marketing: boolean; map?: boolean }) {
   const c: Consent = { ...choice, ts: Date.now(), v: VERSION };
   try {
     window.localStorage.setItem(CONSENT_KEY, JSON.stringify(c));
@@ -70,7 +71,8 @@ export function onOpenCookieBanner(fn: () => void) {
 export function useMapsConsent(): [boolean, (v: boolean) => void] {
   const c = useConsent();
   return [
-    Boolean(c?.marketing),
-    (v: boolean) => saveConsent({ statistics: c?.statistics ?? false, marketing: v }),
+    Boolean(c?.marketing || c?.map),
+    // Il clic sulla mappa non attiva il Meta Pixel: salva solo il consenso alla mappa.
+    (v: boolean) => saveConsent({ statistics: c?.statistics ?? false, marketing: c?.marketing ?? false, map: v }),
   ];
 }

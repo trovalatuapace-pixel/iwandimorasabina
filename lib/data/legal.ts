@@ -5,15 +5,16 @@ import { contacts } from "@/lib/site";
  * Informativa privacy (art. 13 GDPR) e cookie policy (Linee guida Garante 10/06/2021)
  * in 4 lingue.
  *
- * Il sito NON usa cookie di profilazione né statistiche. L'unico contenuto di terze parti
- * che può installare cookie è la mappa Google, che si carica solo con il consenso
- * "Marketing e contenuti esterni" dato nel banner (components/site/CookieBanner.tsx) o con il clic sulla mappa.
+ * Il sito NON usa cookie statistici. Gli unici strumenti di terze parti che possono installare cookie
+ * sono la mappa Google e il Meta Pixel (components/site/MetaPixel.tsx): entrambi si caricano solo con il
+ * consenso "Marketing e contenuti esterni" dato nel banner (components/site/CookieBanner.tsx);
+ * la mappa si può attivare anche con il clic sulla mappa.
  *
- * Se in futuro si aggiungono Google Analytics, Meta Pixel, YouTube, ecc. bisogna
+ * Se in futuro si aggiungono Google Analytics, YouTube, ecc. bisogna
  * aggiornare la cookie policy e il banner (lib/data/cookieBanner.ts), e caricarli solo col consenso.
  */
 
-export const LEGAL_UPDATED = "2026-09-25";
+export const LEGAL_UPDATED = "2026-10-09";
 
 export type LegalBlock = { h: string; p?: string[]; ul?: string[] };
 export type LegalDoc = {
@@ -68,7 +69,7 @@ const privacy: Record<Lang, LegalDoc> = {
           "Adempiere agli obblighi di legge: comunicazione delle generalità degli ospiti alla Questura tramite il portale Alloggiati Web (art. 109 TULPS), statistiche turistiche regionali/ISTAT, imposta di soggiorno ove prevista, obblighi fiscali e contabili (art. 6.1.c GDPR).",
           "Garantire il funzionamento e la sicurezza del sito — legittimo interesse del titolare (art. 6.1.f GDPR).",
         ],
-        p: ["Non usiamo i tuoi dati per pubblicità o profilazione e non li vendiamo a nessuno."],
+        p: ["Non vendiamo i tuoi dati a nessuno. Solo se dai il consenso ai cookie «Marketing» usiamo il Meta Pixel per misurare l'efficacia delle nostre campagne pubblicitarie su Facebook e Instagram (vedi punto 8 e Cookie policy)."],
       },
       {
         h: "5. Per quanto tempo conserviamo i dati",
@@ -97,7 +98,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "8. Mappa e contenuti esterni",
         p: [
-          "La mappa di Google Maps nelle pagine «Territorio» e «Contatti» si carica solo se la attivi tu con un clic. Da quel momento Google può raccogliere dati come l'indirizzo IP e usare cookie. Trovi i dettagli nella Cookie policy.",
+          "La mappa di Google Maps nelle pagine «Territorio» e «Contatti» si carica solo se la attivi tu con un clic. Da quel momento Google può raccogliere dati come l'indirizzo IP e usare cookie. Il Meta Pixel (Meta Platforms Ireland Ltd.) si attiva solo se accetti i cookie «Marketing» nel banner: misura le visite e i clic su WhatsApp, Booking.com, Airbnb e sulla richiesta di preventivo, anche per mostrarti i nostri annunci su Facebook e Instagram. Puoi revocare il consenso in ogni momento da «Preferenze cookie». Trovi i dettagli nella Cookie policy.",
         ],
       },
       {
@@ -157,7 +158,7 @@ const privacy: Record<Lang, LegalDoc> = {
           "Complying with legal obligations: reporting guest details to the police via the Alloggiati Web portal (Art. 109 TULPS), regional/ISTAT tourism statistics, tourist tax where applicable, tax and accounting obligations (Art. 6(1)(c) GDPR).",
           "Keeping the website working and secure — legitimate interest of the controller (Art. 6(1)(f) GDPR).",
         ],
-        p: ["We do not use your data for advertising or profiling, and we never sell it."],
+        p: ["We never sell your data. Only if you consent to “Marketing” cookies do we use the Meta Pixel to measure the effectiveness of our advertising campaigns on Facebook and Instagram (see section 8 and the Cookie policy)."],
       },
       {
         h: "5. How long we keep data",
@@ -186,7 +187,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "8. Map and external content",
         p: [
-          "The Google Maps map on the “Surroundings” and “Contact” pages only loads if you activate it with a click. From that moment Google may collect data such as your IP address and use cookies. See the Cookie policy for details.",
+          "The Google Maps map on the “Surroundings” and “Contact” pages only loads if you activate it with a click. From that moment Google may collect data such as your IP address and use cookies. The Meta Pixel (Meta Platforms Ireland Ltd.) only activates if you accept “Marketing” cookies in the banner: it measures visits and clicks on WhatsApp, Booking.com, Airbnb and the quote request, also to show you our ads on Facebook and Instagram. You can withdraw consent at any time via “Cookie settings”. See the Cookie policy for details.",
         ],
       },
       {
@@ -246,7 +247,7 @@ const privacy: Record<Lang, LegalDoc> = {
           "Erfüllung gesetzlicher Pflichten: Meldung der Gästedaten an die Polizei über das Portal Alloggiati Web (Art. 109 TULPS), regionale/ISTAT-Tourismusstatistik, ggf. Kurtaxe, steuerliche und buchhalterische Pflichten (Art. 6 Abs. 1 lit. c DSGVO).",
           "Betrieb und Sicherheit der Website — berechtigtes Interesse des Verantwortlichen (Art. 6 Abs. 1 lit. f DSGVO).",
         ],
-        p: ["Wir nutzen Ihre Daten nicht für Werbung oder Profiling und verkaufen sie nicht."],
+        p: ["Wir verkaufen Ihre Daten nicht. Nur wenn Sie in „Marketing“-Cookies einwilligen, nutzen wir das Meta-Pixel, um die Wirksamkeit unserer Werbekampagnen auf Facebook und Instagram zu messen (siehe Punkt 8 und Cookie-Richtlinie)."],
       },
       {
         h: "5. Speicherdauer",
@@ -275,7 +276,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "8. Karte und externe Inhalte",
         p: [
-          "Die Google-Maps-Karte auf den Seiten „Umgebung“ und „Kontakt“ wird erst geladen, wenn Sie sie per Klick aktivieren. Ab dann kann Google Daten wie Ihre IP-Adresse erfassen und Cookies setzen. Details finden Sie in der Cookie-Richtlinie.",
+          "Die Google-Maps-Karte auf den Seiten „Umgebung“ und „Kontakt“ wird erst geladen, wenn Sie sie per Klick aktivieren. Ab dann kann Google Daten wie Ihre IP-Adresse erfassen und Cookies setzen. Das Meta-Pixel (Meta Platforms Ireland Ltd.) wird nur aktiviert, wenn Sie im Banner „Marketing“-Cookies akzeptieren: Es misst Besuche und Klicks auf WhatsApp, Booking.com, Airbnb und die Anfrage, auch um Ihnen unsere Anzeigen auf Facebook und Instagram zu zeigen. Sie können Ihre Einwilligung jederzeit über „Cookie-Einstellungen“ widerrufen. Details finden Sie in der Cookie-Richtlinie.",
         ],
       },
       {
@@ -335,7 +336,7 @@ const privacy: Record<Lang, LegalDoc> = {
           "Respecter les obligations légales : déclaration des hôtes à la police via le portail Alloggiati Web (art. 109 TULPS), statistiques touristiques régionales/ISTAT, taxe de séjour le cas échéant, obligations fiscales et comptables (art. 6.1.c RGPD).",
           "Assurer le fonctionnement et la sécurité du site — intérêt légitime du responsable (art. 6.1.f RGPD).",
         ],
-        p: ["Nous n'utilisons pas vos données à des fins publicitaires ou de profilage et nous ne les vendons pas."],
+        p: ["Nous ne vendons pas vos données. Uniquement si vous acceptez les cookies « Marketing », nous utilisons le Meta Pixel pour mesurer l'efficacité de nos campagnes publicitaires sur Facebook et Instagram (voir point 8 et Politique cookies)."],
       },
       {
         h: "5. Durée de conservation",
@@ -364,7 +365,7 @@ const privacy: Record<Lang, LegalDoc> = {
       {
         h: "8. Carte et contenus externes",
         p: [
-          "La carte Google Maps des pages « Alentours » et « Contact » ne se charge que si vous l'activez d'un clic. Google peut alors collecter des données comme votre adresse IP et utiliser des cookies. Les détails figurent dans la Politique cookies.",
+          "La carte Google Maps des pages « Alentours » et « Contact » ne se charge que si vous l'activez d'un clic. Google peut alors collecter des données comme votre adresse IP et utiliser des cookies. Le Meta Pixel (Meta Platforms Ireland Ltd.) ne s'active que si vous acceptez les cookies « Marketing » dans le bandeau : il mesure les visites et les clics vers WhatsApp, Booking.com, Airbnb et la demande de devis, y compris pour vous montrer nos annonces sur Facebook et Instagram. Vous pouvez retirer votre consentement à tout moment via « Préférences cookies ». Les détails figurent dans la Politique cookies.",
         ],
       },
       {
@@ -391,10 +392,10 @@ const privacy: Record<Lang, LegalDoc> = {
 const cookies: Record<Lang, LegalDoc> = {
   it: {
     metaTitle: "Cookie policy",
-    metaDescription: "Quali cookie usa il sito di Dimora Pangea: nessun cookie di profilazione o statistico, mappa Google solo su consenso.",
+    metaDescription: "Quali cookie usa il sito di Dimora Pangea: nessun cookie statistico; mappa Google e Meta Pixel solo con il tuo consenso.",
     eyebrow: "Cookie",
     title: "Cookie policy",
-    lead: "In breve: questo sito non usa cookie di profilazione né statistiche. L'unico servizio esterno che può usare cookie è la mappa di Google, che si carica solo se la attivi tu.",
+    lead: "In breve: questo sito non usa cookie statistici. I servizi esterni che possono usare cookie sono la mappa di Google e il Meta Pixel, e si attivano solo con il tuo consenso.",
     updated: "Ultimo aggiornamento",
     blocks: [
       {
@@ -411,8 +412,12 @@ const cookies: Record<Lang, LegalDoc> = {
         ],
       },
       {
-        h: "3. Cookie analitici e di profilazione",
-        p: ["Non usiamo Google Analytics, Meta Pixel né altri strumenti di statistica, pubblicità o profilazione."],
+        h: "3. Cookie analitici e di marketing: Meta Pixel",
+        p: [
+          "Non usiamo Google Analytics né altri strumenti di statistica.",
+          "Usiamo il Meta Pixel (Meta Platforms Ireland Ltd.) solo se accetti la categoria «Marketing e contenuti esterni» nel banner. Imposta i cookie _fbp e _fbc (fino a 3 mesi) e invia a Meta dati sulla tua visita (pagine viste, clic su WhatsApp, Booking.com, Airbnb, invio della richiesta di preventivo, indirizzo IP e informazioni sul browser). Li usiamo per misurare l'efficacia delle nostre campagne su Facebook e Instagram e per mostrare i nostri annunci a persone interessate; Meta può usarli anche per finalità proprie e trasferirli fuori dall'Unione Europea. Senza il tuo consenso il Pixel non viene caricato. Se revochi il consenso da «Preferenze cookie», il Pixel si ferma e il cookie viene cancellato.",
+          "Informativa di Meta: facebook.com/privacy/policy — Cookie di Meta: facebook.com/privacy/policies/cookies",
+        ],
       },
       {
         h: "4. Cookie di terze parti: Google Maps",
@@ -439,10 +444,10 @@ const cookies: Record<Lang, LegalDoc> = {
 
   en: {
     metaTitle: "Cookie policy",
-    metaDescription: "Which cookies the Dimora Pangea website uses: no profiling or analytics cookies, Google map only with consent.",
+    metaDescription: "Which cookies the Dimora Pangea website uses: no analytics cookies; Google map and Meta Pixel only with your consent.",
     eyebrow: "Cookies",
     title: "Cookie policy",
-    lead: "In short: this website uses no profiling or analytics cookies. The only external service that may use cookies is the Google map, which only loads if you activate it.",
+    lead: "In short: this website uses no analytics cookies. The external services that may use cookies are the Google map and the Meta Pixel, and they only activate with your consent.",
     updated: "Last updated",
     blocks: [
       {
@@ -459,8 +464,12 @@ const cookies: Record<Lang, LegalDoc> = {
         ],
       },
       {
-        h: "3. Analytics and profiling cookies",
-        p: ["We do not use Google Analytics, Meta Pixel or any other statistics, advertising or profiling tools."],
+        h: "3. Analytics and marketing cookies: Meta Pixel",
+        p: [
+          "We do not use Google Analytics or any other statistics tools.",
+          "We use the Meta Pixel (Meta Platforms Ireland Ltd.) only if you accept the “Marketing and external content” category in the banner. It sets the _fbp and _fbc cookies (up to 3 months) and sends Meta data about your visit (pages viewed, clicks on WhatsApp, Booking.com, Airbnb, submission of the quote request, IP address and browser information). We use it to measure the effectiveness of our campaigns on Facebook and Instagram and to show our ads to interested people; Meta may also use the data for its own purposes and transfer it outside the European Union. Without your consent the Pixel is not loaded. If you withdraw consent via “Cookie settings”, the Pixel stops and the cookie is deleted.",
+          "Meta privacy policy: facebook.com/privacy/policy — Meta cookies: facebook.com/privacy/policies/cookies",
+        ],
       },
       {
         h: "4. Third-party cookies: Google Maps",
@@ -487,10 +496,10 @@ const cookies: Record<Lang, LegalDoc> = {
 
   de: {
     metaTitle: "Cookie-Richtlinie",
-    metaDescription: "Welche Cookies die Website von Dimora Pangea verwendet: keine Tracking- oder Statistik-Cookies, Google-Karte nur mit Einwilligung.",
+    metaDescription: "Welche Cookies die Website von Dimora Pangea verwendet: keine Statistik-Cookies; Google-Karte und Meta-Pixel nur mit Einwilligung.",
     eyebrow: "Cookies",
     title: "Cookie-Richtlinie",
-    lead: "Kurz gesagt: Diese Website verwendet keine Profiling- oder Statistik-Cookies. Der einzige externe Dienst, der Cookies setzen kann, ist die Google-Karte — und die wird nur geladen, wenn Sie sie aktivieren.",
+    lead: "Kurz gesagt: Diese Website verwendet keine Statistik-Cookies. Externe Dienste, die Cookies setzen können, sind die Google-Karte und das Meta-Pixel — beide werden nur mit Ihrer Einwilligung aktiviert.",
     updated: "Zuletzt aktualisiert",
     blocks: [
       {
@@ -507,8 +516,12 @@ const cookies: Record<Lang, LegalDoc> = {
         ],
       },
       {
-        h: "3. Analyse- und Profiling-Cookies",
-        p: ["Wir verwenden weder Google Analytics noch Meta Pixel oder andere Statistik-, Werbe- oder Profiling-Tools."],
+        h: "3. Analyse- und Marketing-Cookies: Meta-Pixel",
+        p: [
+          "Wir verwenden weder Google Analytics noch andere Statistik-Tools.",
+          "Das Meta-Pixel (Meta Platforms Ireland Ltd.) setzen wir nur ein, wenn Sie im Banner die Kategorie „Marketing und externe Inhalte“ akzeptieren. Es setzt die Cookies _fbp und _fbc (bis zu 3 Monate) und übermittelt Meta Daten zu Ihrem Besuch (aufgerufene Seiten, Klicks auf WhatsApp, Booking.com, Airbnb, Absenden der Anfrage, IP-Adresse und Browserinformationen). Wir nutzen es, um die Wirksamkeit unserer Kampagnen auf Facebook und Instagram zu messen und unsere Anzeigen interessierten Personen zu zeigen; Meta kann die Daten auch für eigene Zwecke nutzen und außerhalb der Europäischen Union übermitteln. Ohne Ihre Einwilligung wird das Pixel nicht geladen. Wenn Sie die Einwilligung über „Cookie-Einstellungen“ widerrufen, stoppt das Pixel und das Cookie wird gelöscht.",
+          "Datenschutzerklärung von Meta: facebook.com/privacy/policy — Cookies von Meta: facebook.com/privacy/policies/cookies",
+        ],
       },
       {
         h: "4. Cookies von Drittanbietern: Google Maps",
@@ -535,10 +548,10 @@ const cookies: Record<Lang, LegalDoc> = {
 
   fr: {
     metaTitle: "Politique cookies",
-    metaDescription: "Les cookies utilisés par le site de Dimora Pangea : aucun cookie de profilage ou de mesure d'audience, carte Google uniquement avec votre accord.",
+    metaDescription: "Les cookies utilisés par le site de Dimora Pangea : aucun cookie de mesure d'audience ; carte Google et Meta Pixel uniquement avec votre accord.",
     eyebrow: "Cookies",
     title: "Politique cookies",
-    lead: "En bref : ce site n'utilise aucun cookie de profilage ni de mesure d'audience. Le seul service externe susceptible d'utiliser des cookies est la carte Google, qui ne se charge que si vous l'activez.",
+    lead: "En bref : ce site n'utilise aucun cookie de mesure d'audience. Les services externes susceptibles d'utiliser des cookies sont la carte Google et le Meta Pixel, activés uniquement avec votre accord.",
     updated: "Dernière mise à jour",
     blocks: [
       {
@@ -555,8 +568,12 @@ const cookies: Record<Lang, LegalDoc> = {
         ],
       },
       {
-        h: "3. Cookies de mesure d'audience et de profilage",
-        p: ["Nous n'utilisons ni Google Analytics, ni Meta Pixel, ni aucun autre outil de statistiques, de publicité ou de profilage."],
+        h: "3. Cookies de mesure d'audience et de marketing : Meta Pixel",
+        p: [
+          "Nous n'utilisons ni Google Analytics ni aucun autre outil de statistiques.",
+          "Nous utilisons le Meta Pixel (Meta Platforms Ireland Ltd.) uniquement si vous acceptez la catégorie « Marketing et contenus externes » dans le bandeau. Il dépose les cookies _fbp et _fbc (jusqu'à 3 mois) et transmet à Meta des données sur votre visite (pages vues, clics vers WhatsApp, Booking.com, Airbnb, envoi de la demande de devis, adresse IP et informations sur le navigateur). Nous l'utilisons pour mesurer l'efficacité de nos campagnes sur Facebook et Instagram et montrer nos annonces aux personnes intéressées ; Meta peut aussi utiliser ces données pour ses propres finalités et les transférer hors de l'Union européenne. Sans votre consentement, le Pixel n'est pas chargé. Si vous retirez votre consentement via « Préférences cookies », le Pixel s'arrête et le cookie est supprimé.",
+          "Politique de confidentialité de Meta : facebook.com/privacy/policy — Cookies de Meta : facebook.com/privacy/policies/cookies",
+        ],
       },
       {
         h: "4. Cookies tiers : Google Maps",

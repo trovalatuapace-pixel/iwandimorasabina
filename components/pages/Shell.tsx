@@ -5,6 +5,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import MobileActionBar from "@/components/site/MobileActionBar";
 import CookieBanner from "@/components/site/CookieBanner";
+import MetaPixel from "@/components/site/MetaPixel";
 
 export default function Shell({
   lang,
@@ -26,6 +27,7 @@ export default function Shell({
       <Footer lang={lang} current={current} roomSlugIt={roomSlugIt} />
       <MobileActionBar lang={lang} />
       <CookieBanner lang={lang} />
+      <MetaPixel />
     </>
   );
 }

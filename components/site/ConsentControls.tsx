@@ -11,7 +11,7 @@ export default function ConsentControls({ lang }: { lang: Lang }) {
   const t = legalUi[lang];
   return (
     <div className="card-surface mt-6 flex flex-wrap items-center gap-5 rounded-2xl p-5">
-      <p className="font-sans text-sm text-sabina-100/85">{c?.marketing ? t.consentOn : t.consentOff}</p>
+      <p className="font-sans text-sm text-sabina-100/85">{(c?.marketing || c?.map) ? t.consentOn : t.consentOff}</p>
       <button type="button" onClick={openCookieBanner} className="btn-primary">
         {bannerText[lang].settingsLink}
       </button>

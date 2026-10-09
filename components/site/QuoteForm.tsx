@@ -7,6 +7,7 @@ import { ui } from "@/lib/data/extras";
 import { legalUi } from "@/lib/data/legalUi";
 import { href } from "@/lib/site";
 import Link from "next/link";
+import { trackPixel } from "@/components/site/MetaPixel";
 
 type RoomReq = { room: string; adults: string; children: string };
 
@@ -54,6 +55,7 @@ export default function QuoteForm({ lang, whatsapp, email }: { lang: Lang; whats
     const url = whatsapp
       ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`
       : `mailto:${email}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(text)}`;
+    trackPixel("Lead");
     window.open(url, "_blank", "noopener");
   }
 
