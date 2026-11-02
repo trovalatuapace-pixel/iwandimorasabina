@@ -30,7 +30,7 @@ export default function StructuredData({ lang }: { lang: Lang }) {
     email: contacts.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Via Roma 33",
+      streetAddress: "Via Roma 33A",
       postalCode: "02034",
       addressLocality: "Montopoli di Sabina",
       addressRegion: "RI",

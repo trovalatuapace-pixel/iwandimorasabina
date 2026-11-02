@@ -6,7 +6,7 @@ import { href } from "@/lib/site";
 import { legalUi } from "@/lib/data/legalUi";
 import { useMapsConsent } from "@/lib/consent";
 
-const MAPS_QUERY = "Via Roma 33, 02034 Montopoli di Sabina RI, Italia";
+const MAPS_QUERY = "Via Roma 33A, 02034 Montopoli di Sabina RI, Italia";
 
 /**
  * Mappa Google caricata SOLO dopo il clic dell'utente (consenso ai cookie di terze parti,
