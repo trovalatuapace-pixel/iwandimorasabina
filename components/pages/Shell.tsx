@@ -6,6 +6,7 @@ import Footer from "@/components/site/Footer";
 import MobileActionBar from "@/components/site/MobileActionBar";
 import CookieBanner from "@/components/site/CookieBanner";
 import MetaPixel from "@/components/site/MetaPixel";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Shell({
   lang,
@@ -28,6 +29,7 @@ export default function Shell({
       <MobileActionBar lang={lang} />
       <CookieBanner lang={lang} />
       <MetaPixel />
+      <Analytics />
     </>
   );
 }
