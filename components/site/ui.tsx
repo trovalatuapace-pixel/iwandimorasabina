@@ -132,12 +132,14 @@ export function BookingCta({
   button,
   target,
   lang,
+  unit,
 }: {
   title: string;
   text: string;
   button: string;
   target: string;
   lang?: Lang;
+  unit?: string;
 }) {
   return (
     <section className="relative px-5 py-20 sm:px-8">
@@ -149,7 +151,7 @@ export function BookingCta({
             <Link href={target} className="btn-primary">
               {button}
             </Link>
-            {lang && <PlatformLinks lang={lang} />}
+            {lang && <PlatformLinks lang={lang} unit={unit} />}
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { Lang } from "@/lib/i18n/translations";
 import { translations } from "@/lib/i18n/translations";
 import { contacts } from "@/lib/site";
+import { getBookingUnits } from "@/lib/units";
 
 /**
  * Pulsanti "Prenota su Booking.com" e "Prenota su Airbnb".
@@ -11,16 +12,22 @@ export default function PlatformLinks({
   lang,
   className = "",
   size = "md",
+  unit,
 }: {
   lang: Lang;
+  /** Slug della camera: se presente usa i link della camera (nessun link generale della casa intera). */
+  unit?: string;
   className?: string;
   size?: "sm" | "md";
 }) {
   const t = translations[lang].booking;
+  const room = unit ? getBookingUnits().find((u) => u.id === unit) : undefined;
+  const bookingHref = unit ? room?.bookingUrl : contacts.bookingUrl;
+  const airbnbHref = unit ? room?.airbnbUrl : contacts.airbnbUrl;
   const links = [
-    { href: contacts.bookingUrl, label: t.bookOnBooking },
-    { href: contacts.airbnbUrl, label: t.bookOnAirbnb },
-  ].filter((l) => l.href);
+    { href: bookingHref, label: t.bookOnBooking },
+    { href: airbnbHref, label: t.bookOnAirbnb },
+  ].filter((l): l is { href: string; label: string } => Boolean(l.href));
   if (!links.length) return null;
 
   const btn =
