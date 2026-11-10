@@ -125,8 +125,6 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <PhotoBand src="/foto/brindisi.webp" eyebrow={band.spa[0]} title={band.spa[1]} position="center 60%" />
-
       <Section tone="dark">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -140,6 +138,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
           ))}
         </div>
       </Section>
+
+      <PhotoBand src="/foto/brindisi.webp" eyebrow={band.spa[0]} title={band.spa[1]} position="center 60%" />
 
       <StayModes lang={lang} tone="light" />
 
