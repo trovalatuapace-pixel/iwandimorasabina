@@ -27,7 +27,7 @@ export type Room = {
   ogImage?: string;
 };
 
-export const rooms: Room[] = [
+const baseRooms: Room[] = [
   {
     slug: { it: "europa", en: "europe", de: "europa", fr: "europe" },
     photo: "/foto/camera-europa.webp",
@@ -227,6 +227,38 @@ export const rooms: Room[] = [
     },
   },
 ];
+
+/** Prezzo a notte per camera (EUR): `two` = 1-2 ospiti, `three` = 3 ospiti (solo dove la camera ospita 3 persone). Chiave = slug italiano. */
+export const ROOM_PRICE: Record<string, { two: number; three?: number }> = {
+  europa: { two: 180 },
+  asia: { two: 180 },
+  africa: { two: 180 },
+  americhe: { two: 180, three: 240 },
+  oceania: { two: 180 },
+};
+
+/** Ospiti massimi per camera, ricavato dal campo `guests` ("2" o "3"). */
+export function roomMaxGuests(room: Room): number {
+  return Math.max(...(room.guests ?? "2").split("/").map((n) => parseInt(n, 10) || 2));
+}
+
+const LOCK: Localized = {
+  it: "Porta con serratura elettronica",
+  en: "Door with electronic lock",
+  de: "Tür mit elektronischem Schloss",
+  fr: "Porte à serrure électronique",
+};
+
+/** Ogni camera è prenotabile singolarmente: serratura elettronica sulla porta e bagno privato. */
+export const rooms: Room[] = baseRooms.map((r) => ({
+  ...r,
+  amenities: {
+    it: [...r.amenities.it, LOCK.it],
+    en: [...r.amenities.en, LOCK.en],
+    de: [...r.amenities.de, LOCK.de],
+    fr: [...r.amenities.fr, LOCK.fr],
+  },
+}));
 
 export function findRoom(lang: Lang, slug: string) {
   return rooms.find((r) => r.slug[lang] === slug) ?? null;

@@ -6,7 +6,7 @@ export type CommonArea = { slug: string; name: Localized; text: Localized; photo
 
 export const commonAreasHead = {
   eyebrow: { it: "Parti comuni e servizi", en: "Shared areas and services", de: "Gemeinschaftsbereiche und Services", fr: "Espaces communs et services" } as Localized,
-  title: { it: "Tutta la casa è vostra", en: "The whole house is yours", de: "Das ganze Haus gehört Ihnen", fr: "Toute la maison est à vous" } as Localized,
+  title: { it: "Spazi da vivere insieme", en: "Spaces to enjoy together", de: "Räume zum gemeinsamen Genießen", fr: "Des espaces à partager" } as Localized,
 };
 
 export const commonAreas: CommonArea[] = [

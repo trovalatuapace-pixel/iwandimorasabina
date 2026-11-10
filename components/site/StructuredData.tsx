@@ -1,6 +1,7 @@
 import type { Lang } from "@/lib/i18n/translations";
 import { content } from "@/lib/content";
 import { SITE_URL, contacts, href } from "@/lib/site";
+import { rooms, ROOM_PRICE, roomMaxGuests } from "@/lib/data/rooms";
 
 /**
  * Dati strutturati (schema.org) per Google: dicono che il sito è una struttura
@@ -39,6 +40,23 @@ export default function StructuredData({ lang }: { lang: Lang }) {
     hasMap: "https://www.google.com/maps/search/?api=1&query=Via+Roma+33,+02034+Montopoli+di+Sabina+RI",
     containedInPlace: { "@type": "Place", name: "Sabina, Lazio" },
     numberOfRooms: contacts.rooms,
+    priceRange: "€180+",
+    containsPlace: rooms.map((r) => ({
+      "@type": "HotelRoom",
+      name: r.name[lang],
+      description: r.tagline[lang],
+      url: `${SITE_URL}${href(lang, "room", r.slug.it)}`,
+      image: `${SITE_URL}${r.photo ?? "/og/dimora-pangea.jpg"}`,
+      occupancy: { "@type": "QuantitativeValue", maxValue: roomMaxGuests(r) },
+      amenityFeature: [
+        { "@type": "LocationFeatureSpecification", name: "Private bathroom", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Electronic door lock", value: true },
+      ],
+      makesOffer: {
+        "@type": "Offer",
+        priceSpecification: { "@type": "UnitPriceSpecification", price: ROOM_PRICE[r.slug.it]?.two, priceCurrency: "EUR", unitText: "night" },
+      },
+    })),
     maximumAttendeeCapacity: contacts.beds,
     checkinTime: "15:00",
     checkoutTime: "11:00",

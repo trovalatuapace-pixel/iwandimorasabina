@@ -23,8 +23,8 @@ export function href(lang: Lang, page: PageKey, roomSlugIt?: string): string {
 }
 
 /** Ancora della sezione prenotazione, usata dal pulsante "Prenota". */
-export function bookingHref(lang: Lang) {
-  return `${paths.contact[lang]}#prenota`;
+export function bookingHref(lang: Lang, unit?: string) {
+  return `${paths.contact[lang]}${unit ? `?camera=${unit}` : ""}#prenota`;
 }
 
 /** Ancora del modulo "Chiedi un preventivo". */

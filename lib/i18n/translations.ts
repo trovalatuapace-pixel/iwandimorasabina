@@ -140,7 +140,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Prenota il tuo soggiorno",
       title: "Disponibilità e prenotazione",
       intro:
-        "La casa si prenota sempre intera e in esclusiva: da 2 a 11 ospiti, solo il tuo gruppo, mai estranei. Il calendario mostra le date già occupate sulle nostre piattaforme. Per prenotare, scegli il canale che preferisci.",
+        "Scegli una delle cinque camere (bagno privato, serratura elettronica, spazi comuni condivisi con gli altri ospiti) oppure l'intera casa in esclusiva, da 2 a 11 ospiti. Il calendario mostra le date già occupate. Per prenotare, scegli il canale che preferisci.",
       bookOnBooking: "Prenota su Booking.com",
       bookOnAirbnb: "Prenota su Airbnb",
       calendarLegendFree: "Disponibile",
@@ -258,7 +258,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Book your stay",
       title: "Availability & booking",
       intro:
-        "The house is always booked whole and exclusively: from 2 to 11 guests, only your group, never strangers. The calendar shows the dates already booked on our platforms. To book, choose the channel you prefer.",
+        "Choose one of the five rooms (private bathroom, electronic lock, shared spaces with the other guests) or the whole house exclusively, for 2 to 11 guests. The calendar shows the dates already booked. To book, choose the channel you prefer.",
       bookOnBooking: "Book on Booking.com",
       bookOnAirbnb: "Book on Airbnb",
       calendarLegendFree: "Available",
@@ -376,7 +376,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Buchen Sie Ihren Aufenthalt",
       title: "Verfügbarkeit & Buchung",
       intro:
-        "Das Haus wird immer komplett und exklusiv vermietet: von 2 bis 11 Gäste, nur Ihre Gruppe, nie Fremde. Der Kalender zeigt die bereits belegten Tage auf unseren Plattformen. Wählen Sie zum Buchen einfach den Kanal, den Sie bevorzugen.",
+        "Wählen Sie eines der fünf Zimmer (eigenes Bad, elektronisches Schloss, Gemeinschaftsbereiche mit den anderen Gästen) oder das ganze Haus exklusiv für 2 bis 11 Gäste. Der Kalender zeigt die bereits belegten Tage. Wählen Sie zum Buchen einfach den Kanal, den Sie bevorzugen.",
       bookOnBooking: "Auf Booking.com buchen",
       bookOnAirbnb: "Auf Airbnb buchen",
       calendarLegendFree: "Verfügbar",
@@ -494,7 +494,7 @@ export const translations: Record<Lang, TranslationDict> = {
       eyebrow: "Réservez votre séjour",
       title: "Disponibilités et réservation",
       intro:
-        "La maison se loue toujours entière et en exclusivité : de 2 à 11 personnes, uniquement votre groupe, jamais d'inconnus. Le calendrier indique les dates déjà réservées sur nos plateformes. Pour réserver, choisissez le canal que vous préférez.",
+        "Choisissez l'une des cinq chambres (salle de bain privée, serrure électronique, espaces communs partagés avec les autres hôtes) ou la maison entière en exclusivité, de 2 à 11 personnes. Le calendrier indique les dates déjà réservées. Pour réserver, choisissez le canal que vous préférez.",
       bookOnBooking: "Réserver sur Booking.com",
       bookOnAirbnb: "Réserver sur Airbnb",
       calendarLegendFree: "Disponible",

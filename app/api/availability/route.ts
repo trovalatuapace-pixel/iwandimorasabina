@@ -27,31 +27,46 @@ async function fetchFeed(
   }
 }
 
-export async function GET() {
-  const bookingUrl = process.env.ICAL_BOOKING_URL;
-  const airbnbUrl = process.env.ICAL_AIRBNB_URL;
+const ROOM_SLUGS = ["europa", "asia", "africa", "americhe", "oceania"] as const;
 
-  const configured = Boolean(bookingUrl || airbnbUrl);
+/** Feed iCal per ogni unità. Le variabili per camera sono ICAL_BOOKING_URL_<SLUG> e ICAL_AIRBNB_URL_<SLUG>. */
+function roomFeeds(slug: string) {
+  const key = slug.toUpperCase();
+  return [
+    { url: process.env[`ICAL_BOOKING_URL_${key}`], source: "booking" as const },
+    { url: process.env[`ICAL_AIRBNB_URL_${key}`], source: "airbnb" as const },
+  ];
+}
 
-  if (!configured) {
-    return NextResponse.json({
-      configured: false,
-      busyRanges: [],
-      errors: [],
-    });
+function houseFeeds() {
+  return [
+    { url: process.env.ICAL_BOOKING_URL, source: "booking" as const },
+    { url: process.env.ICAL_AIRBNB_URL, source: "airbnb" as const },
+  ];
+}
+
+/**
+ * ?unit=<slug camera> oppure ?unit=casa (default).
+ * - Una camera è occupata se è occupata lei oppure la casa intera.
+ * - La casa intera è occupata se lo è lei oppure una qualsiasi camera.
+ */
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const requested = (searchParams.get("unit") || "casa").toLowerCase();
+  const isRoom = (ROOM_SLUGS as readonly string[]).includes(requested);
+
+  const feeds = isRoom
+    ? [...roomFeeds(requested), ...houseFeeds()]
+    : [...houseFeeds(), ...ROOM_SLUGS.flatMap((s) => roomFeeds(s))];
+
+  const active = feeds.filter((f) => f.url);
+  if (!active.length) {
+    return NextResponse.json({ configured: false, busyRanges: [], errors: [] });
   }
 
-  const [booking, airbnb] = await Promise.all([
-    fetchFeed(bookingUrl, "booking"),
-    fetchFeed(airbnbUrl, "airbnb"),
-  ]);
+  const results = await Promise.all(active.map((f) => fetchFeed(f.url, f.source)));
+  const busyRanges = mergeBusyRanges(results.flatMap((r) => r.ranges));
+  const errors = results.map((r) => r.error).filter(Boolean);
 
-  const busyRanges = mergeBusyRanges([...booking.ranges, ...airbnb.ranges]);
-  const errors = [booking.error, airbnb.error].filter(Boolean);
-
-  return NextResponse.json({
-    configured: true,
-    busyRanges,
-    errors,
-  });
+  return NextResponse.json({ configured: true, busyRanges, errors });
 }

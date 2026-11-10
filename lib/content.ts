@@ -24,10 +24,10 @@ export const content = {
     home: {
       metaTitle: "Casa vacanze in Sabina vicino a Roma | Dimora Pangea",
       metaDescription:
-        "Casa vacanze in esclusiva per 2-11 ospiti a Montopoli di Sabina, a 45 minuti da Roma: cinque camere dedicate ai continenti, sauna, palestra, idromassaggio e terrazzo con vista sulla Cupola di San Pietro.",
+        "Casa vacanze a Montopoli di Sabina, a 45 minuti da Roma: cinque camere con bagno privato dedicate ai continenti, da prenotare una per una o l'intera casa, con sauna, palestra, idromassaggio e terrazzo con vista sulla Cupola di San Pietro.",
       eyebrow: "Casa vacanze · Montopoli di Sabina",
       title: "Dimora Pangea",
-      lead: "Cinque camere dedicate ai cinque continenti, un'area benessere riservata agli ospiti e un terrazzo affacciato sulle colline della Sabina, a meno di un'ora da Roma.",
+      lead: "Cinque camere dedicate ai cinque continenti, da prenotare una per una o insieme come casa intera, e un'area benessere con terrazzo sulle colline della Sabina, a meno di un'ora da Roma.",
       introEyebrow: "Il mondo in una casa",
       introTitle: "Un nome, un'idea",
       introText: [
@@ -55,7 +55,7 @@ export const content = {
     rooms: {
       metaTitle: "Camere a tema continenti, casa vacanze in Sabina",
       metaDescription:
-        "Le cinque camere di Dimora Pangea, ciascuna dedicata a un continente: Europa, Asia, Africa, Americhe e Oceania.",
+        "Le cinque camere di Dimora Pangea, ciascuna dedicata a un continente e prenotabile singolarmente, con bagno privato: Europa, Asia, Africa, Americhe e Oceania.",
       eyebrow: "Cinque continenti, una sola casa",
       title: "Le camere",
       lead: "Ogni camera racconta un continente attraverso colori, materiali e dettagli, con lo stesso livello di cura e di comfort.",
@@ -142,7 +142,7 @@ export const content = {
         "Contatti, disponibilità e prenotazione di Dimora Pangea, casa vacanze a Montopoli di Sabina (Rieti).",
       eyebrow: "Contatti",
       title: "Contatti e prenotazioni",
-      lead: "Per informazioni sul soggiorno potete scriverci in qualsiasi momento. Qui sotto trovate il calendario delle disponibilità e il link per prenotare.",
+      lead: "Per informazioni sul soggiorno potete scriverci in qualsiasi momento. Qui sotto scegliete la camera (o la casa intera) e trovate il calendario delle disponibilità per prenotare.",
       infoTitle: "Recapiti",
       addressLabel: "Indirizzo",
       emailLabel: "Email",
@@ -151,10 +151,10 @@ export const content = {
       socialLabel: "Social",
       bookingEyebrow: "Prenota",
       bookingTitle: "Disponibilità",
-      bookingText: "Il calendario mostra le date già occupate. Seleziona arrivo e partenza, poi prenota su Booking.com, su Airbnb oppure direttamente con noi su WhatsApp.",
+      bookingText: "Scegli la camera o la casa intera: il calendario mostra le date già occupate di quella scelta. Seleziona arrivo e partenza, poi prenota su WhatsApp direttamente con noi o, dove disponibile, su Booking.com e Airbnb.",
       bookButton: "Prenota il soggiorno",
       bookFallback: "Richiedi disponibilità su WhatsApp",
-      alsoAirbnb: "La casa è disponibile anche su Airbnb",
+      alsoAirbnb: "La struttura è disponibile anche su Airbnb",
       mapTitle: "Come arrivare",
     },
   },
@@ -176,10 +176,10 @@ export const content = {
     home: {
       metaTitle: "Holiday home in Sabina near Rome | Dimora Pangea",
       metaDescription:
-        "Private holiday home for 2-11 guests in Montopoli di Sabina, 45 minutes from Rome: five continent-themed rooms, sauna, gym, hot tub and a terrace overlooking St. Peter's Dome.",
+        "Holiday home in Montopoli di Sabina, 45 minutes from Rome: five continent-themed rooms with private bathroom, bookable one by one or as a whole house, with sauna, gym, hot tub and a terrace overlooking St. Peter's Dome.",
       eyebrow: "Holiday home · Montopoli di Sabina",
       title: "Dimora Pangea",
-      lead: "Five rooms dedicated to the five continents, a private wellness area for guests and a terrace overlooking the Sabine hills, less than an hour from Rome.",
+      lead: "Five rooms dedicated to the five continents, bookable one by one or together as a whole house, and a wellness area with a terrace over the Sabine hills, less than an hour from Rome.",
       introEyebrow: "The world in one house",
       introTitle: "A name, an idea",
       introText: [
@@ -207,7 +207,7 @@ export const content = {
     rooms: {
       metaTitle: "Continent-themed rooms, holiday home in Sabina",
       metaDescription:
-        "The five rooms of Dimora Pangea, each dedicated to a continent: Europe, Asia, Africa, the Americas and Oceania.",
+        "The five rooms of Dimora Pangea, each dedicated to a continent and bookable on its own, with private bathroom: Europe, Asia, Africa, the Americas and Oceania.",
       eyebrow: "Five continents, one house",
       title: "The rooms",
       lead: "Each room tells the story of a continent through colours, materials and details, with the same level of care and comfort.",
@@ -294,7 +294,7 @@ export const content = {
         "Contact details, availability and booking for Dimora Pangea, holiday home in Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact and booking",
-      lead: "For any information about your stay, feel free to write to us at any time. Below you will find the availability calendar and the booking link.",
+      lead: "For any information about your stay, feel free to write to us at any time. Below, choose a room (or the whole house) and check its availability calendar to book.",
       infoTitle: "Details",
       addressLabel: "Address",
       emailLabel: "Email",
@@ -303,10 +303,10 @@ export const content = {
       socialLabel: "Social",
       bookingEyebrow: "Book",
       bookingTitle: "Availability",
-      bookingText: "The calendar shows the dates already booked. Select your arrival and departure, then book on Booking.com, on Airbnb or directly with us on WhatsApp.",
+      bookingText: "Choose a room or the whole house: the calendar shows the dates already booked for that choice. Select your arrival and departure, then book directly with us on WhatsApp or, where available, on Booking.com and Airbnb.",
       bookButton: "Book your stay",
       bookFallback: "Ask for availability on WhatsApp",
-      alsoAirbnb: "The house is also listed on Airbnb",
+      alsoAirbnb: "The property is also listed on Airbnb",
       mapTitle: "Getting here",
     },
   },
@@ -328,10 +328,10 @@ export const content = {
     home: {
       metaTitle: "Ferienhaus in der Sabina bei Rom | Dimora Pangea",
       metaDescription:
-        "Exklusives Ferienhaus für 2-11 Gäste in Montopoli di Sabina, 45 Minuten von Rom: fünf Zimmer im Zeichen der Kontinente, Sauna, Fitnessraum, Whirlpool und Terrasse mit Blick auf den Petersdom.",
+        "Ferienhaus in Montopoli di Sabina, 45 Minuten von Rom: fünf Zimmer im Zeichen der Kontinente mit eigenem Bad, einzeln buchbar oder als ganzes Haus, mit Sauna, Fitnessraum, Whirlpool und Terrasse mit Blick auf den Petersdom.",
       eyebrow: "Ferienhaus · Montopoli di Sabina",
       title: "Dimora Pangea",
-      lead: "Fünf Zimmer, den fünf Kontinenten gewidmet, ein privater Wellnessbereich für die Gäste und eine Terrasse mit Blick auf die Hügel der Sabina – weniger als eine Stunde von Rom.",
+      lead: "Fünf Zimmer, den fünf Kontinenten gewidmet, einzeln buchbar oder zusammen als ganzes Haus, dazu ein Wellnessbereich mit Terrasse über den Hügeln der Sabina – weniger als eine Stunde von Rom.",
       introEyebrow: "Die Welt in einem Haus",
       introTitle: "Ein Name, eine Idee",
       introText: [
@@ -359,7 +359,7 @@ export const content = {
     rooms: {
       metaTitle: "Zimmer im Zeichen der Kontinente, Ferienhaus in der Sabina",
       metaDescription:
-        "Die fünf Zimmer von Dimora Pangea, jedes einem Kontinent gewidmet: Europa, Asien, Afrika, Amerika und Ozeanien.",
+        "Die fünf Zimmer von Dimora Pangea, jedes einem Kontinent gewidmet, einzeln buchbar und mit eigenem Bad: Europa, Asien, Afrika, Amerika und Ozeanien.",
       eyebrow: "Fünf Kontinente, ein Haus",
       title: "Die Zimmer",
       lead: "Jedes Zimmer erzählt von einem Kontinent – durch Farben, Materialien und Details, mit derselben Sorgfalt und demselben Komfort.",
@@ -446,7 +446,7 @@ export const content = {
         "Kontakt, Verfügbarkeit und Buchung für Dimora Pangea, Ferienhaus in Montopoli di Sabina (Rieti).",
       eyebrow: "Kontakt",
       title: "Kontakt und Buchung",
-      lead: "Für Fragen zu Ihrem Aufenthalt können Sie uns jederzeit schreiben. Unten finden Sie den Verfügbarkeitskalender und den Buchungslink.",
+      lead: "Für Fragen zu Ihrem Aufenthalt können Sie uns jederzeit schreiben. Wählen Sie unten ein Zimmer (oder das ganze Haus) und prüfen Sie den Verfügbarkeitskalender.",
       infoTitle: "Kontaktdaten",
       addressLabel: "Adresse",
       emailLabel: "E-Mail",
@@ -455,10 +455,10 @@ export const content = {
       socialLabel: "Social Media",
       bookingEyebrow: "Buchen",
       bookingTitle: "Verfügbarkeit",
-      bookingText: "Der Kalender zeigt die bereits belegten Tage. Wählen Sie An- und Abreise und buchen Sie dann über Booking.com, Airbnb oder direkt bei uns per WhatsApp.",
+      bookingText: "Wählen Sie ein Zimmer oder das ganze Haus: Der Kalender zeigt die bereits belegten Tage für Ihre Auswahl. Wählen Sie An- und Abreise und buchen Sie direkt bei uns per WhatsApp oder, wo verfügbar, über Booking.com und Airbnb.",
       bookButton: "Aufenthalt buchen",
       bookFallback: "Verfügbarkeit per WhatsApp anfragen",
-      alsoAirbnb: "Das Haus ist auch auf Airbnb verfügbar",
+      alsoAirbnb: "Die Unterkunft ist auch auf Airbnb verfügbar",
       mapTitle: "Anreise",
     },
   },
@@ -480,10 +480,10 @@ export const content = {
     home: {
       metaTitle: "Maison de vacances en Sabine près de Rome | Dimora Pangea",
       metaDescription:
-        "Maison de vacances privée pour 2 à 11 personnes à Montopoli di Sabina, à 45 minutes de Rome : cinq chambres dédiées aux continents, sauna, salle de sport, jacuzzi et terrasse avec vue sur Saint-Pierre.",
+        "Maison de vacances à Montopoli di Sabina, à 45 minutes de Rome : cinq chambres dédiées aux continents avec salle de bain privée, à réserver une par une ou en maison entière, avec sauna, salle de sport, jacuzzi et terrasse avec vue sur Saint-Pierre.",
       eyebrow: "Maison de vacances · Montopoli di Sabina",
       title: "Dimora Pangea",
-      lead: "Cinq chambres dédiées aux cinq continents, un espace bien-être réservé aux hôtes et une terrasse face aux collines de la Sabine, à moins d'une heure de Rome.",
+      lead: "Cinq chambres dédiées aux cinq continents, à réserver une par une ou ensemble en maison entière, et un espace bien-être avec terrasse face aux collines de la Sabine, à moins d'une heure de Rome.",
       introEyebrow: "Le monde dans une maison",
       introTitle: "Un nom, une idée",
       introText: [
@@ -511,7 +511,7 @@ export const content = {
     rooms: {
       metaTitle: "Chambres sur le thème des continents, maison de vacances en Sabine",
       metaDescription:
-        "Les cinq chambres de Dimora Pangea, chacune dédiée à un continent : Europe, Asie, Afrique, Amériques et Océanie.",
+        "Les cinq chambres de Dimora Pangea, chacune dédiée à un continent, réservable séparément et avec salle de bain privée : Europe, Asie, Afrique, Amériques et Océanie.",
       eyebrow: "Cinq continents, une seule maison",
       title: "Les chambres",
       lead: "Chaque chambre raconte un continent à travers couleurs, matières et détails, avec le même soin et le même confort.",
@@ -598,7 +598,7 @@ export const content = {
         "Coordonnées, disponibilités et réservation de Dimora Pangea, maison de vacances à Montopoli di Sabina (Rieti).",
       eyebrow: "Contact",
       title: "Contact et réservation",
-      lead: "Pour toute information sur votre séjour, écrivez-nous à tout moment. Vous trouverez ci-dessous le calendrier des disponibilités et le lien de réservation.",
+      lead: "Pour toute information sur votre séjour, écrivez-nous à tout moment. Ci-dessous, choisissez une chambre (ou la maison entière) et consultez son calendrier des disponibilités.",
       infoTitle: "Coordonnées",
       addressLabel: "Adresse",
       emailLabel: "E-mail",
@@ -607,10 +607,10 @@ export const content = {
       socialLabel: "Réseaux sociaux",
       bookingEyebrow: "Réserver",
       bookingTitle: "Disponibilités",
-      bookingText: "Le calendrier indique les dates déjà réservées. Choisissez vos dates d'arrivée et de départ, puis réservez sur Booking.com, sur Airbnb ou directement auprès de nous sur WhatsApp.",
+      bookingText: "Choisissez une chambre ou la maison entière : le calendrier indique les dates déjà réservées pour ce choix. Sélectionnez vos dates d'arrivée et de départ, puis réservez directement auprès de nous sur WhatsApp ou, quand c'est possible, sur Booking.com et Airbnb.",
       bookButton: "Réserver votre séjour",
       bookFallback: "Demander les disponibilités sur WhatsApp",
-      alsoAirbnb: "La maison est aussi disponible sur Airbnb",
+      alsoAirbnb: "L'hébergement est aussi disponible sur Airbnb",
       mapTitle: "Comment venir",
     },
   },

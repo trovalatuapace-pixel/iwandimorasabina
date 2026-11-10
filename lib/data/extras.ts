@@ -18,6 +18,16 @@ export type ServiceItem = { icon: ServiceIcon; title: Localized; text: Localized
 export const servicesIncluded: ServiceItem[] = [
   {
     icon: "checkin",
+    title: { it: "Serratura elettronica", en: "Electronic lock", de: "Elektronisches Schloss", fr: "Serrure électronique" },
+    text: {
+      it: "Ogni camera ha la porta con serratura elettronica: la vostra stanza resta privata anche con gli spazi comuni condivisi.",
+      en: "Every room has a door with an electronic lock: your room stays private even though the common areas are shared.",
+      de: "Jedes Zimmer hat eine Tür mit elektronischem Schloss: Ihr Zimmer bleibt privat, auch wenn die Gemeinschaftsbereiche geteilt werden.",
+      fr: "Chaque chambre a une porte à serrure électronique : votre chambre reste privée même si les espaces communs sont partagés.",
+    },
+  },
+  {
+    icon: "checkin",
     title: { it: "Check-in e check-out", en: "Check-in and check-out", de: "Check-in und Check-out", fr: "Arrivée et départ" },
     text: {
       it: "Check-in dalle 15:00, check-out entro le 11:00. Orari diversi si possono concordare.",

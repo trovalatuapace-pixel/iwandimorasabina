@@ -2,7 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import type { Lang } from "@/lib/i18n/translations";
-import { rooms } from "@/lib/data/rooms";
+import { rooms, roomMaxGuests } from "@/lib/data/rooms";
+import { WHOLE_HOUSE_ID, wholeHouse } from "@/lib/data/stay";
 import { ui } from "@/lib/data/extras";
 import { legalUi } from "@/lib/data/legalUi";
 import { href } from "@/lib/site";
@@ -10,6 +11,13 @@ import Link from "next/link";
 import { trackPixel } from "@/components/site/MetaPixel";
 
 type RoomReq = { room: string; adults: string; children: string };
+
+/** Adulti massimi: 11 per la casa intera, altrimenti la capienza della camera (2 o 3). */
+function maxAdults(roomSlug: string) {
+  if (roomSlug === WHOLE_HOUSE_ID) return 11;
+  const room = rooms.find((x) => x.slug.it === roomSlug);
+  return room ? roomMaxGuests(room) : 3;
+}
 
 const field =
   "w-full rounded-xl border border-sabina-800 bg-sabina-950/60 px-4 py-3 font-sans text-sm text-sabina-50 placeholder:text-sabina-100/40 focus:border-sabina-400 focus:outline-none";
@@ -43,7 +51,7 @@ export default function QuoteForm({ lang, whatsapp, email }: { lang: Lang; whats
       `${t.departure}: ${g("departure")}`,
       ...reqs.map(
         (r, i) =>
-          `${t.roomLabel(i + 1)}: ${r.room ? rooms.find((x) => x.slug.it === r.room)?.name[lang] : t.anyRoom} — ${t.adults}: ${r.adults}, ${t.children}: ${r.children}`
+          `${t.roomLabel(i + 1)}: ${r.room === WHOLE_HOUSE_ID ? wholeHouse.name[lang] : r.room ? rooms.find((x) => x.slug.it === r.room)?.name[lang] : t.anyRoom} — ${t.adults}: ${r.adults}, ${t.children}: ${r.children}`
       ),
       "",
       `${t.firstName} ${t.lastName}: ${g("firstName")} ${g("lastName")}`,
@@ -104,17 +112,26 @@ export default function QuoteForm({ lang, whatsapp, email }: { lang: Lang; whats
           </legend>
           <div>
             <label className={label} htmlFor={`q-room-${i}`}>{t.roomType}</label>
-            <select id={`q-room-${i}`} value={r.room} onChange={(e) => update(i, { room: e.target.value })} className={field}>
+            <select
+              id={`q-room-${i}`}
+              value={r.room}
+              onChange={(e) => {
+                const room = e.target.value;
+                update(i, { room, adults: String(Math.min(Number(r.adults), maxAdults(room))) });
+              }}
+              className={field}
+            >
               <option value="">{t.anyRoom}</option>
               {rooms.map((room) => (
                 <option key={room.slug.it} value={room.slug.it}>{room.name[lang]}</option>
               ))}
+              <option value={WHOLE_HOUSE_ID} disabled={reqs.length > 1}>{wholeHouse.name[lang]}</option>
             </select>
           </div>
           <div>
             <label className={label} htmlFor={`q-adults-${i}`}>{t.adults}</label>
             <select id={`q-adults-${i}`} value={r.adults} onChange={(e) => update(i, { adults: e.target.value })} className={field}>
-              {["1", "2", "3", "4"].map((n) => <option key={n} value={n}>{n}</option>)}
+              {Array.from({ length: maxAdults(r.room) }, (_, n) => String(n + 1)).map((n) => <option key={n} value={n}>{n}</option>)}
             </select>
           </div>
           <div>
@@ -126,7 +143,7 @@ export default function QuoteForm({ lang, whatsapp, email }: { lang: Lang; whats
           </div>
         </fieldset>
       ))}
-      {reqs.length < rooms.length && (
+      {reqs.length < rooms.length && !reqs.some((x) => x.room === WHOLE_HOUSE_ID) && (
         <button
           type="button"
           onClick={() => setReqs((x) => [...x, { room: "", adults: "2", children: "0" }])}

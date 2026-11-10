@@ -7,6 +7,8 @@ import { bookingHref, href } from "@/lib/site";
 import Shell from "./Shell";
 import RoomBadges from "@/components/site/RoomBadges";
 import { RoomArc } from "@/components/site/Logo";
+import PriceTag from "@/components/site/PriceTag";
+import { stayUi } from "@/lib/data/stay";
 import { BookingCta, Photo, Section, TextLink } from "@/components/site/ui";
 
 export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
@@ -46,6 +48,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
           <span className="mt-6 block h-1 w-24 rounded-full" style={{ backgroundColor: room.colorLight }} aria-hidden="true" />
           <p className="mt-5 max-w-2xl font-serif text-xl italic text-sabina-200">{room.tagline[lang]}</p>
           <RoomBadges room={room} lang={lang} className="mt-6" />
+          <PriceTag slug={room.slug.it} lang={lang} className="mt-5" />
         </div>
       </section>
 
@@ -67,6 +70,10 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 border-t border-sabina-800 pt-5">
+              <p className="font-serif text-lg text-sabina-50">{stayUi.shared.title[lang]}</p>
+              <p className="mt-2 font-sans text-sm leading-relaxed text-sabina-100/75">{stayUi.shared.text[lang]}</p>
+            </div>
           </aside>
         </div>
 
@@ -86,7 +93,7 @@ export default function RoomPage({ lang, room }: { lang: Lang; room: Room }) {
         title={t.ctaTitle(name)}
         text={t.ctaText}
         button={t.ctaButton(name)}
-        target={bookingHref(lang)}
+        target={bookingHref(lang, room.slug.it)}
         lang={lang}
       />
 

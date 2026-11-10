@@ -5,6 +5,7 @@ import { rooms } from "@/lib/data/rooms";
 import { href } from "@/lib/site";
 import { content } from "@/lib/content";
 import RoomBadges from "./RoomBadges";
+import PriceTag from "./PriceTag";
 import { RoomArc } from "./Logo";
 
 export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
@@ -43,6 +44,7 @@ export default function RoomCard({ room, lang }: { room: Room; lang: Lang }) {
           {room.name[lang]}
         </h3>
         <p className="mt-2 font-sans text-sm text-sabina-100/75">{room.tagline[lang]}</p>
+        <PriceTag slug={room.slug.it} lang={lang} className="mt-4 border-t border-sabina-800 pt-4" />
       </div>
     </Link>
   );

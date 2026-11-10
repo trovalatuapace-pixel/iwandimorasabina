@@ -1,6 +1,7 @@
 import type { Lang } from "@/lib/i18n/translations";
 import { content } from "@/lib/content";
-import { contacts, href } from "@/lib/site";
+import { contacts } from "@/lib/site";
+import { getBookingUnits } from "@/lib/units";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import Shell from "./Shell";
@@ -22,11 +23,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
         <p className="mt-4 max-w-2xl font-sans text-sabina-100/80">{t.bookingText}</p>
         <div className="mt-10">
           <LanguageProvider initialLang={lang}>
-            <AvailabilityCalendar
-              bookingUrl={contacts.bookingUrl}
-              airbnbUrl={contacts.airbnbUrl}
-              whatsapp={contacts.whatsapp}
-            />
+            <AvailabilityCalendar units={getBookingUnits()} whatsapp={contacts.whatsapp} />
           </LanguageProvider>
         </div>
       </Section>

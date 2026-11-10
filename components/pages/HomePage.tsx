@@ -11,6 +11,7 @@ import Services from "@/components/site/Services";
 import StructuredData from "@/components/site/StructuredData";
 import HouseSlider from "@/components/site/HouseSlider";
 import Hero360 from "@/components/site/Hero360";
+import StayModes from "@/components/site/StayModes";
 import { houseGallery } from "@/lib/data/gallery";
 import PlatformLinks from "@/components/site/PlatformLinks";
 import { BookingCta, Photo, PhotoBand, Section, SectionHead, TextLink } from "@/components/site/ui";
@@ -140,7 +141,9 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Section tone="light">
+      <StayModes lang={lang} tone="light" />
+
+      <Section tone="dark">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <SectionHead eyebrow={t.houseEyebrow} title={t.houseTitle} />
@@ -160,7 +163,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </Section>
 
-      <Services lang={lang} tone="dark" />
+      <Services lang={lang} tone="light" />
 
       <PhotoBand src="/foto/vista-cupola-san-pietro.webp" eyebrow={band.view[0]} title={band.view[1]} position="center 45%" />
 

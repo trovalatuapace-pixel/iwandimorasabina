@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { Lang } from "@/lib/i18n/translations";
+import type { BookingUnit } from "@/lib/units";
+import { stayUi, wholeHouse } from "@/lib/data/stay";
 
 type BusyRange = { start: string; end: string; source: "booking" | "airbnb" };
 type ApiResponse = {
@@ -18,8 +20,6 @@ const WEEKDAYS: Record<Lang, string[]> = {
   fr: ["L", "M", "M", "J", "V", "S", "D"],
 };
 
-const MIN_GUESTS = 2;
-const MAX_GUESTS = 11;
 const MAX_MONTH_OFFSET = 16;
 
 /** Testi del modulo di prenotazione nelle 4 lingue. */
@@ -38,7 +38,9 @@ const TXT: Record<
     blocked: string;
     prev: string;
     next: string;
-    waMessage: (ci?: string, co?: string, n?: number, g?: number) => string;
+    /** Frase che nomina ciò che si vuole prenotare (camera o casa intera). */
+    target: (name: string, isHouse: boolean) => string;
+    waMessage: (target: string, ci?: string, co?: string, n?: number, g?: number) => string;
   }
 > = {
   it: {
@@ -54,10 +56,11 @@ const TXT: Record<
     blocked: "In quel periodo c'è già una prenotazione: scegli altre date.",
     prev: "Mesi precedenti",
     next: "Mesi successivi",
-    waMessage: (ci, co, n, g) =>
+    target: (name, isHouse) => (isHouse ? "l'intera Dimora Pangea" : `la camera ${name} di Dimora Pangea`),
+    waMessage: (target, ci, co, n, g) =>
       ci && co
-        ? `Buongiorno, vorrei prenotare Dimora Pangea dal ${ci} al ${co} (${n === 1 ? "1 notte" : `${n} notti`}) per ${g} ospiti. È disponibile?`
-        : "Buongiorno, vorrei informazioni sulla disponibilità di Dimora Pangea.",
+        ? `Buongiorno, vorrei prenotare ${target} dal ${ci} al ${co} (${n === 1 ? "1 notte" : `${n} notti`}) per ${g} ${g === 1 ? "ospite" : "ospiti"}. È disponibile?`
+        : `Buongiorno, vorrei informazioni sulla disponibilità di ${target}.`,
   },
   en: {
     pickCheckIn: "Tap your arrival date",
@@ -72,10 +75,11 @@ const TXT: Record<
     blocked: "Those dates include an existing booking: please choose other dates.",
     prev: "Previous months",
     next: "Next months",
-    waMessage: (ci, co, n, g) =>
+    target: (name, isHouse) => (isHouse ? "the whole of Dimora Pangea" : `the ${name} room at Dimora Pangea`),
+    waMessage: (target, ci, co, n, g) =>
       ci && co
-        ? `Hello, I would like to book Dimora Pangea from ${ci} to ${co} (${n === 1 ? "1 night" : `${n} nights`}) for ${g} guests. Is it available?`
-        : "Hello, I would like some information about availability at Dimora Pangea.",
+        ? `Hello, I would like to book ${target} from ${ci} to ${co} (${n === 1 ? "1 night" : `${n} nights`}) for ${g} ${g === 1 ? "guest" : "guests"}. Is it available?`
+        : `Hello, I would like some information about availability of ${target}.`,
   },
   de: {
     pickCheckIn: "Tippen Sie auf Ihr Anreisedatum",
@@ -90,10 +94,11 @@ const TXT: Record<
     blocked: "In diesem Zeitraum gibt es bereits eine Buchung: bitte wählen Sie andere Daten.",
     prev: "Vorherige Monate",
     next: "Nächste Monate",
-    waMessage: (ci, co, n, g) =>
+    target: (name, isHouse) => (isHouse ? "das ganze Haus Dimora Pangea" : `das Zimmer ${name} im Dimora Pangea`),
+    waMessage: (target, ci, co, n, g) =>
       ci && co
-        ? `Guten Tag, ich möchte Dimora Pangea vom ${ci} bis ${co} (${n === 1 ? "1 Nacht" : `${n} Nächte`}) für ${g} Gäste buchen. Ist das Haus frei?`
-        : "Guten Tag, ich hätte gerne Informationen zur Verfügbarkeit von Dimora Pangea.",
+        ? `Guten Tag, ich möchte ${target} vom ${ci} bis ${co} (${n === 1 ? "1 Nacht" : `${n} Nächte`}) für ${g} ${g === 1 ? "Gast" : "Gäste"} buchen. Ist es frei?`
+        : `Guten Tag, ich hätte gerne Informationen zur Verfügbarkeit: ${target}.`,
   },
   fr: {
     pickCheckIn: "Touchez votre date d'arrivée",
@@ -108,10 +113,11 @@ const TXT: Record<
     blocked: "Ces dates comprennent une réservation existante : choisissez d'autres dates.",
     prev: "Mois précédents",
     next: "Mois suivants",
-    waMessage: (ci, co, n, g) =>
+    target: (name, isHouse) => (isHouse ? "toute la maison Dimora Pangea" : `la chambre ${name} de Dimora Pangea`),
+    waMessage: (target, ci, co, n, g) =>
       ci && co
-        ? `Bonjour, je souhaite réserver Dimora Pangea du ${ci} au ${co} (${n === 1 ? "1 nuit" : `${n} nuits`}) pour ${g} personnes. Est-ce disponible ?`
-        : "Bonjour, je souhaiterais des informations sur les disponibilités de Dimora Pangea.",
+        ? `Bonjour, je souhaite réserver ${target} du ${ci} au ${co} (${n === 1 ? "1 nuit" : `${n} nuits`}) pour ${g} ${g === 1 ? "personne" : "personnes"}. Est-ce disponible ?`
+        : `Bonjour, je souhaiterais des informations sur les disponibilités : ${target}.`,
   },
 };
 
@@ -231,13 +237,13 @@ function MonthGrid({
 }
 
 export default function AvailabilityCalendar({
-  bookingUrl = "",
-  airbnbUrl = "",
+  units,
   whatsapp = "",
+  initialUnit,
 }: {
-  bookingUrl?: string;
-  airbnbUrl?: string;
+  units: BookingUnit[];
   whatsapp?: string;
+  initialUnit?: string;
 }) {
   const { t, lang, locale } = useLanguage();
   const txt = TXT[lang];
@@ -246,12 +252,25 @@ export default function AvailabilityCalendar({
   const [offset, setOffset] = useState(0);
   const [checkIn, setCheckIn] = useState<Date | null>(null);
   const [checkOut, setCheckOut] = useState<Date | null>(null);
-  const [guests, setGuests] = useState(MIN_GUESTS);
+  const [unitId, setUnitId] = useState(
+    units.some((u) => u.id === initialUnit) ? (initialUnit as string) : units[0].id
+  );
+  const unit = units.find((u) => u.id === unitId) ?? units[0];
+  const [guests, setGuests] = useState(2);
   const [warning, setWarning] = useState(false);
 
+  // Camera scelta da un link (es. dalla pagina di una camera): ?camera=asia
+  useEffect(() => {
+    const wanted = new URLSearchParams(window.location.search).get("camera");
+    if (wanted && units.some((u) => u.id === wanted)) setUnitId(wanted);
+  }, [units]);
+
+  // Ogni camera ha il suo calendario (e la casa intera il suo): si ricarica a ogni cambio.
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/availability")
+    setData(null);
+    setLoadError(false);
+    fetch(`/api/availability?unit=${encodeURIComponent(unitId)}`)
       .then((res) => res.json())
       .then((json: ApiResponse) => {
         if (!cancelled) setData(json);
@@ -262,7 +281,17 @@ export default function AvailabilityCalendar({
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [unitId]);
+
+  function chooseUnit(id: string) {
+    const next = units.find((u) => u.id === id);
+    if (!next) return;
+    setUnitId(id);
+    setCheckIn(null);
+    setCheckOut(null);
+    setWarning(false);
+    setGuests((g) => Math.min(Math.max(g, next.minGuests), next.maxGuests));
+  }
 
   const busyRanges = data?.busyRanges ?? [];
 
@@ -313,6 +342,8 @@ export default function AvailabilityCalendar({
   const fmt = (d: Date) => d.toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
 
   // Link con date e ospiti già inseriti.
+  const bookingUrl = unit.bookingUrl;
+  const airbnbUrl = unit.airbnbUrl;
   let bookingHref = bookingUrl;
   if (bookingUrl) {
     try {
@@ -343,10 +374,16 @@ export default function AvailabilityCalendar({
     } catch {}
   }
 
+  const targetPhrase = txt.target(unit.name[lang], unit.isHouse);
   const waText =
     checkIn && checkOut
-      ? txt.waMessage(fmt(checkIn), fmt(checkOut), nights, guests)
-      : txt.waMessage();
+      ? txt.waMessage(targetPhrase, fmt(checkIn), fmt(checkOut), nights, guests)
+      : txt.waMessage(targetPhrase);
+
+  // Prezzo indicativo (solo per le camere: la casa intera è su richiesta).
+  const nightly = unit.priceTwo ? (guests >= 3 && unit.priceThree ? unit.priceThree : unit.priceTwo) : null;
+  const total = nightly && hasDates ? nightly * nights : null;
+  const fmtEuro = (n: number) => `${n.toLocaleString(locale)} €`;
   const whatsappHref = whatsapp ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(waText)}` : "";
 
   let calendar: ReactNode;
@@ -418,6 +455,27 @@ export default function AvailabilityCalendar({
 
   return (
     <div>
+      {/* Scelta: una camera oppure la casa intera */}
+      <p className="section-eyebrow mb-3 text-[11px]">{stayUi.chooseStay[lang]}</p>
+      <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label={stayUi.chooseStay[lang]}>
+        {units.map((u) => (
+          <button
+            key={u.id}
+            type="button"
+            role="tab"
+            aria-selected={u.id === unitId}
+            onClick={() => chooseUnit(u.id)}
+            className={`rounded-full border px-4 py-2 font-sans text-xs uppercase tracking-[0.16em] transition ${
+              u.id === unitId
+                ? "border-sabina-400 bg-sabina-400 font-semibold text-sabina-950"
+                : "border-sabina-300/40 text-sabina-100 hover:border-sabina-100 hover:bg-sabina-50/10"
+            }`}
+          >
+            {u.name[lang]}
+          </button>
+        ))}
+      </div>
+
       {calendar}
 
       {/* Riepilogo soggiorno */}
@@ -432,6 +490,15 @@ export default function AvailabilityCalendar({
             <p className="text-sabina-50">{checkOut ? fmt(checkOut) : "—"}</p>
           </div>
           {hasDates && <p className="text-sm text-sabina-300">{txt.nights(nights)}</p>}
+          {nightly && (
+            <div>
+              <p className="section-eyebrow mb-1 text-[11px]">{total ? stayUi.total[lang] : stayUi.perNight[lang]}</p>
+              <p className="text-sabina-50">{fmtEuro(total ?? nightly)}</p>
+            </div>
+          )}
+          {!nightly && unit.isHouse && (
+            <p className="text-sm text-sabina-300">{wholeHouse.priceOnRequest[lang]}</p>
+          )}
           <label className="flex flex-col">
             <span className="section-eyebrow mb-1 text-[11px]">{txt.guests}</span>
             <select
@@ -439,7 +506,7 @@ export default function AvailabilityCalendar({
               onChange={(e) => setGuests(Number(e.target.value))}
               className="rounded-full border border-sabina-300/40 bg-transparent px-4 py-2 text-sabina-50"
             >
-              {Array.from({ length: MAX_GUESTS - MIN_GUESTS + 1 }, (_, i) => MIN_GUESTS + i).map((n) => (
+              {Array.from({ length: unit.maxGuests - unit.minGuests + 1 }, (_, i) => unit.minGuests + i).map((n) => (
                 <option key={n} value={n} className="bg-sabina-950">
                   {n}
                 </option>
@@ -477,6 +544,7 @@ export default function AvailabilityCalendar({
         )}
       </div>
       {whatsappHref && <p className="mt-3 font-sans text-sm text-sabina-300/90">{txt.directNote}</p>}
+      {nightly && <p className="mt-1 font-sans text-xs text-sabina-300/70">{stayUi.totalNote[lang]}</p>}
     </div>
   );
 }

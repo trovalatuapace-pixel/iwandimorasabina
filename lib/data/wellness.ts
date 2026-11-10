@@ -25,10 +25,10 @@ export const wellnessItems: WellnessItem[] = [
       fr: "Une chaleur enveloppante pour régénérer le corps et l'esprit",
     },
     description: {
-      it: "Una sauna privata pensata per il relax più profondo, disponibile agli ospiti in totale riservatezza.",
-      en: "A private sauna designed for deep relaxation, available to guests in complete privacy.",
-      de: "Eine private Sauna für tiefste Entspannung, die den Gästen in völliger Privatsphäre zur Verfügung steht.",
-      fr: "Un sauna privé conçu pour une détente profonde, à la disposition des hôtes en toute intimité.",
+      it: "Una sauna pensata per il relax più profondo, a disposizione di tutti gli ospiti della casa.",
+      en: "A sauna designed for deep relaxation, available to all guests in the house.",
+      de: "Eine Sauna für tiefste Entspannung, die allen Gästen des Hauses zur Verfügung steht.",
+      fr: "Un sauna conçu pour une détente profonde, à la disposition de tous les hôtes de la maison.",
     },
   },
   {
