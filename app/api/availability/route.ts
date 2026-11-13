@@ -15,7 +15,7 @@ async function fetchFeed(
         "User-Agent": "Mozilla/5.0 (compatible; DimoraPangeaCalendar/1.0)",
         Accept: "text/calendar, text/plain, */*",
       },
-      next: { revalidate: 1800 },
+      cache: "no-store",
     });
     if (!res.ok) {
       return { ranges: [], error: `${source}: HTTP ${res.status}` };

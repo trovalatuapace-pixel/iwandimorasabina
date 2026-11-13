@@ -268,7 +268,7 @@ export default function AvailabilityCalendar({
     let cancelled = false;
     setData(null);
     setLoadError(false);
-    fetch(`/api/availability?unit=${encodeURIComponent(unitId)}`)
+    fetch(`/api/availability?unit=${encodeURIComponent(unitId)}`, { cache: "no-store" })
       .then((res) => res.json())
       .then((json: ApiResponse) => {
         if (!cancelled) setData(json);
