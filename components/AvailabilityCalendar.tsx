@@ -143,12 +143,10 @@ function nightsBetween(a: Date, b: Date) {
 }
 
 function isBusy(day: Date, ranges: BusyRange[]) {
-  const t = day.getTime();
-  return ranges.some((r) => {
-    const start = new Date(r.start).getTime();
-    const end = new Date(r.end).getTime();
-    return t >= start && t < end;
-  });
+  // Confronto tra stringhe YYYY-MM-DD: new Date("YYYY-MM-DD") è UTC e,
+  // confrontato con la mezzanotte locale, spostava i blocchi di un giorno.
+  const key = ymd(day);
+  return ranges.some((r) => key >= r.start && key < r.end);
 }
 
 /** Tutte le notti tra arrivo e partenza (esclusa) devono essere libere. */
